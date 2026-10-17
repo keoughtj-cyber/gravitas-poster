@@ -1,5 +1,5 @@
 {
-  "_readme": "One caption list per Buffer service. The script picks variant (day number mod list length) so posts rotate. Placeholders: {practice} {why} {area} {link}. {link} is APP_LINK, or empty. No emojis, Oxford comma, never the words confidence, character, or respect, and never start with Today.",
+  "_readme": "One caption list per Buffer service. The script picks variant (day number mod list length) so posts rotate. Placeholders: {practice} {why} {area} {pillar} {link}. {pillar} is the day's pillar in capitals (CONFIDENCE, CHARACTER, RESPECT). {link} is APP_LINK, or empty. No emojis, Oxford comma, never the words confidence, character, or respect, and never start with Today.",
   "twitter": [
     "{practice}.\n\n{why}"
   ],
@@ -10,9 +10,7 @@
     "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: {practice}.\n{why}\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.{link}"
   ],
   "instagram": [
-    "{practice}.\n{why}\n\nEvery practice you finish shapes your Stone in GRAVITAS.\n\n#gravitas #dailypractice #discipline #selfimprovement #mensgrowth",
-    "The practice: {practice}.\n\n{why}\n\nOne practice a day. The Stone remembers.\n\n#gravitas #dailypractice #habits #selfimprovement #mensgrowth",
-    "{practice}.\n\n{why} Save this and come back to it tonight.\n\n#gravitas #dailypractice #discipline #habits #mensgrowth"
+    "BUILD {pillar}.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better."
   ],
   "threads": [
     "{practice}.\n\n{why}",

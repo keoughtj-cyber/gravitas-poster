@@ -147,6 +147,7 @@ def build_captions(practice, day_no):
         "practice": practice["practice"].rstrip(". "),
         "why": sentence(practice.get("why", "")),
         "area": practice.get("area", ""),
+        "pillar": practice.get("pillar", "").upper(),
         "link": f"\n\n{link}" if link else "",
     }
     out = {}
