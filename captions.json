@@ -1,0 +1,45 @@
+{
+  "_readme": "One caption list per Buffer service. The script picks variant (day number mod list length) so posts rotate. Placeholders: {practice} {why} {area} {link}. {link} is APP_LINK, or empty. No emojis, Oxford comma, never the words confidence, character, or respect, and never start with Today.",
+
+  "twitter": [
+    "The Stone. {practice}.\n\n{why}",
+    "The Stone. One practice, one more layer.\n\n{practice}.",
+    "The Stone. {practice}.\n\n{why} Do it once and it counts."
+  ],
+
+  "linkedin": [
+    "{practice}.\n\n{why}\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.{link}",
+    "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: {practice}.\n\n{why}\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.{link}",
+    "{practice}.\n\nThat is the whole assignment. {why}\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.{link}",
+    "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: {practice}.\n{why}\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.{link}"
+  ],
+
+  "instagram": [
+    "{practice}.\n{why}\n\nEvery practice you finish shapes your Stone in GRAVITAS.\n\n#gravitas #dailypractice #discipline #selfimprovement #mensgrowth",
+    "The practice: {practice}.\n\n{why}\n\nOne practice a day. The Stone remembers.\n\n#gravitas #dailypractice #habits #selfimprovement #mensgrowth",
+    "{practice}.\n\n{why} Save this and come back to it tonight.\n\n#gravitas #dailypractice #discipline #habits #mensgrowth"
+  ],
+
+  "threads": [
+    "{practice}.\n\n{why}",
+    "The practice: {practice}.\n\n{why} One rep is enough.",
+    "{practice}.\n\nThat is it. {why}"
+  ],
+
+  "facebook": [
+    "{practice}.\n\n{why}\n\nEvery practice you finish in GRAVITAS adds to your Stone.{link}",
+    "The practice: {practice}.\n\n{why}{link}"
+  ],
+
+  "tiktok": [
+    "{practice}. {why} #gravitas #dailypractice #selfimprovement"
+  ],
+
+  "bluesky": [
+    "{practice}.\n\n{why}"
+  ],
+
+  "_default": [
+    "{practice}.\n\n{why}"
+  ]
+}
