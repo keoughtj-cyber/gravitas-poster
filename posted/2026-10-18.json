@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-18",
+  "results": {
+    "twitter": {
+      "channel": "gravitas",
+      "post_id": "pc1",
+      "due_at": "2026-10-18T14:00:00.000Z"
+    },
+    "instagram": {
+      "channel": "gravitas.app",
+      "post_id": "pc2",
+      "due_at": "2026-10-18T14:00:00.000Z"
+    },
+    "linkedin": {
+      "channel": "GRAVITAS",
+      "post_id": "pc3",
+      "due_at": "2026-10-18T14:00:00.000Z"
+    },
+    "area1:twitter": {
+      "channel": "gravitas",
+      "post_id": "pc1",
+      "due_at": "2026-10-18T16:00:00.000Z"
+    },
+    "area1:instagram": {
+      "channel": "gravitas.app",
+      "post_id": "pc2",
+      "due_at": "2026-10-18T16:00:00.000Z"
+    },
+    "area1:linkedin": {
+      "channel": "GRAVITAS",
+      "post_id": "pc3",
+      "due_at": "2026-10-18T16:00:00.000Z"
+    },
+    "area2:twitter": {
+      "channel": "gravitas",
+      "post_id": "pc1",
+      "due_at": "2026-10-18T18:00:00.000Z"
+    },
+    "area2:instagram": {
+      "channel": "gravitas.app",
+      "post_id": "pc2",
+      "due_at": "2026-10-18T18:00:00.000Z"
+    },
+    "area2:linkedin": {
+      "channel": "GRAVITAS",
+      "post_id": "pc3",
+      "due_at": "2026-10-18T18:00:00.000Z"
+    },
+    "area3:twitter": {
+      "channel": "gravitas",
+      "post_id": "pc1",
+      "due_at": "2026-10-18T20:00:00.000Z"
+    },
+    "area3:instagram": {
+      "channel": "gravitas.app",
+      "post_id": "pc2",
+      "due_at": "2026-10-18T20:00:00.000Z"
+    },
+    "area3:linkedin": {
+      "channel": "GRAVITAS",
+      "post_id": "pc3",
+      "due_at": "2026-10-18T20:00:00.000Z"
+    },
+    "area4:twitter": {
+      "channel": "gravitas",
+      "post_id": "pc1",
+      "due_at": "2026-10-18T22:00:00.000Z"
+    },
+    "area4:instagram": {
+      "channel": "gravitas.app",
+      "post_id": "pc2",
+      "due_at": "2026-10-18T22:00:00.000Z"
+    },
+    "area4:linkedin": {
+      "channel": "GRAVITAS",
+      "post_id": "pc3",
+      "due_at": "2026-10-18T22:00:00.000Z"
+    },
+    "area5:twitter": {
+      "channel": "gravitas",
+      "post_id": "pc1",
+      "due_at": "2026-10-19T00:00:00.000Z"
+    },
+    "area5:instagram": {
+      "channel": "gravitas.app",
+      "post_id": "pc2",
+      "due_at": "2026-10-19T00:00:00.000Z"
+    },
+    "area5:linkedin": {
+      "channel": "GRAVITAS",
+      "post_id": "pc3",
+      "due_at": "2026-10-19T00:00:00.000Z"
+    }
+  }
+}

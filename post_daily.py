@@ -40,6 +40,14 @@ PILLARS = [p.strip() for p in os.environ.get("BASE_PILLAR_ORDER", "Confidence,Ch
 BASE_EPOCH = dt.date.fromisoformat(os.environ.get("BASE_EPOCH", "2026-01-01"))
 BASE_SEED = int(os.environ.get("BASE_SEED", "0x6761766974617321"), 0)
 
+# Extra posts: one per Focus area, AREA_GAP_HOURS apart after the main post.
+AREA_ORDER = [a.strip() for a in os.environ.get(
+    "AREA_ORDER",
+    "Habits and Discipline,Relationships and Friendships,Career and Leadership,Calm and Mindset,Fitness and Health",
+).split(",") if a.strip()]
+AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
+AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
+
 # Services that get the caption only, no card image.
 TEXT_ONLY = {x.strip() for x in os.environ.get("TEXT_ONLY_SERVICES", "twitter").split(",") if x.strip()}
 
@@ -140,6 +148,35 @@ def pick_base(rows, day):
     return pool[step % len(pool)], idx
 
 
+def pick_area(rows, day, area, avoid_id=""):
+    """The Base rule run inside one area: same day pillar, area-only pool."""
+    idx = day_index(day)
+    pillar = PILLARS[idx % len(PILLARS)]
+    in_area = [r for r in rows if r.get("area", "").lower() == area.lower()]
+    if not in_area:
+        return None
+    pool = [r for r in in_area if r["pillar"].lower() == pillar.lower()] or in_area
+    pool.sort(key=lambda r: r.get("id", ""))
+    swift_shuffle(pool, SplitMix64(BASE_SEED ^ stable_hash(f"{pillar}|{area}")))
+    pick = pool[(idx // 3) % len(pool)]
+    if pick.get("id") == avoid_id and len(pool) > 1:
+        pick = pool[(idx // 3 + 1) % len(pool)]
+    return pick
+
+
+def day_slots(rows, day):
+    """Every post for the day: the main Base post, then one per area."""
+    base, idx = pick_base(rows, day)
+    slots = [{"key": "base", "area": "", "offset_hours": 0, "practice": base}]
+    if AREA_POSTS:
+        for n, area in enumerate(AREA_ORDER, start=1):
+            practice = pick_area(rows, day, area, base.get("id", ""))
+            if practice:
+                slots.append({"key": f"area{n}", "area": area,
+                              "offset_hours": n * AREA_GAP_HOURS, "practice": practice})
+    return slots, idx
+
+
 # ---------- captions ----------
 
 def sentence(text):
@@ -203,7 +240,7 @@ def spaced_width(draw, text, fnt, tracking):
     return sum(draw.textlength(c, font=fnt) for c in text) + tracking * (len(text) - 1)
 
 
-def render_card(practice, day, out_path):
+def render_card(practice, day, out_path, subtitle=""):
     """Black 4:5 card in the gravitas_ccr Instagram style."""
     W, H = 1080, 1350
     white, grey, dim = (255, 255, 255), (150, 150, 150), (140, 140, 140)
@@ -221,6 +258,8 @@ def render_card(practice, day, out_path):
     lines = wrap(draw, sentence(practice["practice"]), practice_f, max_w)
     why_lines = wrap(draw, sentence(practice.get("why", "")), why_f, max_w) if practice.get("why") else []
     date = day.strftime("%B %-d, %Y").upper()
+    if subtitle:
+        date = f"{date} \u00b7 {subtitle.upper()}"
     pillar = f"BUILD {practice['pillar'].upper()}"
 
     # The block is left-aligned text, centered as a whole on the card.
@@ -321,9 +360,9 @@ def create_post(channel, text, image_url, due_at):
     raise RuntimeError(last)
 
 
-def due_at_iso(day):
+def due_at_iso(day, offset_hours=0):
     hh, mm = (int(x) for x in POST_TIME.split(":"))
-    local = dt.datetime.combine(day, dt.time(hh, mm), TZ)
+    local = dt.datetime.combine(day, dt.time(hh, mm), TZ) + dt.timedelta(hours=offset_hours)
     soonest = dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=10)
     when = max(local.astimezone(dt.timezone.utc), soonest)
     return when.strftime("%Y-%m-%dT%H:%M:%S.000Z")
@@ -351,31 +390,38 @@ def target_day():
 
 def cmd_render():
     day = target_day()
-    practice, idx = pick_base(load_library(), day)
     stem = day.isoformat()
-    tmp = CARDS / "_render.jpg"
-    render_card(practice, day, tmp)
-    # A new file name whenever the card changes, so no cached old image gets posted.
-    digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
-    image = f"{stem}-{digest}.jpg"
+    slots, idx = day_slots(load_library(), day)
+    keep = set()
+    for slot in slots:
+        tmp = CARDS / "_render.jpg"
+        render_card(slot["practice"], day, tmp, slot["area"])
+        # A new file name whenever the card changes, so no cached old image gets posted.
+        digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
+        suffix = "" if slot["key"] == "base" else f"-{slot['key']}"
+        slot["image"] = f"{stem}{suffix}-{digest}.jpg"
+        tmp.rename(CARDS / slot["image"])
+        keep.add(slot["image"])
+        slot["captions"] = build_captions(slot["practice"], idx)
+        print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
     for old in CARDS.glob(f"{stem}*.jpg"):
-        if old.name != image:
+        if old.name not in keep:
             old.unlink()
-    tmp.rename(CARDS / image)
-    meta = {"date": stem, "day_index": idx, "practice": practice, "image": image,
-            "captions": build_captions(practice, idx)}
+    meta = {"date": stem, "day_index": idx, "slots": slots}
     (CARDS / f"{stem}.json").write_text(json.dumps(meta, indent=2))
-    print(f"Rendered {stem}: {practice.get('id', '')} {practice['practice']}")
 
 
 def cmd_preview():
     day = target_day()
-    practice, idx = pick_base(load_library(), day)
-    print(f"{day} day {idx} {practice['pillar']} {practice.get('id', '')}")
-    for service, text in build_captions(practice, idx).items():
-        print(f"\n--- {service} ({len(text)} chars) ---\n{text}")
-    render_card(practice, day, CARDS / "preview.jpg")
-    print(f"\nCard: {CARDS / 'preview.jpg'}")
+    slots, idx = day_slots(load_library(), day)
+    print(f"{day} day {idx}")
+    for slot in slots:
+        p = slot["practice"]
+        print(f"\n=== {slot['key']} +{slot['offset_hours']:g}h {slot['area'] or 'Base'}: {p.get('id', '')} ({p['pillar']})")
+        for service, text in build_captions(p, idx).items():
+            if service in ("instagram", "twitter"):
+                print(f"--- {service} ---\n{text}")
+        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", slot["area"])
 
 
 def cmd_publish():
@@ -385,33 +431,37 @@ def cmd_publish():
     redo = os.environ.get("REDO", "").lower() == "true"
     done = json.loads(marker.read_text())["results"] if marker.exists() and not redo else {}
     meta = json.loads((CARDS / f"{stem}.json").read_text())
-    base = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
-    if not base:
+    base_url = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
+    if not base_url:
         sys.exit("Set IMAGE_BASE_URL.")
-    image_url = f"{base}/{meta.get('image', stem + '.jpg')}"
-    wait_for_url(image_url)
 
-    due = due_at_iso(day)
+    channels = buffer_channels()
     results, failed = {}, []
-    for ch in buffer_channels():
-        if done.get(ch["service"], {}).get("post_id"):
-            results[ch["service"]] = done[ch["service"]]
-            print(f"Already scheduled {ch['service']}, skipping.")
-            continue
-        text = meta["captions"].get(ch["service"]) or meta["captions"]["_default"]
-        try:
-            post = create_post(ch, text, image_url, due)
-            results[ch["service"]] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
-            print(f"Scheduled {ch['service']} ({ch['name']}) for {due}")
-        except RuntimeError as e:
-            failed.append(ch["service"])
-            results[ch["service"]] = {"channel": ch["name"], "error": str(e)}
-            print(f"FAILED {ch['service']} ({ch['name']}): {e}")
+    for slot in meta["slots"]:
+        image_url = f"{base_url}/{slot['image']}"
+        wait_for_url(image_url)
+        due = due_at_iso(day, slot["offset_hours"])
+        for ch in channels:
+            # The main post keeps the plain service name so older records still count.
+            key = ch["service"] if slot["key"] == "base" else f"{slot['key']}:{ch['service']}"
+            if done.get(key, {}).get("post_id"):
+                results[key] = done[key]
+                print(f"Already scheduled {key}, skipping.")
+                continue
+            text = slot["captions"].get(ch["service"]) or slot["captions"]["_default"]
+            try:
+                post = create_post(ch, text, image_url, due)
+                results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
+                print(f"Scheduled {key} ({ch['name']}) for {due}")
+            except RuntimeError as e:
+                failed.append(key)
+                results[key] = {"channel": ch["name"], "error": str(e)}
+                print(f"FAILED {key} ({ch['name']}): {e}")
 
     POSTED.mkdir(exist_ok=True)
-    marker.write_text(json.dumps({"date": stem, "image": image_url, "results": results}, indent=2))
+    marker.write_text(json.dumps({"date": stem, "results": results}, indent=2))
     if failed:
-        sys.exit(f"Some channels failed: {', '.join(failed)}")
+        sys.exit(f"Some posts failed: {', '.join(failed)}")
 
 
 if __name__ == "__main__":

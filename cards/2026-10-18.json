@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-18",
+  "day_index": 290,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-143",
+        "practice": "Track how you spend your work hours for one day",
+        "why": "Knowing where time goes protects it.",
+        "pillar": "Respect",
+        "area": "Career and Leadership",
+        "tier": "free",
+        "status": "approved",
+        "chars": "84",
+        "check": "OK",
+        "notes": "Newport 2016, Deep Work; Leroy 2009, attention residue",
+        "concept": "Deep work"
+      },
+      "image": "2026-10-18-58c87a5b.jpg",
+      "captions": {
+        "twitter": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.",
+        "linkedin": "Track how you spend your work hours for one day.\n\nThat is the whole assignment. Knowing where time goes protects it.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Track how you spend your work hours for one day.\n\nThat is it. Knowing where time goes protects it.",
+        "facebook": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Track how you spend your work hours for one day. Knowing where time goes protects it. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.",
+        "_default": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it."
+      }
+    },
+    {
+      "key": "area1",
+      "area": "Habits and Discipline",
+      "offset_hours": 2.0,
+      "practice": {
+        "id": "HAB-168",
+        "practice": "Clean your shoes and keep them ready to wear",
+        "why": "Care shows in small details.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline",
+        "tier": "free",
+        "status": "approved",
+        "chars": "73",
+        "check": "OK",
+        "notes": "Saxbe and Repetti 2010, cluttered homes and stress",
+        "concept": "Order at home"
+      },
+      "image": "2026-10-18-area1-4498a98b.jpg",
+      "captions": {
+        "twitter": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details.",
+        "linkedin": "Clean your shoes and keep them ready to wear.\n\nThat is the whole assignment. Care shows in small details.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Clean your shoes and keep them ready to wear.\n\nThat is it. Care shows in small details.",
+        "facebook": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Clean your shoes and keep them ready to wear. Care shows in small details. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details.",
+        "_default": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details."
+      }
+    },
+    {
+      "key": "area2",
+      "area": "Relationships and Friendships",
+      "offset_hours": 4.0,
+      "practice": {
+        "id": "REL-055",
+        "practice": "Notice who drains you and see them a little less",
+        "why": "Your energy is limited.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships",
+        "tier": "free",
+        "status": "approved",
+        "chars": "72",
+        "check": "OK",
+        "notes": "Speed, Goldstein, and Goldfried 2018, assertiveness research",
+        "concept": "Hold boundaries"
+      },
+      "image": "2026-10-18-area2-15526f5b.jpg",
+      "captions": {
+        "twitter": "Notice who drains you and see them a little less.\n\nYour energy is limited.",
+        "linkedin": "Notice who drains you and see them a little less.\n\nThat is the whole assignment. Your energy is limited.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Notice who drains you and see them a little less.\n\nThat is it. Your energy is limited.",
+        "facebook": "Notice who drains you and see them a little less.\n\nYour energy is limited.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Notice who drains you and see them a little less. Your energy is limited. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Notice who drains you and see them a little less.\n\nYour energy is limited.",
+        "_default": "Notice who drains you and see them a little less.\n\nYour energy is limited."
+      }
+    },
+    {
+      "key": "area3",
+      "area": "Career and Leadership",
+      "offset_hours": 6.0,
+      "practice": {
+        "id": "CAR-095",
+        "practice": "Close tabs and apps not needed for your current task",
+        "why": "Clear screens clear minds.",
+        "pillar": "Respect",
+        "area": "Career and Leadership",
+        "tier": "free",
+        "status": "approved",
+        "chars": "79",
+        "check": "OK",
+        "notes": "Newport 2016, Deep Work; Leroy 2009, attention residue",
+        "concept": "Deep work"
+      },
+      "image": "2026-10-18-area3-1a187c3b.jpg",
+      "captions": {
+        "twitter": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds.",
+        "linkedin": "Close tabs and apps not needed for your current task.\n\nThat is the whole assignment. Clear screens clear minds.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Close tabs and apps not needed for your current task.\n\nThat is it. Clear screens clear minds.",
+        "facebook": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Close tabs and apps not needed for your current task. Clear screens clear minds. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds.",
+        "_default": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds."
+      }
+    },
+    {
+      "key": "area4",
+      "area": "Calm and Mindset",
+      "offset_hours": 8.0,
+      "practice": {
+        "id": "CAL-013",
+        "practice": "Spend twenty minutes outside among trees or water",
+        "why": "Nature lowers stress.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset",
+        "tier": "free",
+        "status": "approved",
+        "chars": "71",
+        "check": "OK",
+        "notes": "White et al. 2019, 120 minutes a week in nature",
+        "concept": "Time in nature"
+      },
+      "image": "2026-10-18-area4-5ba33891.jpg",
+      "captions": {
+        "twitter": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress.",
+        "linkedin": "Spend twenty minutes outside among trees or water.\n\nThat is the whole assignment. Nature lowers stress.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Spend twenty minutes outside among trees or water.\n\nThat is it. Nature lowers stress.",
+        "facebook": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Spend twenty minutes outside among trees or water. Nature lowers stress. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress.",
+        "_default": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress."
+      }
+    },
+    {
+      "key": "area5",
+      "area": "Fitness and Health",
+      "offset_hours": 10.0,
+      "practice": {
+        "id": "FIT-132",
+        "practice": "Take a few minutes to foam roll or massage sore spots",
+        "why": "Care speeds recovery.",
+        "pillar": "Respect",
+        "area": "Fitness and Health",
+        "tier": "free",
+        "status": "approved",
+        "chars": "75",
+        "check": "OK",
+        "notes": "Recovery and adaptation in training science",
+        "concept": "Recover well"
+      },
+      "image": "2026-10-18-area5-d4c30b13.jpg",
+      "captions": {
+        "twitter": "Take a few minutes to foam roll or massage sore spots.\n\nCare speeds recovery.",
+        "linkedin": "Take a few minutes to foam roll or massage sore spots.\n\nThat is the whole assignment. Care speeds recovery.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a few minutes to foam roll or massage sore spots.\n\nThat is it. Care speeds recovery.",
+        "facebook": "Take a few minutes to foam roll or massage sore spots.\n\nCare speeds recovery.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Take a few minutes to foam roll or massage sore spots. Care speeds recovery. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a few minutes to foam roll or massage sore spots.\n\nCare speeds recovery.",
+        "_default": "Take a few minutes to foam roll or massage sore spots.\n\nCare speeds recovery."
+      }
+    }
+  ]
+}
