@@ -47,6 +47,8 @@ AREA_ORDER = [a.strip() for a in os.environ.get(
 ).split(",") if a.strip()]
 AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
 AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
+# Also post the main practice to the Instagram Story at the same time.
+STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
 # Short focus names for the card, as the app shows them.
 AREA_SHORT = {
     "habits and discipline": "Habits",
@@ -175,6 +177,8 @@ def day_slots(rows, day):
     """Every post for the day: the main Base post, then one per area."""
     base, idx = pick_base(rows, day)
     slots = [{"key": "base", "area": "", "offset_hours": 0, "practice": base}]
+    if STORY_POST:
+        slots.append({"key": "story", "area": "", "offset_hours": 0, "practice": base, "story": True})
     if AREA_POSTS:
         for n, area in enumerate(AREA_ORDER, start=1):
             # Each later post moves to the next pillar, so the day mixes all three.
@@ -251,9 +255,10 @@ def spaced_width(draw, text, fnt, tracking):
     return sum(draw.textlength(c, font=fnt) for c in text) + tracking * (len(text) - 1)
 
 
-def render_card(practice, day, out_path, subtitle=""):
+def render_card(practice, day, out_path, subtitle="", story=False):
     """Black 4:5 card in the gravitas_ccr Instagram style."""
-    W, H = 1080, 1350
+    # Feed cards are 4:5. Story cards are 9:16 with the brand kept clear of the Story bar.
+    W, H = (1080, 1920) if story else (1080, 1350)
     white, grey, dim = (255, 255, 255), (150, 150, 150), (140, 140, 140)
 
     img = Image.new("RGB", (W, H), (0, 0, 0))
@@ -283,9 +288,9 @@ def render_card(practice, day, out_path, subtitle=""):
 
     line_h, why_h = 70, 40
     block_h = 26 + 22 + 48 + 24 + len(lines) * line_h + (14 + len(why_lines) * why_h if why_lines else 0)
-    y = int(H * 0.53 - block_h / 2)
+    y = int(H * (0.5 if story else 0.53) - block_h / 2)
 
-    spaced(draw, (x, 70), "GRAVITAS", brand_f, white, 5)
+    spaced(draw, (x, 250 if story else 70), "GRAVITAS", brand_f, white, 5)
     spaced(draw, (x, y), date, date_f, dim, 3)
     y += 26 + 22
     spaced(draw, (x, y), pillar, pillar_f, white, 4)
@@ -347,7 +352,7 @@ mutation($input: CreatePostInput!) {
 }"""
 
 
-def create_post(channel, text, image_url, due_at):
+def create_post(channel, text, image_url, due_at, story=False):
     base = {
         "channelId": channel["id"],
         "text": text,
@@ -357,8 +362,14 @@ def create_post(channel, text, image_url, due_at):
     }
     if channel["service"] not in TEXT_ONLY:
         base["assets"] = [{"image": {"url": image_url}}]
-    attempts = [base]
-    if channel["service"] == "instagram":
+    if story:
+        # Stories publish automatically only with no caption, stickers, or links.
+        base["text"] = ""
+        base["metadata"] = {"instagram": {"type": "story", "shouldShareToFeed": False}}
+        attempts = [base]
+    else:
+        attempts = [base]
+    if channel["service"] == "instagram" and not story:
         attempts.insert(0, {**base, "metadata": {"instagram": {"type": "post", "shouldShareToFeed": True}}})
     last = None
     for payload in attempts:
@@ -408,7 +419,7 @@ def cmd_render():
     keep = set()
     for slot in slots:
         tmp = CARDS / "_render.jpg"
-        render_card(slot["practice"], day, tmp, AREA_SHORT.get(slot["area"].lower(), slot["area"]))
+        render_card(slot["practice"], day, tmp, AREA_SHORT.get(slot["area"].lower(), slot["area"]), slot.get("story", False))
         # A new file name whenever the card changes, so no cached old image gets posted.
         digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
         suffix = "" if slot["key"] == "base" else f"-{slot['key']}"
@@ -434,7 +445,7 @@ def cmd_preview():
         for service, text in build_captions(p, idx, slot["key"] != "base").items():
             if service in ("instagram", "twitter"):
                 print(f"--- {service} ---\n{text}")
-        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", AREA_SHORT.get(slot["area"].lower(), slot["area"]))
+        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", AREA_SHORT.get(slot["area"].lower(), slot["area"]), slot.get("story", False))
 
 
 def cmd_publish():
@@ -455,6 +466,8 @@ def cmd_publish():
         wait_for_url(image_url)
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
+            if slot.get("story") and ch["service"] != "instagram":
+                continue
             # The main post keeps the plain service name so older records still count.
             key = ch["service"] if slot["key"] == "base" else f"{slot['key']}:{ch['service']}"
             if done.get(key, {}).get("post_id"):
@@ -463,7 +476,7 @@ def cmd_publish():
                 continue
             text = slot["captions"].get(ch["service"]) or slot["captions"]["_default"]
             try:
-                post = create_post(ch, text, image_url, due)
+                post = create_post(ch, text, image_url, due, slot.get("story", False))
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
             except RuntimeError as e:

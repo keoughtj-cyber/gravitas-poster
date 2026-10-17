@@ -32,6 +32,7 @@ env:
   CARD_FOOTER: ${{ vars.CARD_FOOTER || 'ONE PRACTICE A DAY' }}
   BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
+  STORY_POST: ${{ vars.STORY_POST || 'true' }}
   AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
   AREA_GAP_HOURS: ${{ vars.AREA_GAP_HOURS || '2' }}
   BASE_SEED: ${{ vars.BASE_SEED || '0x6761766974617321' }}
