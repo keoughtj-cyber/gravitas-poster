@@ -1,22 +1,168 @@
 {
   "date": "2026-10-17",
   "day_index": 289,
-  "practice": {
-    "id": "CAL-150",
-    "practice": "Ask yourself what this feeling is trying to tell you",
-    "why": "Feelings carry information.",
-    "pillar": "Character",
-    "area": "Calm and Mindset"
-  },
-  "image": "2026-10-17-9c873873.jpg",
-  "captions": {
-    "twitter": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
-    "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
-    "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
-    "threads": "The practice: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information. One rep is enough.",
-    "facebook": "The practice: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
-    "tiktok": "Ask yourself what this feeling is trying to tell you. Feelings carry information. #gravitas #dailypractice #selfimprovement",
-    "bluesky": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
-    "_default": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information."
-  }
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-150",
+        "practice": "Ask yourself what this feeling is trying to tell you",
+        "why": "Feelings carry information.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-17-9c873873.jpg",
+      "captions": {
+        "twitter": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information. One rep is enough.",
+        "facebook": "The practice: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
+        "tiktok": "Ask yourself what this feeling is trying to tell you. Feelings carry information. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
+        "_default": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information."
+      }
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-150",
+        "practice": "Ask yourself what this feeling is trying to tell you",
+        "why": "Feelings carry information.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-10-17-story-8dca1511.jpg",
+      "captions": {
+        "twitter": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information. One rep is enough.",
+        "facebook": "The practice: Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
+        "tiktok": "Ask yourself what this feeling is trying to tell you. Feelings carry information. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information.",
+        "_default": "Ask yourself what this feeling is trying to tell you.\n\nFeelings carry information."
+      }
+    },
+    {
+      "key": "area1",
+      "area": "Habits and Discipline",
+      "offset_hours": 2.0,
+      "practice": {
+        "id": "HAB-168",
+        "practice": "Clean your shoes and keep them ready to wear",
+        "why": "Care shows in small details.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-17-area1-029c730c.jpg",
+      "captions": {
+        "twitter": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Clean your shoes and keep them ready to wear.\n\nCare shows in small details.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Clean your shoes and keep them ready to wear.\n\nCare shows in small details. One rep is enough.",
+        "facebook": "The practice: Clean your shoes and keep them ready to wear.\n\nCare shows in small details.",
+        "tiktok": "Clean your shoes and keep them ready to wear. Care shows in small details. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details.",
+        "_default": "Clean your shoes and keep them ready to wear.\n\nCare shows in small details."
+      }
+    },
+    {
+      "key": "area2",
+      "area": "Relationships and Friendships",
+      "offset_hours": 4.0,
+      "practice": {
+        "id": "REL-029",
+        "practice": "Join a group, class, or team where you know no one",
+        "why": "New circles start with one visit.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-17-area2-f988ad0d.jpg",
+      "captions": {
+        "twitter": "Join a group, class, or team where you know no one.\n\nNew circles start with one visit.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Join a group, class, or team where you know no one.\n\nNew circles start with one visit.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Join a group, class, or team where you know no one.\n\nNew circles start with one visit. One rep is enough.",
+        "facebook": "The practice: Join a group, class, or team where you know no one.\n\nNew circles start with one visit.",
+        "tiktok": "Join a group, class, or team where you know no one. New circles start with one visit. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Join a group, class, or team where you know no one.\n\nNew circles start with one visit.",
+        "_default": "Join a group, class, or team where you know no one.\n\nNew circles start with one visit."
+      }
+    },
+    {
+      "key": "area3",
+      "area": "Career and Leadership",
+      "offset_hours": 6.0,
+      "practice": {
+        "id": "CAR-064",
+        "practice": "Explain a decision clearly so others can follow it",
+        "why": "Clarity is a kindness.",
+        "pillar": "Character",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-10-17-area3-b5004d5c.jpg",
+      "captions": {
+        "twitter": "Explain a decision clearly so others can follow it.\n\nClarity is a kindness.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Explain a decision clearly so others can follow it.\n\nClarity is a kindness.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Explain a decision clearly so others can follow it.\n\nClarity is a kindness. One rep is enough.",
+        "facebook": "The practice: Explain a decision clearly so others can follow it.\n\nClarity is a kindness.",
+        "tiktok": "Explain a decision clearly so others can follow it. Clarity is a kindness. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Explain a decision clearly so others can follow it.\n\nClarity is a kindness.",
+        "_default": "Explain a decision clearly so others can follow it.\n\nClarity is a kindness."
+      }
+    },
+    {
+      "key": "area4",
+      "area": "Calm and Mindset",
+      "offset_hours": 8.0,
+      "practice": {
+        "id": "CAL-013",
+        "practice": "Spend twenty minutes outside among trees or water",
+        "why": "Nature lowers stress.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-17-area4-09fb56d1.jpg",
+      "captions": {
+        "twitter": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Spend twenty minutes outside among trees or water.\n\nNature lowers stress.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Spend twenty minutes outside among trees or water.\n\nNature lowers stress. One rep is enough.",
+        "facebook": "The practice: Spend twenty minutes outside among trees or water.\n\nNature lowers stress.",
+        "tiktok": "Spend twenty minutes outside among trees or water. Nature lowers stress. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress.",
+        "_default": "Spend twenty minutes outside among trees or water.\n\nNature lowers stress."
+      }
+    },
+    {
+      "key": "area5",
+      "area": "Fitness and Health",
+      "offset_hours": 10.0,
+      "practice": {
+        "id": "FIT-019",
+        "practice": "Climb a hill or stairs until you feel your heart work",
+        "why": "Hard efforts build fitness.",
+        "pillar": "Confidence",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-17-area5-4985464f.jpg",
+      "captions": {
+        "twitter": "Climb a hill or stairs until you feel your heart work.\n\nHard efforts build fitness.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Climb a hill or stairs until you feel your heart work.\n\nHard efforts build fitness.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Climb a hill or stairs until you feel your heart work.\n\nHard efforts build fitness. One rep is enough.",
+        "facebook": "The practice: Climb a hill or stairs until you feel your heart work.\n\nHard efforts build fitness.",
+        "tiktok": "Climb a hill or stairs until you feel your heart work. Hard efforts build fitness. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Climb a hill or stairs until you feel your heart work.\n\nHard efforts build fitness.",
+        "_default": "Climb a hill or stairs until you feel your heart work.\n\nHard efforts build fitness."
+      }
+    }
+  ]
 }
