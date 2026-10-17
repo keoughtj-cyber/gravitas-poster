@@ -1,0 +1,68 @@
+name: Daily post
+
+on:
+  schedule:
+    # 09:17 UTC is about 5 a.m. Eastern. The post itself goes out at POST_TIME,
+    # so a late cron run does not change when people see it.
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Post for this date (YYYY-MM-DD). Leave blank for today."
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-post
+  cancel-in-progress: false
+
+env:
+  POST_DATE: ${{ github.event.inputs.date }}
+  POST_TZ: ${{ vars.POST_TZ || 'America/New_York' }}
+  POST_TIME: ${{ vars.POST_TIME || '07:30' }}
+  LIBRARY_CSV_URL: ${{ vars.LIBRARY_CSV_URL }}
+  APP_LINK: ${{ vars.APP_LINK }}
+  CARD_FOOTER: ${{ vars.CARD_FOOTER || 'ONE PRACTICE A DAY' }}
+  BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
+  BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
+  BASE_SEED: ${{ vars.BASE_SEED || '20260101' }}
+  BASE_EPOCH: ${{ vars.BASE_EPOCH || '2026-01-01' }}
+  BASE_PILLAR_ORDER: ${{ vars.BASE_PILLAR_ORDER || 'Confidence,Character,Respect' }}
+  IMAGE_BASE_URL: ${{ vars.IMAGE_BASE_URL || format('https://raw.githubusercontent.com/{0}/{1}/cards', github.repository, github.ref_name) }}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Draw the card
+        run: python post_daily.py render
+
+      - name: Publish the card image
+        run: |
+          git config user.name "gravitas-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cards
+          git diff --cached --quiet || git commit -m "Card for ${POST_DATE:-$(TZ=$POST_TZ date +%F)}"
+          git push
+
+      - name: Schedule on Buffer
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python post_daily.py publish
+
+      - name: Save the result
+        if: always()
+        run: |
+          git add posted || true
+          git diff --cached --quiet || git commit -m "Posted ${POST_DATE:-$(TZ=$POST_TZ date +%F)}"
+          git push || true
