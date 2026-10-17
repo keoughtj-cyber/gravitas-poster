@@ -57,6 +57,9 @@ def load_library():
         text = Path(path).read_text(encoding="utf-8-sig")
     else:
         sys.exit("Set LIBRARY_CSV_URL (published library_publish CSV) or LIBRARY_CSV_PATH.")
+    # Keep a copy of what was read, so a mismatch with the app can be checked later.
+    CARDS.mkdir(parents=True, exist_ok=True)
+    (CARDS / "library_latest.csv").write_text(text, encoding="utf-8")
     rows = []
     for row in csv.DictReader(io.StringIO(text)):
         row = {(k or "").strip().lower(): (v or "").strip() for k, v in row.items()}
@@ -66,6 +69,10 @@ def load_library():
             rows.append(row)
     if not rows:
         sys.exit("Library is empty. Check the CSV link and that rows are approved.")
+    counts = {}
+    for r in rows:
+        counts[r["pillar"]] = counts.get(r["pillar"], 0) + 1
+    print(f"Library: {len(rows)} rows, by pillar {counts}")
     return rows
 
 
