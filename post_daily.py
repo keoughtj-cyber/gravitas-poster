@@ -156,10 +156,9 @@ def pick_base(rows, day):
     return pool[step % len(pool)], idx
 
 
-def pick_area(rows, day, area, avoid_id=""):
-    """The Base rule run inside one area: same day pillar, area-only pool."""
+def pick_area(rows, day, area, pillar, avoid_id=""):
+    """The Base rule run inside one area, for the given pillar."""
     idx = day_index(day)
-    pillar = PILLARS[idx % len(PILLARS)]
     in_area = [r for r in rows if r.get("area", "").lower() == area.lower()]
     if not in_area:
         return None
@@ -178,7 +177,9 @@ def day_slots(rows, day):
     slots = [{"key": "base", "area": "", "offset_hours": 0, "practice": base}]
     if AREA_POSTS:
         for n, area in enumerate(AREA_ORDER, start=1):
-            practice = pick_area(rows, day, area, base.get("id", ""))
+            # Each later post moves to the next pillar, so the day mixes all three.
+            pillar = PILLARS[(idx + n) % len(PILLARS)]
+            practice = pick_area(rows, day, area, pillar, base.get("id", ""))
             if practice:
                 slots.append({"key": f"area{n}", "area": area,
                               "offset_hours": n * AREA_GAP_HOURS, "practice": practice})
