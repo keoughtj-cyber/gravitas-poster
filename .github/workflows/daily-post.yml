@@ -10,6 +10,10 @@ on:
       date:
         description: "Post for this date (YYYY-MM-DD). Leave blank for today."
         required: false
+      redo:
+        description: "Post again even if this date was already scheduled (delete the old ones in Buffer first)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -20,6 +24,7 @@ concurrency:
 
 env:
   POST_DATE: ${{ github.event.inputs.date }}
+  REDO: ${{ github.event.inputs.redo }}
   POST_TZ: ${{ vars.POST_TZ || 'America/New_York' }}
   POST_TIME: ${{ vars.POST_TIME || '07:30' }}
   LIBRARY_CSV_URL: ${{ vars.LIBRARY_CSV_URL }}

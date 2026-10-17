@@ -366,7 +366,8 @@ def cmd_publish():
     day = target_day()
     stem = day.isoformat()
     marker = POSTED / f"{stem}.json"
-    done = json.loads(marker.read_text())["results"] if marker.exists() else {}
+    redo = os.environ.get("REDO", "").lower() == "true"
+    done = json.loads(marker.read_text())["results"] if marker.exists() and not redo else {}
     meta = json.loads((CARDS / f"{stem}.json").read_text())
     base = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
     if not base:
