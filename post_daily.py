@@ -11,6 +11,7 @@ Picks the day's Base practice from the published library, draws a dark
 Settings come from environment variables (see README.md).
 """
 import csv
+import hashlib
 import datetime as dt
 import io
 import json
@@ -352,8 +353,16 @@ def cmd_render():
     day = target_day()
     practice, idx = pick_base(load_library(), day)
     stem = day.isoformat()
-    render_card(practice, day, CARDS / f"{stem}.jpg")
-    meta = {"date": stem, "day_index": idx, "practice": practice,
+    tmp = CARDS / "_render.jpg"
+    render_card(practice, day, tmp)
+    # A new file name whenever the card changes, so no cached old image gets posted.
+    digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
+    image = f"{stem}-{digest}.jpg"
+    for old in CARDS.glob(f"{stem}*.jpg"):
+        if old.name != image:
+            old.unlink()
+    tmp.rename(CARDS / image)
+    meta = {"date": stem, "day_index": idx, "practice": practice, "image": image,
             "captions": build_captions(practice, idx)}
     (CARDS / f"{stem}.json").write_text(json.dumps(meta, indent=2))
     print(f"Rendered {stem}: {practice.get('id', '')} {practice['practice']}")
@@ -379,7 +388,7 @@ def cmd_publish():
     base = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
     if not base:
         sys.exit("Set IMAGE_BASE_URL.")
-    image_url = f"{base}/{stem}.jpg"
+    image_url = f"{base}/{meta.get('image', stem + '.jpg')}"
     wait_for_url(image_url)
 
     due = due_at_iso(day)
