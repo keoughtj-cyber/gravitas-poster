@@ -47,6 +47,14 @@ AREA_ORDER = [a.strip() for a in os.environ.get(
 ).split(",") if a.strip()]
 AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
 AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
+# Short focus names for the card, as the app shows them.
+AREA_SHORT = {
+    "habits and discipline": "Habits",
+    "relationships and friendships": "Relationships",
+    "career and leadership": "Career",
+    "calm and mindset": "Calm",
+    "fitness and health": "Fitness",
+}
 
 # Services that get the caption only, no card image.
 TEXT_ONLY = {x.strip() for x in os.environ.get("TEXT_ONLY_SERVICES", "twitter").split(",") if x.strip()}
@@ -257,12 +265,14 @@ def render_card(practice, day, out_path, subtitle=""):
     why_f = font("Inter-Italic.otf", 31)
 
     max_w = 940
-    lines = wrap(draw, sentence(practice["practice"]), practice_f, max_w)
+    # Focus cards show the practice without a closing period, like the app's share card.
+    text = practice["practice"].rstrip(". ") if subtitle else sentence(practice["practice"])
+    lines = wrap(draw, text, practice_f, max_w)
     why_lines = wrap(draw, sentence(practice.get("why", "")), why_f, max_w) if practice.get("why") else []
     date = day.strftime("%B %-d, %Y").upper()
-    if subtitle:
-        date = f"{date} \u00b7 {subtitle.upper()}"
     pillar = f"BUILD {practice['pillar'].upper()}"
+    if subtitle:
+        pillar = f"{pillar} \u00b7 {subtitle.upper()}"
 
     # The block is left-aligned text, centered as a whole on the card.
     widths = [draw.textlength(l, font=practice_f) for l in lines]
@@ -397,7 +407,7 @@ def cmd_render():
     keep = set()
     for slot in slots:
         tmp = CARDS / "_render.jpg"
-        render_card(slot["practice"], day, tmp, slot["area"])
+        render_card(slot["practice"], day, tmp, AREA_SHORT.get(slot["area"].lower(), slot["area"]))
         # A new file name whenever the card changes, so no cached old image gets posted.
         digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
         suffix = "" if slot["key"] == "base" else f"-{slot['key']}"
@@ -423,7 +433,7 @@ def cmd_preview():
         for service, text in build_captions(p, idx, slot["key"] != "base").items():
             if service in ("instagram", "twitter"):
                 print(f"--- {service} ---\n{text}")
-        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", slot["area"])
+        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", AREA_SHORT.get(slot["area"].lower(), slot["area"]))
 
 
 def cmd_publish():
