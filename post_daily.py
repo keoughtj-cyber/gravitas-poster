@@ -42,7 +42,6 @@ BASE_SEED = int(os.environ.get("BASE_SEED", "0x6761766974617321"), 0)
 # Services that get the caption only, no card image.
 TEXT_ONLY = {x.strip() for x in os.environ.get("TEXT_ONLY_SERVICES", "twitter").split(",") if x.strip()}
 
-PILLAR_COLORS = {"Confidence": "#D4A843", "Character": "#4F9D7A", "Respect": "#5B8DEF"}
 
 
 # ---------- library ----------
@@ -196,75 +195,49 @@ def spaced_width(draw, text, fnt, tracking):
     return sum(draw.textlength(c, font=fnt) for c in text) + tracking * (len(text) - 1)
 
 
-def draw_logo(img, draw, x, y):
-    logo = ROOT / "assets" / "logo.png"
-    if logo.exists():
-        mark = Image.open(logo).convert("RGBA")
-        mark.thumbnail((360, 90))
-        img.paste(mark, (x, y), mark)
-        return
-    col = hex_rgb("#E9E6DF")
-    # Three columns (III) with a cap and base, then the wordmark.
-    draw.rectangle([x, y, x + 64, y + 6], fill=col)
-    draw.rectangle([x, y + 58, x + 64, y + 64], fill=col)
-    for i in range(3):
-        cx = x + 8 + i * 20
-        draw.rectangle([cx, y + 12, cx + 8, y + 52], fill=col)
-    spaced(draw, (x + 92, y + 12), "GRAVITAS", font("InterDisplay-SemiBold.otf", 38), col, 9)
-
-
 def render_card(practice, day, out_path):
-    W, H, M = 1080, 1350, 96
-    bg, ink, muted = hex_rgb("#0E0E10"), hex_rgb("#F2EFE8"), hex_rgb("#9C9890")
-    accent = hex_rgb(PILLAR_COLORS.get(practice["pillar"], "#C2A15A"))
+    """Black 4:5 card in the gravitas_ccr Instagram style."""
+    W, H = 1080, 1350
+    white, grey, dim = (255, 255, 255), (150, 150, 150), (140, 140, 140)
 
-    img = Image.new("RGB", (W, H), bg)
+    img = Image.new("RGB", (W, H), (0, 0, 0))
     draw = ImageDraw.Draw(img)
 
-    # Soft vignette so the card is not flat black.
-    glow = Image.new("L", (W, H), 0)
-    gd = ImageDraw.Draw(glow)
-    for r in range(900, 0, -30):
-        gd.ellipse([W // 2 - r, -r // 2, W // 2 + r, r * 1.2], fill=int(14 * (1 - r / 900)))
-    img.paste(Image.new("RGB", (W, H), (40, 40, 44)), (0, 0), glow)
-    draw = ImageDraw.Draw(img)
+    brand_f = font("Inter-Bold.otf", 22)
+    date_f = font("Inter-Medium.otf", 20)
+    pillar_f = font("Inter-Bold.otf", 38)
+    practice_f = font("Inter-SemiBold.otf", 46)
+    why_f = font("Inter-Italic.otf", 31)
 
-    draw_logo(img, draw, M, M)
+    max_w = 940
+    lines = wrap(draw, sentence(practice["practice"]), practice_f, max_w)
+    why_lines = wrap(draw, sentence(practice.get("why", "")), why_f, max_w) if practice.get("why") else []
+    date = day.strftime("%B %-d, %Y").upper()
+    pillar = f"BUILD {practice['pillar'].upper()}"
 
-    label = (practice.get("area") or "Daily practice").upper()
-    lf = font("Inter-Medium.otf", 28)
+    # The block is left-aligned text, centered as a whole on the card.
+    widths = [draw.textlength(l, font=practice_f) for l in lines]
+    widths += [draw.textlength(l, font=why_f) for l in why_lines]
+    widths += [spaced_width(draw, pillar, pillar_f, 4), spaced_width(draw, date, date_f, 3)]
+    x = (W - max(widths)) // 2
 
-    size = 84
-    while True:
-        pf = font("InterDisplay-SemiBold.otf", size)
-        lines = wrap(draw, sentence(practice["practice"]), pf, W - 2 * M)
-        if len(lines) <= 5 or size <= 60:
-            break
-        size -= 4
-    wf = font("Inter-Light.otf", 44)
-    why = practice.get("why", "")
-    why_lines = wrap(draw, sentence(why), wf, W - 2 * M) if why else []
+    line_h, why_h = 70, 40
+    block_h = 26 + 22 + 48 + 24 + len(lines) * line_h + (14 + len(why_lines) * why_h if why_lines else 0)
+    y = int(H * 0.53 - block_h / 2)
 
-    # Center the label, practice, and why block between the logo and the footer.
-    block = 34 + 72 + len(lines) * int(size * 1.18) + (36 + len(why_lines) * 58 if why_lines else 0)
-    y = max(300, (H - block) // 2 - 10)
-    draw.rectangle([M, y, M + 56, y + 6], fill=accent)
-    spaced(draw, (M, y + 28), label, lf, accent, 5)
-    y += 34 + 72
+    spaced(draw, (x, 70), "GRAVITAS", brand_f, white, 5)
+    spaced(draw, (x, y), date, date_f, dim, 3)
+    y += 26 + 22
+    spaced(draw, (x, y), pillar, pillar_f, white, 4)
+    y += 48 + 24
     for line in lines:
-        draw.text((M, y), line, font=pf, fill=ink)
-        y += int(size * 1.18)
+        draw.text((x, y), line, font=practice_f, fill=white)
+        y += line_h
     if why_lines:
-        y += 36
+        y += 14
         for line in why_lines:
-            draw.text((M, y), line, font=wf, fill=muted)
-            y += 58
-
-    ff = font("Inter-Medium.otf", 26)
-    draw.line([M, H - M - 52, W - M, H - M - 52], fill=hex_rgb("#2A2A2E"), width=2)
-    spaced(draw, (M, H - M - 24), day.strftime("%B %-d, %Y").upper(), ff, muted, 4)
-    tag = os.environ.get("CARD_FOOTER", "ONE PRACTICE A DAY")
-    spaced(draw, (W - M - spaced_width(draw, tag, ff, 4), H - M - 24), tag, ff, muted, 4)
+            draw.text((x, y), line, font=why_f, fill=grey)
+            y += why_h
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)

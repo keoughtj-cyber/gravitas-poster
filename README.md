@@ -6,7 +6,7 @@ Every morning GitHub runs `post_daily.py`, which:
 
 1. Reads the published `library_publish` CSV from the GRAVITAS Google Sheet.
 2. Picks the day's Base practice (same rule as the app: pillar by day, shuffled pool per pillar).
-3. Draws a 1080x1350 dark card (III GRAVITAS logo, area label in the pillar color, practice, why, date) and commits it to `cards/`.
+3. Draws a 1080x1350 black card in the gravitas_ccr style (GRAVITAS, date, BUILD plus the pillar, practice, why in italics) and commits it to `cards/`.
 4. Schedules it on Buffer for `POST_TIME` with a caption written for each network (`captions.json`).
 5. Writes `posted/DATE.json` so a re-run never posts twice.
 
@@ -29,7 +29,6 @@ Cost to start: $0 (public GitHub repo, Buffer Free plan, up to 3 accounts).
 
 1. Create a new **public** repository on github.com named `gravitas-poster`. Public is required because Buffer and Instagram download the card from a public link. Nothing secret lives in the code.
 2. Upload every file in this folder, keeping the folders (`.github/workflows/daily-post.yml`, `fonts/`, `cards/`, `posted/`, `assets/`). On github.com: Add file, Upload files, drag the whole folder in. If the `.github` folder does not upload (it is hidden on a Mac, press Cmd+Shift+period in Finder to show it), create it with Add file, Create new file, and type `.github/workflows/daily-post.yml` as the name, then paste the contents.
-3. Optional: put your real logo at `assets/logo.png` (white or light logo, transparent background). Without it the card draws a III mark and the GRAVITAS wordmark.
 
 ### 4. Secrets and settings
 
