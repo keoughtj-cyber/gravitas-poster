@@ -32,7 +32,7 @@ env:
   CARD_FOOTER: ${{ vars.CARD_FOOTER || 'ONE PRACTICE A DAY' }}
   BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
-  BASE_SEED: ${{ vars.BASE_SEED || '20260101' }}
+  BASE_SEED: ${{ vars.BASE_SEED || '0x6761766974617321' }}
   BASE_EPOCH: ${{ vars.BASE_EPOCH || '2026-01-01' }}
   BASE_PILLAR_ORDER: ${{ vars.BASE_PILLAR_ORDER || 'Confidence,Character,Respect' }}
   IMAGE_BASE_URL: ${{ vars.IMAGE_BASE_URL || format('https://raw.githubusercontent.com/{0}/{1}/cards', github.repository, github.ref_name) }}
