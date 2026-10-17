@@ -184,7 +184,7 @@ def sentence(text):
     return text if text.endswith((".", "!", "?")) else text + "."
 
 
-def build_captions(practice, day_no):
+def build_captions(practice, day_no, area_post=False):
     templates = json.loads((ROOT / "captions.json").read_text())
     link = os.environ.get("APP_LINK", "").strip()
     fields = {
@@ -196,8 +196,10 @@ def build_captions(practice, day_no):
     }
     out = {}
     for service, variants in templates.items():
-        if service.startswith("_") and service != "_default":
+        if (service.startswith("_") and service != "_default") or service.endswith("_area"):
             continue
+        if area_post and f"{service}_area" in templates:
+            variants = templates[f"{service}_area"]
         text = variants[day_no % len(variants)].format(**fields)
         out[service] = text.strip()
     return out
@@ -402,7 +404,7 @@ def cmd_render():
         slot["image"] = f"{stem}{suffix}-{digest}.jpg"
         tmp.rename(CARDS / slot["image"])
         keep.add(slot["image"])
-        slot["captions"] = build_captions(slot["practice"], idx)
+        slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
     for old in CARDS.glob(f"{stem}*.jpg"):
         if old.name not in keep:
@@ -418,7 +420,7 @@ def cmd_preview():
     for slot in slots:
         p = slot["practice"]
         print(f"\n=== {slot['key']} +{slot['offset_hours']:g}h {slot['area'] or 'Base'}: {p.get('id', '')} ({p['pillar']})")
-        for service, text in build_captions(p, idx).items():
+        for service, text in build_captions(p, idx, slot["key"] != "base").items():
             if service in ("instagram", "twitter"):
                 print(f"--- {service} ---\n{text}")
         render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", slot["area"])

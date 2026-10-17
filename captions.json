@@ -1,5 +1,5 @@
 {
-  "_readme": "One caption list per Buffer service. The script picks variant (day number mod list length) so posts rotate. Placeholders: {practice} {why} {area} {pillar} {link}. {pillar} is the day's pillar in capitals (CONFIDENCE, CHARACTER, RESPECT). {link} is APP_LINK, or empty. No emojis, Oxford comma, never the words confidence, character, or respect, and never start with Today.",
+  "_readme": "One caption list per Buffer service. The script picks variant (day number mod list length) so posts rotate. Placeholders: {practice} {why} {area} {pillar} {link}. {pillar} is the day's pillar in capitals (CONFIDENCE, CHARACTER, RESPECT). {link} is APP_LINK, or empty. No emojis, Oxford comma, never the words confidence, character, or respect, and never start with Today. A key ending in _area (for example instagram_area) replaces that service's caption on the Focus area posts.",
   "twitter": [
     "{practice}.\n\n{why}"
   ],
@@ -29,5 +29,8 @@
   ],
   "_default": [
     "{practice}.\n\n{why}"
+  ],
+  "instagram_area": [
+    "BUILD {pillar}.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better."
   ]
 }
