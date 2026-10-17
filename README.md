@@ -67,20 +67,11 @@ LIBRARY_CSV_URL="your published csv link" python3 post_daily.py preview
 
 `preview` prints every caption and writes `cards/preview.jpg`. It never contacts Buffer.
 
-### 8. Match the app's Base practice exactly
+### 8. Matching the app
 
-The script follows the brief (fixed global seed, pillar = dayIndex % 3, SplitMix64 shuffle per pillar), but the exact seed value, day 0, and shuffle details live in `DailyPlanner.swift`. Until they are copied over, the posted practice is a valid library practice but may differ from what the app shows that day. Paste this into a fresh Xcode agent chat and send the answer back to Claude:
+The pick is a direct port of `DailyPlanner.computeBaseItem(for:)`: seed `0x6761766974617321`, day 0 is 2026-01-01, pillar order Confidence, Character, Respect, FNV-1a pillar hash, SplitMix64, and Swift's own `shuffle(using:)` algorithm. So the post shows the same practice as the app's Base view, as long as the published sheet is the same library the app reads.
 
-```
-Do not change any code. Read DailyPlanner.swift and anything it calls for the Base (not For you) daily pick, and report exactly:
-1. The global seed value used for Base, as a number.
-2. How dayIndex is computed: the reference date, the time zone, and the calendar used.
-3. The pillar order for dayIndex % 3.
-4. The stable pillar hash function, with its full source.
-5. The SplitMix64 implementation and how it shuffles the pool (paste the shuffle code, including whether it uses Swift's shuffled(using:) or a custom Fisher-Yates and how it maps a random number to an index).
-6. How the pool is sorted before shuffling, and how the day's position in the shuffled pool is chosen.
-Paste the relevant functions in full.
-```
+One thing the server cannot copy: `excludingActiveElsewhere`, which depends on what each person has active on their own phone. If it removes items for someone, their Base can differ from the post.
 
 ## Files
 
