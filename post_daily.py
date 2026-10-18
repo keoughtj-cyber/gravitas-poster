@@ -57,8 +57,8 @@ REEL_SECONDS = int(os.environ.get("REEL_SECONDS", "7"))
 
 # Also post the main practice to the Instagram Story at the same time.
 STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
-# Every Instagram post goes out as a video with music: the 10:00 post becomes a reel and
-# the Story a video Story. Other networks keep the still card.
+# Instagram feed posts go out as videos with music: the 10:00 post becomes a reel, and the
+# 15:00 reel uses a different clip. The Story stays a still image. Other networks keep the card.
 INSTAGRAM_AUDIO = os.environ.get("INSTAGRAM_AUDIO", "true").lower() != "false"
 # Short focus names for the card, as the app shows them.
 AREA_SHORT = {
@@ -527,7 +527,7 @@ def cmd_render():
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
     if INSTAGRAM_AUDIO:
-        # One tall video of the Base card, used for both the 10:00 Instagram reel and the Story.
+        # A tall video of the Base card for the 10:00 Instagram reel (the Story stays a still image).
         base = next(s for s in slots if s["key"] == "base")
         story = next((s for s in slots if s["key"] == "story"), None)
         if story:
@@ -539,8 +539,6 @@ def cmd_render():
         base["ig_video"] = f"{stem}-ig-{digest}.mp4"
         make_reel(tall_image, CARDS / base["ig_video"], day, "a")
         keep.add(base["ig_video"])
-        if story:
-            story["ig_video"] = base["ig_video"]
         tall_image.with_name("_render.jpg").unlink(missing_ok=True)
     for old in [*CARDS.glob(f"{stem}*.jpg"), *CARDS.glob(f"{stem}*.mp4")]:
         if old.name not in keep:
