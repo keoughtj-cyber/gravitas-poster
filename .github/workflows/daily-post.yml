@@ -60,7 +60,7 @@ jobs:
       - name: Install the AI music model
         if: env.REEL_POST == 'true' && env.AI_MUSIC == 'true'
         run: |
-          pip install torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install torch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
           pip install stable-audio-tools==0.0.19
 
       - uses: actions/cache@v4
