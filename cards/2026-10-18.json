@@ -163,6 +163,31 @@
         "bluesky": "Eat a handful of nuts instead of chips.\n\nNuts are a better snack.",
         "_default": "Eat a handful of nuts instead of chips.\n\nNuts are a better snack."
       }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-181",
+        "practice": "Do your habit on a tired day, just smaller.",
+        "why": "Small still counts.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-10-18-reel-c755be2e.jpg",
+      "video": "2026-10-18-reel-c755be2e.mp4",
+      "captions": {
+        "twitter": "Do your habit on a tired day, just smaller.\n\nSmall still counts.",
+        "linkedin": "Do your habit on a tired day, just smaller.\n\nThat is the whole assignment. Small still counts.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Do your habit on a tired day, just smaller.\n\nThat is it. Small still counts.",
+        "facebook": "Do your habit on a tired day, just smaller.\n\nSmall still counts.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Do your habit on a tired day, just smaller. Small still counts. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Do your habit on a tired day, just smaller.\n\nSmall still counts.",
+        "_default": "Do your habit on a tired day, just smaller.\n\nSmall still counts."
+      }
     }
   ]
 }
