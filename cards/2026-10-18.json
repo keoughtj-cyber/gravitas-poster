@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-18",
+  "day_index": 290,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-143",
+        "practice": "Track how you spend your work hours for one day.",
+        "why": "Knowing where time goes protects it.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-10-18-58c87a5b.jpg",
+      "captions": {
+        "twitter": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.",
+        "linkedin": "Track how you spend your work hours for one day.\n\nThat is the whole assignment. Knowing where time goes protects it.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Track how you spend your work hours for one day.\n\nThat is it. Knowing where time goes protects it.",
+        "facebook": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Track how you spend your work hours for one day. Knowing where time goes protects it. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.",
+        "_default": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it."
+      }
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-143",
+        "practice": "Track how you spend your work hours for one day.",
+        "why": "Knowing where time goes protects it.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "story": true,
+      "image": "2026-10-18-story-52e8c270.jpg",
+      "captions": {
+        "twitter": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.",
+        "linkedin": "Track how you spend your work hours for one day.\n\nThat is the whole assignment. Knowing where time goes protects it.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Track how you spend your work hours for one day.\n\nThat is it. Knowing where time goes protects it.",
+        "facebook": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Track how you spend your work hours for one day. Knowing where time goes protects it. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it.",
+        "_default": "Track how you spend your work hours for one day.\n\nKnowing where time goes protects it."
+      }
+    },
+    {
+      "key": "area1",
+      "area": "Habits and Discipline",
+      "offset_hours": 2.0,
+      "practice": {
+        "id": "HAB-181",
+        "practice": "Do your habit on a tired day, just smaller.",
+        "why": "Small still counts.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-18-area1-539a2c54.jpg",
+      "captions": {
+        "twitter": "Do your habit on a tired day, just smaller.\n\nSmall still counts.",
+        "linkedin": "Do your habit on a tired day, just smaller.\n\nThat is the whole assignment. Small still counts.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Do your habit on a tired day, just smaller.\n\nThat is it. Small still counts.",
+        "facebook": "Do your habit on a tired day, just smaller.\n\nSmall still counts.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Do your habit on a tired day, just smaller. Small still counts. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Do your habit on a tired day, just smaller.\n\nSmall still counts.",
+        "_default": "Do your habit on a tired day, just smaller.\n\nSmall still counts."
+      }
+    },
+    {
+      "key": "area2",
+      "area": "Relationships and Friendships",
+      "offset_hours": 4.0,
+      "practice": {
+        "id": "REL-027",
+        "practice": "Say thank you to someone who usually goes unthanked.",
+        "why": "Unseen work deserves to be seen.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-18-area2-c52e4ee2.jpg",
+      "captions": {
+        "twitter": "Say thank you to someone who usually goes unthanked.\n\nUnseen work deserves to be seen.",
+        "linkedin": "Say thank you to someone who usually goes unthanked.\n\nThat is the whole assignment. Unseen work deserves to be seen.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Say thank you to someone who usually goes unthanked.\n\nThat is it. Unseen work deserves to be seen.",
+        "facebook": "Say thank you to someone who usually goes unthanked.\n\nUnseen work deserves to be seen.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Say thank you to someone who usually goes unthanked. Unseen work deserves to be seen. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Say thank you to someone who usually goes unthanked.\n\nUnseen work deserves to be seen.",
+        "_default": "Say thank you to someone who usually goes unthanked.\n\nUnseen work deserves to be seen."
+      }
+    },
+    {
+      "key": "area3",
+      "area": "Career and Leadership",
+      "offset_hours": 6.0,
+      "practice": {
+        "id": "CAR-095",
+        "practice": "Close tabs and apps not needed for your current task.",
+        "why": "Clear screens clear minds.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-10-18-area3-a41bd4c8.jpg",
+      "captions": {
+        "twitter": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds.",
+        "linkedin": "Close tabs and apps not needed for your current task.\n\nThat is the whole assignment. Clear screens clear minds.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Close tabs and apps not needed for your current task.\n\nThat is it. Clear screens clear minds.",
+        "facebook": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Close tabs and apps not needed for your current task. Clear screens clear minds. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds.",
+        "_default": "Close tabs and apps not needed for your current task.\n\nClear screens clear minds."
+      }
+    },
+    {
+      "key": "area4",
+      "area": "Calm and Mindset",
+      "offset_hours": 8.0,
+      "practice": {
+        "id": "CAL-161",
+        "practice": "Focus on what you can do next, not what went wrong.",
+        "why": "Next steps beat regret.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-18-area4-16e15033.jpg",
+      "captions": {
+        "twitter": "Focus on what you can do next, not what went wrong.\n\nNext steps beat regret.",
+        "linkedin": "Focus on what you can do next, not what went wrong.\n\nThat is the whole assignment. Next steps beat regret.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Focus on what you can do next, not what went wrong.\n\nThat is it. Next steps beat regret.",
+        "facebook": "Focus on what you can do next, not what went wrong.\n\nNext steps beat regret.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Focus on what you can do next, not what went wrong. Next steps beat regret. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Focus on what you can do next, not what went wrong.\n\nNext steps beat regret.",
+        "_default": "Focus on what you can do next, not what went wrong.\n\nNext steps beat regret."
+      }
+    },
+    {
+      "key": "area5",
+      "area": "Fitness and Health",
+      "offset_hours": 10.0,
+      "practice": {
+        "id": "FIT-119",
+        "practice": "Eat a handful of nuts instead of chips.",
+        "why": "Nuts are a better snack.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-18-area5-bb3e4eac.jpg",
+      "captions": {
+        "twitter": "Eat a handful of nuts instead of chips.\n\nNuts are a better snack.",
+        "linkedin": "Eat a handful of nuts instead of chips.\n\nThat is the whole assignment. Nuts are a better snack.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Eat a handful of nuts instead of chips.\n\nThat is it. Nuts are a better snack.",
+        "facebook": "Eat a handful of nuts instead of chips.\n\nNuts are a better snack.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Eat a handful of nuts instead of chips. Nuts are a better snack. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Eat a handful of nuts instead of chips.\n\nNuts are a better snack.",
+        "_default": "Eat a handful of nuts instead of chips.\n\nNuts are a better snack."
+      }
+    }
+  ]
+}
