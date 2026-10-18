@@ -45,7 +45,7 @@ AREA_ORDER = [a.strip() for a in os.environ.get(
     "AREA_ORDER",
     "Habits and Discipline,Relationships and Friendships,Career and Leadership,Calm and Mindset,Fitness and Health",
 ).split(",") if a.strip()]
-AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
+AREA_POSTS = os.environ.get("AREA_POSTS", "false").lower() == "true"
 AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
 # Also post the main practice to the Instagram Story at the same time.
 STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
