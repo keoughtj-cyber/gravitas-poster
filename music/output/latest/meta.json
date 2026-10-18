@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-19",
+  "pillar": "Confidence",
+  "prompt": "dark trap, 75 BPM, low cello and 808 bass, bold, warm and dusty, instrumental",
+  "date_seed": 1971133815,
+  "chosen_seed": 1973133821,
+  "attempts": [
+    {
+      "prompt": "dark trap, 75 BPM, low cello and 808 bass, bold, warm and dusty, instrumental",
+      "source": "rotation",
+      "candidates": [
+        {
+          "peak": 1.0758,
+          "rms_dbfs": -6.33,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 1.48,
+          "score": -1.48,
+          "rejected": [
+            "clipping"
+          ],
+          "seed": 1971133815
+        },
+        {
+          "peak": 0.4301,
+          "rms_dbfs": -20.28,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 2.12,
+          "score": -2.12,
+          "rejected": [],
+          "seed": 1972133818
+        },
+        {
+          "peak": 0.5703,
+          "rms_dbfs": -13.22,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 2e-05,
+          "loudness_spread_db": 0.72,
+          "score": -0.72,
+          "rejected": [],
+          "seed": 1973133821
+        },
+        {
+          "peak": 0.7882,
+          "rms_dbfs": -10.19,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 3e-05,
+          "loudness_spread_db": 1.16,
+          "score": -1.16,
+          "rejected": [],
+          "seed": 1974133824
+        }
+      ]
+    }
+  ],
+  "model": "stabilityai/stable-audio-open-small",
+  "settings": {
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sampler_type": "pingpong",
+    "seconds_total": 11
+  },
+  "post": {
+    "cut_seconds": 7.0,
+    "fade_in": 0.1,
+    "fade_out": 0.8,
+    "target_lufs": -14.0,
+    "true_peak_db": -1.0,
+    "mp3_bitrate": "192k"
+  },
+  "result": {
+    "seconds_7s": 7.0,
+    "seconds_full": 11.0,
+    "lufs": -13.99,
+    "true_peak_db": -5.45,
+    "bytes": {
+      "gravitas_2026-10-19_7s.mp3": 169316,
+      "gravitas_2026-10-19_7s.wav": 1234878,
+      "gravitas_2026-10-19_full.wav": 1940478
+    }
+  }
+}
