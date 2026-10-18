@@ -432,12 +432,26 @@ def due_at_iso(day, offset_hours=0):
     return when.strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 
+def video_link(name, base_url):
+    """Raw GitHub sends videos as application/octet-stream, so serve them through
+    jsDelivr at the exact commit, which sends video/mp4 and never goes stale."""
+    override = os.environ.get("VIDEO_BASE_URL", "").rstrip("/")
+    if override:
+        return f"{override}/{name}"
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if repo:
+        sha = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        if sha:
+            return f"https://cdn.jsdelivr.net/gh/{repo}@{sha}/cards/{name}"
+    return f"{base_url}/{name}"
+
+
 def wait_for_url(url, tries=20):
     for _ in range(tries):
         try:
             req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "gravitas-poster"})
             with urllib.request.urlopen(req, timeout=20) as r:
-                if r.status == 200 and r.headers.get("Content-Type", "").split("/")[0] in ("image", "video", "application"):
+                if r.status == 200 and r.headers.get("Content-Type", "").split("/")[0] in ("image", "video"):
                     return
         except Exception:
             pass
@@ -511,7 +525,7 @@ def cmd_publish():
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
         if slot.get("video"):
-            wait_for_url(f"{base_url}/{slot['video']}")
+            wait_for_url(video_link(slot["video"], base_url))
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
             if (slot.get("story") or slot["key"] == "reel") and ch["service"] != "instagram":
@@ -526,7 +540,7 @@ def cmd_publish():
                 continue
             text = slot["captions"].get(ch["service"]) or slot["captions"]["_default"]
             try:
-                video_url = f"{base_url}/{slot['video']}" if slot.get("video") else ""
+                video_url = video_link(slot["video"], base_url) if slot.get("video") else ""
                 post = create_post(ch, text, image_url, due, slot.get("story", False), video_url)
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
