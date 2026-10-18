@@ -484,6 +484,11 @@ def cmd_publish():
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
             except RuntimeError as e:
+                if "already got this one scheduled or posted" in str(e):
+                    # Buffer refuses exact repeats, so this one is already queued or out.
+                    results[key] = {"channel": ch["name"], "skipped": "duplicate in Buffer"}
+                    print(f"Already in Buffer {key}, skipping.")
+                    continue
                 failed.append(key)
                 results[key] = {"channel": ch["name"], "error": str(e)}
                 print(f"FAILED {key} ({ch['name']}): {e}")
