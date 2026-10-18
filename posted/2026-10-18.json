@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-18",
+  "results": {
+    "instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939cae173d6e00f550dd",
+      "due_at": "2026-10-18T14:00:00.000Z"
+    },
+    "twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939d0a208cb3235b6c8b",
+      "due_at": "2026-10-18T14:00:00.000Z"
+    },
+    "story:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939d0b0d72757a168c43",
+      "due_at": "2026-10-18T14:00:00.000Z"
+    },
+    "area1:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939d938409f1d0c43f34",
+      "due_at": "2026-10-18T16:00:00.000Z"
+    },
+    "area1:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939eae173d6e00f55113",
+      "due_at": "2026-10-18T16:00:00.000Z"
+    },
+    "area2:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939e6d56c60a73040920",
+      "due_at": "2026-10-18T18:00:00.000Z"
+    },
+    "area2:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939e769b457934b712a2",
+      "due_at": "2026-10-18T18:00:00.000Z"
+    },
+    "area3:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939e769b457934b712ca",
+      "due_at": "2026-10-18T20:00:00.000Z"
+    },
+    "area3:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939f938409f1d0c43f5d",
+      "due_at": "2026-10-18T20:00:00.000Z"
+    },
+    "area4:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939f769b457934b712f3",
+      "due_at": "2026-10-18T22:00:00.000Z"
+    },
+    "area4:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad4939f769b457934b7131c",
+      "due_at": "2026-10-18T22:00:00.000Z"
+    },
+    "area5:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad493a0ae173d6e00f5516d",
+      "due_at": "2026-10-19T00:00:00.000Z"
+    },
+    "area5:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad493a00b0d72757a168c99",
+      "due_at": "2026-10-19T00:00:00.000Z"
+    }
+  }
+}
