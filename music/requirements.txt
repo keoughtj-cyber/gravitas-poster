@@ -6,5 +6,5 @@ torchvision==0.21.0+cpu
 stable-audio-tools==0.0.19
 # transformers 4.49 and later need a newer torch than stable-audio-tools was tested with.
 transformers==4.48.3
-# pandas 2.0.2 (pinned by stable-audio-tools) is built against numpy 1.x.
-numpy==1.26.4
+# laion-clap 1.1.4 (pulled in by stable-audio-tools) pins numpy 1.23.5.
+numpy==1.23.5
