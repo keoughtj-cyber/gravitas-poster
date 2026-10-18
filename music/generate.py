@@ -119,11 +119,14 @@ def load_model():
     if _model is None:
         import torch
         from stable_audio_tools import get_pretrained_model
-        # CPU speed fixes: tiny "denormal" numbers and half-precision layers make CPU
-        # convolutions crawl, which stalled the audio decoder for half an hour.
+        # CPU speed fix: the model's audio decoder is set to run in half precision, which
+        # most CPUs can only do very slowly (it stalled the decoder for over 30 minutes on
+        # GitHub's runner). Run everything in full precision instead.
         torch.set_flush_denormal(True)
         log(f"Loading {MODEL_NAME}")
         model, config = get_pretrained_model(MODEL_NAME)
+        if getattr(model, "pretransform", None) is not None:
+            model.pretransform.model_half = False
         model = model.to("cpu").float().eval()
         log(f"Model dtype: {next(model.parameters()).dtype}, threads: {torch.get_num_threads()}")
         _model = (model, config)
