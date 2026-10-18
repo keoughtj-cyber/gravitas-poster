@@ -334,7 +334,12 @@ def make_reel(image_path, out_path):
     """A short still-card video with a silent audio track, which Instagram expects on reels."""
     music = ROOT / "assets" / "music.mp3"
     audio = ["-i", str(music)] if music.exists() else ["-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(image_path), *audio,
+    try:
+        import imageio_ffmpeg  # bundled ffmpeg, since GitHub's runner has none
+        exe = imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        exe = "ffmpeg"
+    cmd = [exe, "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(image_path), *audio,
            "-t", str(REEL_SECONDS), "-vf", "format=yuv420p", "-c:v", "libx264", "-preset", "medium",
            "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out_path)]
     subprocess.run(cmd, check=True)
