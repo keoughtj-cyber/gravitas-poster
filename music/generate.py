@@ -277,9 +277,9 @@ def prune(today):
 # ---------- main ----------
 
 def main():
-    # If a step stalls, print where every thread is, every two minutes, so the log shows the cause.
+    # If a step stalls, print where every thread is, every ten minutes, so the log shows the cause.
     import faulthandler
-    faulthandler.dump_traceback_later(120, repeat=True)
+    faulthandler.dump_traceback_later(600, repeat=True)
     parser = argparse.ArgumentParser(description="Generate the daily GRAVITAS music clip.")
     parser.add_argument("--date", help="YYYY-MM-DD, default today in America/New_York")
     parser.add_argument("--dry-run", action="store_true", help="print the prompt, pillar, and seed, then stop")
