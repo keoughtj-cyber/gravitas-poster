@@ -34,6 +34,11 @@
     "area5:twitter": {
       "channel": "gravitas_ccr",
       "skipped": "duplicate in Buffer"
+    },
+    "reel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad511bfae173d6e00138941",
+      "due_at": "2026-10-18T19:00:00.000Z"
     }
   }
 }
