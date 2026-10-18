@@ -45,7 +45,9 @@ AREA_ORDER = [a.strip() for a in os.environ.get(
     "AREA_ORDER",
     "Habits and Discipline,Relationships and Friendships,Career and Leadership,Calm and Mindset,Fitness and Health",
 ).split(",") if a.strip()]
-AREA_POSTS = os.environ.get("AREA_POSTS", "false").lower() == "true"
+AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
+# Which networks get the area posts. Instagram keeps one post a day.
+AREA_SERVICES = {x.strip() for x in os.environ.get("AREA_SERVICES", "twitter").split(",") if x.strip()}
 AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
 # Also post the main practice to the Instagram Story at the same time.
 STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
@@ -467,6 +469,8 @@ def cmd_publish():
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
             if slot.get("story") and ch["service"] != "instagram":
+                continue
+            if slot["key"].startswith("area") and ch["service"] not in AREA_SERVICES:
                 continue
             # The main post keeps the plain service name so older records still count.
             key = ch["service"] if slot["key"] == "base" else f"{slot['key']}:{ch['service']}"

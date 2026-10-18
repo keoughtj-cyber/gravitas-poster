@@ -33,7 +33,8 @@ env:
   BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
   STORY_POST: ${{ vars.STORY_POST || 'true' }}
-  AREA_POSTS: ${{ vars.AREA_POSTS || 'false' }}
+  AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
+  AREA_SERVICES: ${{ vars.AREA_SERVICES || 'twitter' }}
   AREA_GAP_HOURS: ${{ vars.AREA_GAP_HOURS || '2' }}
   BASE_SEED: ${{ vars.BASE_SEED || '0x6761766974617321' }}
   BASE_EPOCH: ${{ vars.BASE_EPOCH || '2026-01-01' }}
