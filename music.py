@@ -1,5 +1,9 @@
 """Composes a short, original backing track for the daily reel.
 
+The sound stays on brand for GRAVITAS: dark, slow, low, and heavy, like the Stone.
+Minor modes only, a low drone under every chord, a deep impact on the first beat,
+a slow pulse, and a long room. What changes day to day is everything inside that frame.
+
 Every date gets its own track: the key, scale, chords, tempo, instruments, rhythm,
 and melody all come from a seed built from the date, so no two reels share audio
 and a re-run of the same day makes the same track again. Everything is synthesized
@@ -18,9 +22,6 @@ SCALES = {
     "dorian": [0, 2, 3, 5, 7, 9, 10],
     "phrygian": [0, 1, 3, 5, 7, 8, 10],
     "harmonic": [0, 2, 3, 5, 7, 8, 11],
-    "ionian": [0, 2, 4, 5, 7, 9, 11],
-    "lydian": [0, 2, 4, 6, 7, 9, 11],
-    "mixolydian": [0, 2, 4, 5, 7, 9, 10],
 }
 
 # Scale-degree progressions (0 = the tonic chord), two to four chords each.
@@ -44,13 +45,13 @@ def compose(day, seconds, out_wav):
     n = int(SR * seconds)
     t = np.arange(n) / SR
 
-    root = 36 + int(rng.integers(0, 12))
+    root = 33 + int(rng.integers(0, 9))  # A1 to F2, kept low
     scale_name = str(rng.choice(list(SCALES)))
     scale = SCALES[scale_name]
     prog = PROGRESSIONS[int(rng.integers(0, len(PROGRESSIONS)))]
-    bpm = int(rng.integers(60, 100))
+    bpm = int(rng.integers(56, 76))
     beat = 60 / bpm
-    brightness = rng.uniform(0.3, 1.0)
+    brightness = rng.uniform(0.15, 0.45)
 
     def degree(d, octave=0):
         return root + 12 * (octave + d // 7) + scale[d % 7]
@@ -84,7 +85,7 @@ def compose(day, seconds, out_wav):
 
     # Chords: pad or keys, one chord per bar or per two beats.
     chord_len = beat * float(rng.choice([2, 4]))
-    chord_kind = str(rng.choice(["pad", "pad", "keys"]))
+    chord_kind = str(rng.choice(["pad", "pad", "pad", "keys"]))
     starts = np.arange(0, seconds, chord_len)
     for k, s0 in enumerate(starts):
         d = prog[k % len(prog)]
@@ -94,33 +95,35 @@ def compose(day, seconds, out_wav):
 
     # Arpeggio, on most days.
     if rng.random() < 0.7:
-        step = beat / float(rng.choice([2, 3, 4]))
+        step = beat / float(rng.choice([1, 2]))
         pattern = list(rng.permutation([0, 2, 4, 7]))[: int(rng.integers(3, 5))]
         for k, s0 in enumerate(np.arange(rng.choice([0, beat * 2]), seconds, step)):
             d = prog[int(s0 // chord_len) % len(prog)]
-            place(mix, voice(midi_hz(degree(d + pattern[k % len(pattern)], 2)), step * 3, "pluck"), s0, 0.18)
+            place(mix, voice(midi_hz(degree(d + pattern[k % len(pattern)], 1)), step * 3, "pluck"), s0, 0.14)
 
     # A few melody notes, on some days.
-    if rng.random() < 0.6:
+    if rng.random() < 0.4:
         for s0 in np.arange(beat * 4, seconds - 1, beat * float(rng.choice([1, 2]))):
             if rng.random() < 0.6:
-                place(mix, voice(midi_hz(degree(int(rng.integers(0, 8)), 3)), 1.8, "bell"), s0, 0.12)
+                place(mix, voice(midi_hz(degree(int(rng.integers(0, 8)), 2)), 2.2, "bell"), s0, 0.07)
 
     # Pulse: heartbeat, soft kick with hats, or none.
-    pulse = str(rng.choice(["heartbeat", "kick", "kick", "none"]))
-    if pulse != "none":
-        for s0 in np.arange(beat * float(rng.choice([0, 2, 4])), seconds, beat):
-            hits = ((0, 1.0), (0.22, 0.6)) if pulse == "heartbeat" else ((0, 1.0),)
-            for off, a in hits:
-                tt = np.arange(int(SR * 0.5)) / SR
-                place(mix, np.sin(2 * np.pi * 55 * tt * (1 - 0.35 * tt)) * np.exp(-tt * 9), s0 + off, 0.5 * a)
-            if pulse == "kick":
-                tt = np.arange(int(SR * 0.06)) / SR
-                hat = rng.standard_normal(len(tt)) * np.exp(-tt * 70)
-                place(mix, hat, s0 + beat / 2, 0.05)
+    # The Stone landing: one deep impact on the downbeat, every track.
+    tt = np.arange(int(SR * 2.5)) / SR
+    impact = np.sin(2 * np.pi * 42 * tt * (1 - 0.2 * tt)) * np.exp(-tt * 2.2)
+    impact[: int(SR * 0.03)] += rng.standard_normal(int(SR * 0.03)) * np.exp(-tt[: int(SR * 0.03)] * 120) * 0.4
+    place(mix, impact, 0, 0.9)
+
+    pulse = str(rng.choice(["heartbeat", "heartbeat", "drum"]))
+    every = beat if pulse == "heartbeat" else beat * 2
+    for s0 in np.arange(beat * float(rng.choice([2, 4])), seconds, every):
+        hits = ((0, 1.0), (0.22, 0.6)) if pulse == "heartbeat" else ((0, 1.0),)
+        for off, a in hits:
+            tt = np.arange(int(SR * 0.5)) / SR
+            place(mix, np.sin(2 * np.pi * 55 * tt * (1 - 0.35 * tt)) * np.exp(-tt * 9), s0 + off, 0.5 * a)
 
     # Room: convolve with a decaying noise tail.
-    tail = rng.uniform(1.2, 3.0)
+    tail = rng.uniform(2.2, 3.5)
     ir = rng.standard_normal(int(SR * tail)) * np.exp(-np.arange(int(SR * tail)) / SR * (5 / tail))
     wet = np.convolve(mix, ir)[:n]
     y = 0.7 * mix / (np.abs(mix).max() or 1) + rng.uniform(0.3, 0.55) * wet / (np.abs(wet).max() or 1)
