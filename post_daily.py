@@ -57,6 +57,9 @@ REEL_SECONDS = int(os.environ.get("REEL_SECONDS", "7"))
 
 # Also post the main practice to the Instagram Story at the same time.
 STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
+# Every Instagram post goes out as a video with music: the 10:00 post becomes a reel and
+# the Story a video Story. Other networks keep the still card.
+INSTAGRAM_AUDIO = os.environ.get("INSTAGRAM_AUDIO", "true").lower() != "false"
 # Short focus names for the card, as the app shows them.
 AREA_SHORT = {
     "habits and discipline": "Habits",
@@ -330,15 +333,18 @@ def render_card(practice, day, out_path, subtitle="", story=False):
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
 
 
-def make_reel(image_path, out_path, day):
-    """A short still-card video with the daily AI clip, or a track composed for this date (music.py)."""
+def make_reel(image_path, out_path, day, track_id="a"):
+    """A short still-card video with a daily AI clip, or a track composed for this date (music.py).
+    track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ."""
     track = CARDS / "_music.wav"
-    clip = reel_music_from_latest(day)
+    clip = reel_music_from_latest(day, track_id)
     if clip:
         audio = ["-i", str(clip)]
     else:
         import music
-        print(f"Composed reel track: {music.compose(day, REEL_SECONDS, track)}")
+        # Track "b" composes from a shifted date so it never matches track "a".
+        seed_day = day if track_id == "a" else day + dt.timedelta(days=500)
+        print(f"Composed reel track: {music.compose(seed_day, REEL_SECONDS, track)}")
         audio = ["-i", str(track)]
     try:
         import imageio_ffmpeg  # bundled ffmpeg, since GitHub's runner has none
@@ -354,17 +360,17 @@ def make_reel(image_path, out_path, day):
 
 # Optional: put the daily clip from the Daily music workflow (music/) under the reel.
 # Turn off with the repository variable REEL_MUSIC_FROM_LATEST=false.
-def reel_music_from_latest(day):
+def reel_music_from_latest(day, track_id="a"):
     if os.environ.get("REEL_MUSIC_FROM_LATEST", "true").lower() == "false":
         return None
     sys.path.insert(0, str(ROOT / "music"))
     from reel_audio import latest_clip
-    found = latest_clip(day)
+    found = latest_clip(day, track_id)
     if not found:
         print("No recent daily music clip, composing the reel track instead.")
         return None
     clip, made = found
-    print(f"Reel track: daily music clip from {made}")
+    print(f"Reel track: daily music clip {track_id} from {made}")
     return clip
 
 
@@ -422,7 +428,12 @@ def create_post(channel, text, image_url, due_at, story=False, video_url=""):
     }
     if video_url:
         base["assets"] = [{"video": {"url": video_url}}]
-        base["metadata"] = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
+        if story:
+            # Stories publish automatically only with no caption, stickers, or links.
+            base["text"] = ""
+            base["metadata"] = {"instagram": {"type": "story", "shouldShareToFeed": False}}
+        else:
+            base["metadata"] = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
         return send_post([base])
     if channel["service"] not in TEXT_ONLY:
         base["assets"] = [{"image": {"url": image_url}}]
@@ -511,10 +522,26 @@ def cmd_render():
         keep.add(slot["image"])
         if slot["key"] == "reel":
             slot["video"] = f"{stem}-reel-{digest}.mp4"
-            make_reel(CARDS / slot["image"], CARDS / slot["video"], day)
+            make_reel(CARDS / slot["image"], CARDS / slot["video"], day, "b" if INSTAGRAM_AUDIO else "a")
             keep.add(slot["video"])
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
+    if INSTAGRAM_AUDIO:
+        # One tall video of the Base card, used for both the 10:00 Instagram reel and the Story.
+        base = next(s for s in slots if s["key"] == "base")
+        story = next((s for s in slots if s["key"] == "story"), None)
+        if story:
+            tall_image = CARDS / story["image"]
+        else:
+            tall_image = CARDS / "_render.jpg"
+            render_card(base["practice"], day, tall_image, "", True)
+        digest = hashlib.sha1(tall_image.read_bytes()).hexdigest()[:8]
+        base["ig_video"] = f"{stem}-ig-{digest}.mp4"
+        make_reel(tall_image, CARDS / base["ig_video"], day, "a")
+        keep.add(base["ig_video"])
+        if story:
+            story["ig_video"] = base["ig_video"]
+        tall_image.with_name("_render.jpg").unlink(missing_ok=True)
     for old in [*CARDS.glob(f"{stem}*.jpg"), *CARDS.glob(f"{stem}*.mp4")]:
         if old.name not in keep:
             old.unlink()
@@ -552,8 +579,8 @@ def cmd_publish():
     for slot in meta["slots"]:
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
-        if slot.get("video"):
-            wait_for_url(video_link(slot["video"], base_url))
+        for name in {slot.get("video"), slot.get("ig_video")} - {None}:
+            wait_for_url(video_link(name, base_url))
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
             if (slot.get("story") or slot["key"] == "reel") and ch["service"] != "instagram":
@@ -568,7 +595,8 @@ def cmd_publish():
                 continue
             text = slot["captions"].get(ch["service"]) or slot["captions"]["_default"]
             try:
-                video_url = video_link(slot["video"], base_url) if slot.get("video") else ""
+                video = slot.get("video") or (slot.get("ig_video") if ch["service"] == "instagram" else "")
+                video_url = video_link(video, base_url) if video else ""
                 post = create_post(ch, text, image_url, due, slot.get("story", False), video_url)
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")

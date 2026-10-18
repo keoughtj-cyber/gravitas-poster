@@ -36,6 +36,7 @@ env:
   REEL_TIME: ${{ vars.REEL_TIME || '15:00' }}
   REEL_MUSIC_FROM_LATEST: ${{ vars.REEL_MUSIC_FROM_LATEST || 'true' }}
   STORY_POST: ${{ vars.STORY_POST || 'true' }}
+  INSTAGRAM_AUDIO: ${{ vars.INSTAGRAM_AUDIO || 'true' }}
   AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
   AREA_SERVICES: ${{ vars.AREA_SERVICES || 'twitter' }}
   AREA_GAP_HOURS: ${{ vars.AREA_GAP_HOURS || '2' }}

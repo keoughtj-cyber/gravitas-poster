@@ -209,9 +209,10 @@ def best_of(prompt, seeds):
         metrics["seed"] = seed
         log(f"  {json.dumps(metrics)}")
         results.append((passed, metrics, y, sr))
-    passing = [r for r in results if r[0]]
-    best = max(passing, key=lambda r: r[1]["score"]) if passing else None
-    return best, [r[1] for r in results]
+    passing = sorted((r for r in results if r[0]), key=lambda r: r[1]["score"], reverse=True)
+    best = passing[0] if passing else None
+    runner_up = passing[1] if len(passing) > 1 else None  # a second track for the day's other video
+    return best, runner_up, [r[1] for r in results]
 
 
 # ---------- post-processing ----------
@@ -299,13 +300,13 @@ def main():
     if args.dry_run:
         return
 
-    best, scores = best_of(prompt, seeds)
+    best, runner_up, scores = best_of(prompt, seeds)
     attempts = [{"prompt": prompt, "source": source, "candidates": scores}]
     if best is None:
         prompt = data["templates"][pillar]
         retry = [(s + 4 * 1000003) % (2 ** 31) for s in seeds]
         log(f"All candidates failed, retrying once with the {pillar} template: {prompt}")
-        best, scores = best_of(prompt, retry)
+        best, runner_up, scores = best_of(prompt, retry)
         attempts.append({"prompt": prompt, "source": "template", "candidates": scores})
     if best is None:
         sys.exit("Every candidate failed the quality checks. No clip was saved.")
@@ -328,12 +329,25 @@ def main():
     raw_full.unlink()
     raw_cut.unlink()
 
+    # The runner-up becomes a second 7-second track, so two videos on one day sound different.
+    cut_b = None
+    if runner_up:
+        _, metrics_b, y_b, sr_b = runner_up
+        write_wav(raw_cut, y_b[: int(sr_b * CUT_SECONDS)] / (np.abs(y_b).max() or 1) * 0.9, sr_b)
+        cut_b_wav = folder / "_cut_b.wav"
+        master(raw_cut, cut_b_wav, CUT_SECONDS)
+        cut_b = folder / f"{stem}_7s_b.mp3"
+        ffmpeg("-i", str(cut_b_wav), "-c:a", "libmp3lame", "-b:a", MP3_BITRATE, str(cut_b))
+        raw_cut.unlink()
+        cut_b_wav.unlink()
+
     meta = {
         "date": day.isoformat(),
         "pillar": pillar,
         "prompt": prompt,
         "date_seed": seed,
         "chosen_seed": metrics["seed"],
+        "second_seed": runner_up[1]["seed"] if runner_up else None,
         "attempts": attempts,
         "model": MODEL_NAME,
         "settings": SETTINGS,
@@ -343,7 +357,7 @@ def main():
             "seconds_7s": duration(cut_wav),
             "seconds_full": duration(full_wav),
             **measure(cut_wav),
-            "bytes": {p.name: p.stat().st_size for p in (cut_mp3, cut_wav, full_wav)},
+            "bytes": {p.name: p.stat().st_size for p in (cut_mp3, cut_wav, full_wav, cut_b) if p},
         },
     }
     (folder / "meta.json").write_text(json.dumps(meta, indent=2) + "\n")
@@ -352,6 +366,10 @@ def main():
     latest.mkdir(exist_ok=True)
     shutil.copyfile(cut_mp3, latest / "gravitas_7s.mp3")
     shutil.copyfile(folder / "meta.json", latest / "meta.json")
+    if cut_b:
+        shutil.copyfile(cut_b, latest / "gravitas_7s_b.mp3")
+    else:
+        (latest / "gravitas_7s_b.mp3").unlink(missing_ok=True)
     prune(day)
 
     log(f"Saved music/output/{folder.name}: {json.dumps(meta['result'])}")
