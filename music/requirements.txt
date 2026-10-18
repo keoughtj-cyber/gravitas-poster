@@ -1,0 +1,10 @@
+# Python 3.11. CPU-only torch build, since GitHub's free runners have no GPU.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+torchaudio==2.6.0+cpu
+torchvision==0.21.0+cpu
+stable-audio-tools==0.0.19
+# transformers 4.49 and later need a newer torch than stable-audio-tools was tested with.
+transformers==4.48.3
+# pandas 2.0.2 (pinned by stable-audio-tools) is built against numpy 1.x.
+numpy==1.26.4

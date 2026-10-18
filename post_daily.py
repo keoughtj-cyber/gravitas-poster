@@ -331,20 +331,15 @@ def render_card(practice, day, out_path, subtitle="", story=False):
 
 
 def make_reel(image_path, out_path, day):
-    """A short still-card video with a new track composed for this date (music.py)."""
+    """A short still-card video with the daily AI clip, or a track composed for this date (music.py)."""
     track = CARDS / "_music.wav"
-    desc = ""
-    if os.environ.get("AI_MUSIC", "true").lower() == "true":
-        try:
-            import ai_music
-            desc = ai_music.generate(day, REEL_SECONDS, track)
-        except Exception as e:  # the reel still goes out, with the composed track
-            print(f"AI music failed ({e!r}), composing instead")
-    if not desc:
+    clip = reel_music_from_latest(day)
+    if clip:
+        audio = ["-i", str(clip)]
+    else:
         import music
-        desc = music.compose(day, REEL_SECONDS, track)
-    print(f"Reel track: {desc}")
-    audio = ["-i", str(track)]
+        print(f"Composed reel track: {music.compose(day, REEL_SECONDS, track)}")
+        audio = ["-i", str(track)]
     try:
         import imageio_ffmpeg  # bundled ffmpeg, since GitHub's runner has none
         exe = imageio_ffmpeg.get_ffmpeg_exe()
@@ -354,7 +349,23 @@ def make_reel(image_path, out_path, day):
            "-t", str(REEL_SECONDS), "-vf", "format=yuv420p", "-c:v", "libx264", "-preset", "medium",
            "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out_path)]
     subprocess.run(cmd, check=True)
-    track.unlink()
+    track.unlink(missing_ok=True)
+
+
+# Optional: put the daily clip from the Daily music workflow (music/) under the reel.
+# Turn off with the repository variable REEL_MUSIC_FROM_LATEST=false.
+def reel_music_from_latest(day):
+    if os.environ.get("REEL_MUSIC_FROM_LATEST", "true").lower() == "false":
+        return None
+    sys.path.insert(0, str(ROOT / "music"))
+    from reel_audio import latest_clip
+    found = latest_clip(day)
+    if not found:
+        print("No recent daily music clip, composing the reel track instead.")
+        return None
+    clip, made = found
+    print(f"Reel track: daily music clip from {made}")
+    return clip
 
 
 # ---------- Buffer ----------
