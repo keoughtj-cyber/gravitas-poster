@@ -8,7 +8,8 @@ Every morning GitHub runs `post_daily.py`, which:
 2. Picks the day's Base practice (same rule as the app: pillar by day, shuffled pool per pillar).
 3. Draws a 1080x1350 black card in the gravitas_ccr style (GRAVITAS, date, BUILD plus the pillar, practice, why in italics) and commits it to `cards/`.
 4. Schedules it on Buffer for `POST_TIME` with a caption written for each network (`captions.json`).
-5. Writes `posted/DATE.json` so a re-run never posts twice.
+5. At 3 p.m. it also posts an Instagram reel: a 7-second, silent, 9:16 video of one Focus area card (the area rotates daily through Habits, Relationships, Career, Calm, and Fitness) with the Focus caption. `REEL_POST` turns it off, `REEL_TIME` moves it. The video is built with the bundled ffmpeg from `imageio-ffmpeg` and served to Buffer through jsDelivr so it arrives as video/mp4.
+6. Writes `posted/DATE.json` so a re-run never posts twice.
 
 Cost to start: $0 (public GitHub repo, Buffer Free plan, up to 3 accounts).
 
