@@ -332,9 +332,18 @@ def render_card(practice, day, out_path, subtitle="", story=False):
 
 def make_reel(image_path, out_path, day):
     """A short still-card video with a new track composed for this date (music.py)."""
-    import music
     track = CARDS / "_music.wav"
-    print(f"Composed reel track: {music.compose(day, REEL_SECONDS, track)}")
+    desc = ""
+    if os.environ.get("AI_MUSIC", "true").lower() == "true":
+        try:
+            import ai_music
+            desc = ai_music.generate(day, REEL_SECONDS, track)
+        except Exception as e:  # the reel still goes out, with the composed track
+            print(f"AI music failed ({e!r}), composing instead")
+    if not desc:
+        import music
+        desc = music.compose(day, REEL_SECONDS, track)
+    print(f"Reel track: {desc}")
     audio = ["-i", str(track)]
     try:
         import imageio_ffmpeg  # bundled ffmpeg, since GitHub's runner has none

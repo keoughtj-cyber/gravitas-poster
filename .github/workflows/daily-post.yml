@@ -34,6 +34,7 @@ env:
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
   REEL_POST: ${{ vars.REEL_POST || 'true' }}
   REEL_TIME: ${{ vars.REEL_TIME || '15:00' }}
+  AI_MUSIC: ${{ vars.AI_MUSIC || 'true' }}
   STORY_POST: ${{ vars.STORY_POST || 'true' }}
   AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
   AREA_SERVICES: ${{ vars.AREA_SERVICES || 'twitter' }}
@@ -51,11 +52,26 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.10"
+          cache: pip
 
       - run: pip install -r requirements.txt
 
+      - name: Install the AI music model
+        if: env.REEL_POST == 'true' && env.AI_MUSIC == 'true'
+        run: |
+          pip install torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install stable-audio-tools==0.0.19
+
+      - uses: actions/cache@v4
+        if: env.REEL_POST == 'true' && env.AI_MUSIC == 'true'
+        with:
+          path: ~/.cache/huggingface
+          key: hf-stable-audio-open-small
+
       - name: Draw the card
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: python post_daily.py render
 
       - name: Publish the card image
