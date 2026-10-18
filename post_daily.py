@@ -330,10 +330,12 @@ def render_card(practice, day, out_path, subtitle="", story=False):
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
 
 
-def make_reel(image_path, out_path):
-    """A short still-card video with a silent audio track, which Instagram expects on reels."""
-    music = ROOT / "assets" / "music.mp3"
-    audio = ["-i", str(music)] if music.exists() else ["-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
+def make_reel(image_path, out_path, day):
+    """A short still-card video with a new track composed for this date (music.py)."""
+    import music
+    track = CARDS / "_music.wav"
+    print(f"Composed reel track: {music.compose(day, REEL_SECONDS, track)}")
+    audio = ["-i", str(track)]
     try:
         import imageio_ffmpeg  # bundled ffmpeg, since GitHub's runner has none
         exe = imageio_ffmpeg.get_ffmpeg_exe()
@@ -343,6 +345,7 @@ def make_reel(image_path, out_path):
            "-t", str(REEL_SECONDS), "-vf", "format=yuv420p", "-c:v", "libx264", "-preset", "medium",
            "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out_path)]
     subprocess.run(cmd, check=True)
+    track.unlink()
 
 
 # ---------- Buffer ----------
@@ -488,7 +491,7 @@ def cmd_render():
         keep.add(slot["image"])
         if slot["key"] == "reel":
             slot["video"] = f"{stem}-reel-{digest}.mp4"
-            make_reel(CARDS / slot["image"], CARDS / slot["video"])
+            make_reel(CARDS / slot["image"], CARDS / slot["video"], day)
             keep.add(slot["video"])
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
