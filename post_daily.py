@@ -16,6 +16,7 @@ import datetime as dt
 import io
 import json
 import os
+import subprocess
 import sys
 import textwrap
 import time
@@ -49,6 +50,11 @@ AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
 # Which networks get the area posts. Instagram keeps one post a day.
 AREA_SERVICES = {x.strip() for x in os.environ.get("AREA_SERVICES", "twitter").split(",") if x.strip()}
 AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
+# A daily Instagram reel of one focus post, rotating through the areas by day.
+REEL_POST = os.environ.get("REEL_POST", "true").lower() != "false"
+REEL_TIME = os.environ.get("REEL_TIME", "15:00")
+REEL_SECONDS = int(os.environ.get("REEL_SECONDS", "7"))
+
 # Also post the main practice to the Instagram Story at the same time.
 STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
 # Short focus names for the card, as the app shows them.
@@ -189,7 +195,21 @@ def day_slots(rows, day):
             if practice:
                 slots.append({"key": f"area{n}", "area": area,
                               "offset_hours": n * AREA_GAP_HOURS, "practice": practice})
+    if REEL_POST and AREA_ORDER:
+        # Same pick as that area's X post, so the reel and the post agree.
+        n = idx % len(AREA_ORDER) + 1
+        area = AREA_ORDER[n - 1]
+        practice = pick_area(rows, day, area, PILLARS[(idx + n) % len(PILLARS)], base.get("id", ""))
+        if practice:
+            slots.append({"key": "reel", "area": area, "offset_hours": hours_after_post(REEL_TIME),
+                          "practice": practice, "tall": True})
     return slots, idx
+
+
+def hours_after_post(clock):
+    hh, mm = (int(x) for x in clock.split(":"))
+    ph, pm = (int(x) for x in POST_TIME.split(":"))
+    return (hh * 60 + mm - ph * 60 - pm) / 60
 
 
 # ---------- captions ----------
@@ -310,6 +330,16 @@ def render_card(practice, day, out_path, subtitle="", story=False):
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
 
 
+def make_reel(image_path, out_path):
+    """A short still-card video with a silent audio track, which Instagram expects on reels."""
+    music = ROOT / "assets" / "music.mp3"
+    audio = ["-i", str(music)] if music.exists() else ["-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(image_path), *audio,
+           "-t", str(REEL_SECONDS), "-vf", "format=yuv420p", "-c:v", "libx264", "-preset", "medium",
+           "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out_path)]
+    subprocess.run(cmd, check=True)
+
+
 # ---------- Buffer ----------
 
 def buffer_call(query, variables=None):
@@ -354,7 +384,7 @@ mutation($input: CreatePostInput!) {
 }"""
 
 
-def create_post(channel, text, image_url, due_at, story=False):
+def create_post(channel, text, image_url, due_at, story=False, video_url=""):
     base = {
         "channelId": channel["id"],
         "text": text,
@@ -362,6 +392,10 @@ def create_post(channel, text, image_url, due_at, story=False):
         "mode": "customScheduled",
         "dueAt": due_at,
     }
+    if video_url:
+        base["assets"] = [{"video": {"url": video_url}}]
+        base["metadata"] = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
+        return send_post([base])
     if channel["service"] not in TEXT_ONLY:
         base["assets"] = [{"image": {"url": image_url}}]
     if story:
@@ -373,6 +407,10 @@ def create_post(channel, text, image_url, due_at, story=False):
         attempts = [base]
     if channel["service"] == "instagram" and not story:
         attempts.insert(0, {**base, "metadata": {"instagram": {"type": "post", "shouldShareToFeed": True}}})
+    return send_post(attempts)
+
+
+def send_post(attempts):
     last = None
     for payload in attempts:
         try:
@@ -399,7 +437,7 @@ def wait_for_url(url, tries=20):
         try:
             req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "gravitas-poster"})
             with urllib.request.urlopen(req, timeout=20) as r:
-                if r.status == 200 and "image" in r.headers.get("Content-Type", ""):
+                if r.status == 200 and r.headers.get("Content-Type", "").split("/")[0] in ("image", "video", "application"):
                     return
         except Exception:
             pass
@@ -421,16 +459,21 @@ def cmd_render():
     keep = set()
     for slot in slots:
         tmp = CARDS / "_render.jpg"
-        render_card(slot["practice"], day, tmp, AREA_SHORT.get(slot["area"].lower(), slot["area"]), slot.get("story", False))
+        tall = slot.get("story", False) or slot.get("tall", False)
+        render_card(slot["practice"], day, tmp, AREA_SHORT.get(slot["area"].lower(), slot["area"]), tall)
         # A new file name whenever the card changes, so no cached old image gets posted.
         digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
         suffix = "" if slot["key"] == "base" else f"-{slot['key']}"
         slot["image"] = f"{stem}{suffix}-{digest}.jpg"
         tmp.rename(CARDS / slot["image"])
         keep.add(slot["image"])
+        if slot["key"] == "reel":
+            slot["video"] = f"{stem}-reel-{digest}.mp4"
+            make_reel(CARDS / slot["image"], CARDS / slot["video"])
+            keep.add(slot["video"])
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
-    for old in CARDS.glob(f"{stem}*.jpg"):
+    for old in [*CARDS.glob(f"{stem}*.jpg"), *CARDS.glob(f"{stem}*.mp4")]:
         if old.name not in keep:
             old.unlink()
     meta = {"date": stem, "day_index": idx, "slots": slots}
@@ -447,7 +490,8 @@ def cmd_preview():
         for service, text in build_captions(p, idx, slot["key"] != "base").items():
             if service in ("instagram", "twitter"):
                 print(f"--- {service} ---\n{text}")
-        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", AREA_SHORT.get(slot["area"].lower(), slot["area"]), slot.get("story", False))
+        render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", AREA_SHORT.get(slot["area"].lower(), slot["area"]),
+                    slot.get("story", False) or slot.get("tall", False))
 
 
 def cmd_publish():
@@ -466,9 +510,11 @@ def cmd_publish():
     for slot in meta["slots"]:
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
+        if slot.get("video"):
+            wait_for_url(f"{base_url}/{slot['video']}")
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
-            if slot.get("story") and ch["service"] != "instagram":
+            if (slot.get("story") or slot["key"] == "reel") and ch["service"] != "instagram":
                 continue
             if slot["key"].startswith("area") and ch["service"] not in AREA_SERVICES:
                 continue
@@ -480,7 +526,8 @@ def cmd_publish():
                 continue
             text = slot["captions"].get(ch["service"]) or slot["captions"]["_default"]
             try:
-                post = create_post(ch, text, image_url, due, slot.get("story", False))
+                video_url = f"{base_url}/{slot['video']}" if slot.get("video") else ""
+                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url)
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
             except RuntimeError as e:
