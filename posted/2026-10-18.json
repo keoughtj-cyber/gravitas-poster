@@ -3,40 +3,37 @@
   "results": {
     "instagram": {
       "channel": "gravitas_ccr",
-      "post_id": "6ad50eb00a208cb323789d5a",
-      "due_at": "2026-10-18T18:33:44.000Z"
+      "post_id": "6ad50f20938409f1d0e14784",
+      "due_at": "2026-10-18T18:35:35.000Z"
     },
     "twitter": {
       "channel": "gravitas_ccr",
-      "error": "Invalid post: Whoops, it looks like you've already got this one scheduled or posted around the same time. We're not able to post the same thing twice so close together."
+      "skipped": "duplicate in Buffer"
     },
     "story:instagram": {
       "channel": "gravitas_ccr",
-      "post_id": "6ad50eb1769b457934d508e5",
-      "due_at": "2026-10-18T18:33:45.000Z"
+      "post_id": "6ad50f200a208cb32378afb2",
+      "due_at": "2026-10-18T18:35:36.000Z"
     },
     "area1:twitter": {
       "channel": "gravitas_ccr",
-      "error": "Invalid post: Whoops, it looks like you've already got this one scheduled or posted around the same time. We're not able to post the same thing twice so close together."
+      "skipped": "duplicate in Buffer"
     },
     "area2:twitter": {
       "channel": "gravitas_ccr",
-      "error": "Invalid post: Whoops, it looks like you've already got this one scheduled or posted around the same time. We're not able to post the same thing twice so close together."
+      "skipped": "duplicate in Buffer"
     },
     "area3:twitter": {
       "channel": "gravitas_ccr",
-      "post_id": "6ad50eb3769b457934d50930",
-      "due_at": "2026-10-18T20:00:00.000Z"
+      "skipped": "duplicate in Buffer"
     },
     "area4:twitter": {
       "channel": "gravitas_ccr",
-      "post_id": "6ad50eb3a48c8f8371acc714",
-      "due_at": "2026-10-18T22:00:00.000Z"
+      "skipped": "duplicate in Buffer"
     },
     "area5:twitter": {
       "channel": "gravitas_ccr",
-      "post_id": "6ad50eb3ae173d6e0012f694",
-      "due_at": "2026-10-19T00:00:00.000Z"
+      "skipped": "duplicate in Buffer"
     }
   }
 }
