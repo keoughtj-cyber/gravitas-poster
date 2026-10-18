@@ -141,6 +141,7 @@ def generate_raw(prompt, seed):
             device="cpu",
             seed=seed,
         )
+    log("  Decoded")
     sr = config["sample_rate"]
     y = audio[0].to(torch.float32).cpu().numpy().T
     return y[: int(sr * SETTINGS["seconds_total"])], sr
