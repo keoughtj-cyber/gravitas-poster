@@ -117,10 +117,16 @@ _model = None
 def load_model():
     global _model
     if _model is None:
+        import torch
         from stable_audio_tools import get_pretrained_model
+        # CPU speed fixes: tiny "denormal" numbers and half-precision layers make CPU
+        # convolutions crawl, which stalled the audio decoder for half an hour.
+        torch.set_flush_denormal(True)
         log(f"Loading {MODEL_NAME}")
         model, config = get_pretrained_model(MODEL_NAME)
-        _model = (model.to("cpu").eval(), config)
+        model = model.to("cpu").float().eval()
+        log(f"Model dtype: {next(model.parameters()).dtype}, threads: {torch.get_num_threads()}")
+        _model = (model, config)
     return _model
 
 
