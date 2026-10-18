@@ -216,15 +216,22 @@ def write_wav(path, y, sr):
         w.writeframes((y * 32767).astype(np.int16).tobytes())
 
 
+def ffmpeg_exe():
+    # The ffmpeg binary bundled with imageio-ffmpeg. The system ffmpeg package is avoided
+    # because its libraries hung torch's audio decoder on GitHub's runner.
+    import imageio_ffmpeg
+    return imageio_ffmpeg.get_ffmpeg_exe()
+
+
 def ffmpeg(*args):
-    subprocess.run(["ffmpeg", "-hide_banner", "-y", *args], check=True, capture_output=True, text=True)
+    subprocess.run([ffmpeg_exe(), "-hide_banner", "-y", *args], check=True, capture_output=True, text=True)
 
 
 def master(src, dst, seconds):
     """Fades, then two-pass loudness normalization to TARGET_LUFS with a TRUE_PEAK_DB ceiling."""
     fades = f"afade=t=in:d={FADE_IN},afade=t=out:st={seconds - FADE_OUT:.3f}:d={FADE_OUT}"
     norm = f"loudnorm=I={TARGET_LUFS}:TP={TRUE_PEAK_DB}:LRA=11"
-    probe = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(src), "-af", f"{fades},{norm}:print_format=json",
+    probe = subprocess.run([ffmpeg_exe(), "-hide_banner", "-i", str(src), "-af", f"{fades},{norm}:print_format=json",
                             "-f", "null", "-"], check=True, capture_output=True, text=True).stderr
     m = json.loads(probe[probe.rindex("{"): probe.rindex("}") + 1])
     second = (f"{norm}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
@@ -234,7 +241,7 @@ def master(src, dst, seconds):
 
 def measure(path):
     """Integrated loudness and true peak of a finished file."""
-    out = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-af",
+    out = subprocess.run([ffmpeg_exe(), "-hide_banner", "-i", str(path), "-af",
                           f"loudnorm=I={TARGET_LUFS}:TP={TRUE_PEAK_DB}:print_format=json", "-f", "null", "-"],
                          check=True, capture_output=True, text=True).stderr
     m = json.loads(out[out.rindex("{"): out.rindex("}") + 1])

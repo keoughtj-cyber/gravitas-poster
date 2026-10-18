@@ -37,7 +37,7 @@ for 30 days (Actions tab, the run, Artifacts).
 
 ## Run it yourself
 
-Python 3.10 and ffmpeg.
+Python 3.10. ffmpeg comes with the requirements (imageio-ffmpeg).
 
 ```
 pip install -r music/requirements.txt

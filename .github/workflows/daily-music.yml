@@ -31,16 +31,13 @@ jobs:
           cache: pip
           cache-dependency-path: music/requirements.txt
 
-      - name: Install ffmpeg
-        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
-
       - name: Cache the Hugging Face model
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
           key: hf-${{ runner.os }}-stable-audio-open-small
 
-      - name: Install requirements
+      - name: Install requirements (ffmpeg comes from imageio-ffmpeg)
         run: pip install -r music/requirements.txt
 
       - name: Generate the clip

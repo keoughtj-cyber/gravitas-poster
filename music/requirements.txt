@@ -8,3 +8,5 @@ stable-audio-tools==0.0.19
 transformers==4.48.3
 # laion-clap 1.1.4 (pulled in by stable-audio-tools) pins numpy 1.23.5.
 numpy==1.23.5
+# ffmpeg binary for trimming, fades, loudness, and MP3.
+imageio-ffmpeg==0.6.0
