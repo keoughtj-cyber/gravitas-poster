@@ -33,7 +33,7 @@ POSTED = ROOT / "posted"
 FONTS = ROOT / "fonts"
 
 TZ = ZoneInfo(os.environ.get("POST_TZ", "America/New_York"))
-POST_TIME = os.environ.get("POST_TIME", "07:30")
+POST_TIME = os.environ.get("POST_TIME", "07:00")
 BUFFER_URL = os.environ.get("BUFFER_URL", "https://api.buffer.com")
 
 # Base rotation settings, copied from DailyPlanner.swift.
@@ -50,9 +50,11 @@ AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
 # Which networks get the area posts. Instagram keeps one post a day.
 AREA_SERVICES = {x.strip() for x in os.environ.get("AREA_SERVICES", "twitter").split(",") if x.strip()}
 AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
+# Clock times for the five area posts, in AREA_ORDER. Blank falls back to AREA_GAP_HOURS spacing.
+AREA_TIMES = [t.strip() for t in os.environ.get("AREA_TIMES", "09:00,12:00,15:00,18:00,21:00").split(",") if t.strip()]
 # A daily Instagram reel of one focus post, rotating through the areas by day.
 REEL_POST = os.environ.get("REEL_POST", "true").lower() != "false"
-REEL_TIME = os.environ.get("REEL_TIME", "15:00")
+REEL_TIME = os.environ.get("REEL_TIME", "19:00")
 REEL_SECONDS = int(os.environ.get("REEL_SECONDS", "7"))
 
 # Also post the main practice to the Instagram Story at the same time.
@@ -197,7 +199,7 @@ def day_slots(rows, day):
             practice = pick_area(rows, day, area, pillar, base.get("id", ""))
             if practice:
                 slots.append({"key": f"area{n}", "area": area,
-                              "offset_hours": n * AREA_GAP_HOURS, "practice": practice})
+                              "offset_hours": area_offset(n), "practice": practice})
     if REEL_POST and AREA_ORDER:
         # Same pick as that area's X post, so the reel and the post agree.
         n = idx % len(AREA_ORDER) + 1
@@ -207,6 +209,13 @@ def day_slots(rows, day):
             slots.append({"key": "reel", "area": area, "offset_hours": hours_after_post(REEL_TIME),
                           "practice": practice, "tall": True})
     return slots, idx
+
+
+def area_offset(n):
+    """Hours after POST_TIME for area post n (1 to 5)."""
+    if len(AREA_TIMES) >= n:
+        return hours_after_post(AREA_TIMES[n - 1])
+    return n * AREA_GAP_HOURS
 
 
 def hours_after_post(clock):

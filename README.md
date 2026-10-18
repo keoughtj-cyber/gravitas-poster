@@ -8,7 +8,7 @@ Every morning GitHub runs `post_daily.py`, which:
 2. Picks the day's Base practice (same rule as the app: pillar by day, shuffled pool per pillar).
 3. Draws a 1080x1350 black card in the gravitas_ccr style (GRAVITAS, date, BUILD plus the pillar, practice, why in italics) and commits it to `cards/`.
 4. Schedules it on Buffer for `POST_TIME` with a caption written for each network (`captions.json`).
-5. At 3 p.m. it also posts an Instagram reel: a 7-second 9:16 video with a new original track composed for that date by `music.py` (key, scale, chords, tempo, instruments, and rhythm all change daily, nothing to license) of one Focus area card (the area rotates daily through Habits, Relationships, Career, Calm, and Fitness) with the Focus caption. `REEL_POST` turns it off, `REEL_TIME` moves it. The video is built with the bundled ffmpeg from `imageio-ffmpeg` and served to Buffer through jsDelivr so it arrives as video/mp4.
+5. At 7 p.m. (`REEL_TIME`) it also posts an Instagram reel: a 7-second 9:16 video with a new original track composed for that date by `music.py` (key, scale, chords, tempo, instruments, and rhythm all change daily, nothing to license) of one Focus area card (the area rotates daily through Habits, Relationships, Career, Calm, and Fitness) with the Focus caption. `REEL_POST` turns it off, `REEL_TIME` moves it. The video is built with the bundled ffmpeg from `imageio-ffmpeg` and served to Buffer through jsDelivr so it arrives as video/mp4.
 6. Writes `posted/DATE.json` so a re-run never posts twice.
 
 Cost to start: $0 (public GitHub repo, Buffer Free plan, up to 3 accounts).
@@ -40,7 +40,7 @@ Secrets tab:
 
 Variables tab:
 - `LIBRARY_CSV_URL` (required): the published CSV link of the `library_publish` tab. In the sheet: File, Share, Publish to web, pick the `library_publish` tab, Comma-separated values, Publish, copy the link.
-- `POST_TIME` (optional, default `07:30`) and `POST_TZ` (default `America/New_York`).
+- `POST_TIME` (optional, default `07:00`), `AREA_TIMES` (X focus posts, default `09:00,12:00,15:00,18:00,21:00`), `REEL_TIME` (default `19:00`), and `POST_TZ` (default `America/New_York`).
 - `APP_LINK` (optional): App Store link once the app is live. Added to LinkedIn and Facebook captions only.
 - `BUFFER_SERVICES` (optional): limit which Buffer channels get posts, for example `instagram,twitter,linkedin`. Blank means every connected channel.
 

@@ -26,20 +26,21 @@ env:
   POST_DATE: ${{ github.event.inputs.date }}
   REDO: ${{ github.event.inputs.redo }}
   POST_TZ: ${{ vars.POST_TZ || 'America/New_York' }}
-  POST_TIME: ${{ vars.POST_TIME || '07:30' }}
+  POST_TIME: ${{ vars.POST_TIME || '07:00' }}
   LIBRARY_CSV_URL: ${{ vars.LIBRARY_CSV_URL }}
   APP_LINK: ${{ vars.APP_LINK }}
   CARD_FOOTER: ${{ vars.CARD_FOOTER || 'ONE PRACTICE A DAY' }}
   BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
   REEL_POST: ${{ vars.REEL_POST || 'true' }}
-  REEL_TIME: ${{ vars.REEL_TIME || '15:00' }}
+  REEL_TIME: ${{ vars.REEL_TIME || '19:00' }}
   REEL_MUSIC_FROM_LATEST: ${{ vars.REEL_MUSIC_FROM_LATEST || 'true' }}
   STORY_POST: ${{ vars.STORY_POST || 'true' }}
   INSTAGRAM_AUDIO: ${{ vars.INSTAGRAM_AUDIO || 'true' }}
   AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
   AREA_SERVICES: ${{ vars.AREA_SERVICES || 'twitter' }}
   AREA_GAP_HOURS: ${{ vars.AREA_GAP_HOURS || '2' }}
+  AREA_TIMES: ${{ vars.AREA_TIMES || '09:00,12:00,15:00,18:00,21:00' }}
   BASE_SEED: ${{ vars.BASE_SEED || '0x6761766974617321' }}
   BASE_EPOCH: ${{ vars.BASE_EPOCH || '2026-01-01' }}
   BASE_PILLAR_ORDER: ${{ vars.BASE_PILLAR_ORDER || 'Confidence,Character,Respect' }}
