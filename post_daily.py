@@ -62,6 +62,11 @@ STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
 # Instagram feed posts go out as videos with music: the 10:00 post becomes a reel, and the
 # 15:00 reel uses a different clip. The Story stays a still image. Other networks keep the card.
 INSTAGRAM_AUDIO = os.environ.get("INSTAGRAM_AUDIO", "true").lower() != "false"
+# Instagram look (ig_design.py): hook-first motion reels, a restyled Story card, and a daily
+# carousel. IG_DESIGN=false brings back the plain card on Instagram. X and LinkedIn never change.
+IG_DESIGN = os.environ.get("IG_DESIGN", "true").lower() != "false"
+CAROUSEL_POST = os.environ.get("CAROUSEL_POST", "true").lower() != "false"
+CAROUSEL_TIME = os.environ.get("CAROUSEL_TIME", "12:00")
 # Short focus names for the card, as the app shows them.
 AREA_SHORT = {
     "habits and discipline": "Habits",
@@ -208,6 +213,16 @@ def day_slots(rows, day):
         if practice:
             slots.append({"key": "reel", "area": area, "offset_hours": hours_after_post(REEL_TIME),
                           "practice": practice, "tall": True})
+    if IG_DESIGN and CAROUSEL_POST and AREA_ORDER:
+        # A different area from the reel and the Base post, with the same pick as that area's X post.
+        taken = {s["area"].lower() for s in slots if s["key"] == "reel"} | {base.get("area", "").lower()}
+        order = [(idx + 2 + k) % len(AREA_ORDER) + 1 for k in range(len(AREA_ORDER))]
+        n = next((m for m in order if AREA_ORDER[m - 1].lower() not in taken), order[0])
+        area = AREA_ORDER[n - 1]
+        practice = pick_area(rows, day, area, PILLARS[(idx + n) % len(PILLARS)], base.get("id", ""))
+        if practice:
+            slots.append({"key": "carousel", "area": area, "offset_hours": hours_after_post(CAROUSEL_TIME),
+                          "practice": practice})
     return slots, idx
 
 
@@ -342,29 +357,48 @@ def render_card(practice, day, out_path, subtitle="", story=False):
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
 
 
-def make_reel(image_path, out_path, day, track_id="a"):
-    """A short still-card video with a daily AI clip, or a track composed for this date (music.py).
+def reel_track(day, track_id="a"):
+    """The daily AI clip, or a track composed for this date (music.py).
     track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ."""
-    track = CARDS / "_music.wav"
     clip = reel_music_from_latest(day, track_id)
     if clip:
-        audio = ["-i", str(clip)]
-    else:
-        import music
-        # Track "b" composes from a shifted date so it never matches track "a".
-        seed_day = day if track_id == "a" else day + dt.timedelta(days=500)
-        print(f"Composed reel track: {music.compose(seed_day, REEL_SECONDS, track)}")
-        audio = ["-i", str(track)]
+        return clip
+    import music
+    track = CARDS / f"_music_{track_id}.wav"
+    # Track "b" composes from a shifted date so it never matches track "a".
+    seed_day = day if track_id == "a" else day + dt.timedelta(days=500)
+    print(f"Composed reel track: {music.compose(seed_day, REEL_SECONDS, track)}")
+    return track
+
+
+def ffmpeg_exe():
     try:
         import imageio_ffmpeg  # bundled ffmpeg, since GitHub's runner has none
-        exe = imageio_ffmpeg.get_ffmpeg_exe()
+        return imageio_ffmpeg.get_ffmpeg_exe()
     except ImportError:
-        exe = "ffmpeg"
+        return "ffmpeg"
+
+
+def make_motion_reel(practice, day, out_path, focus, track_id="a"):
+    """The Instagram reel: hook, then the practice and why, then a share prompt (ig_design.py)."""
+    import ig_design
+    track = reel_track(day, track_id)
+    ig_design.motion_reel(practice, day, out_path, track, REEL_SECONDS, ffmpeg_exe(), focus)
+    if track.parent == CARDS:
+        track.unlink(missing_ok=True)
+
+
+def make_reel(image_path, out_path, day, track_id="a"):
+    """A short still-card video with the day's music."""
+    track = reel_track(day, track_id)
+    audio = ["-i", str(track)]
+    exe = ffmpeg_exe()
     cmd = [exe, "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(image_path), *audio,
            "-t", str(REEL_SECONDS), "-vf", "format=yuv420p", "-c:v", "libx264", "-preset", "medium",
            "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out_path)]
     subprocess.run(cmd, check=True)
-    track.unlink(missing_ok=True)
+    if track.parent == CARDS:
+        track.unlink(missing_ok=True)
 
 
 # Optional: put the daily clip from the Daily music workflow (music/) under the reel.
@@ -427,7 +461,7 @@ mutation($input: CreatePostInput!) {
 }"""
 
 
-def create_post(channel, text, image_url, due_at, story=False, video_url=""):
+def create_post(channel, text, image_url, due_at, story=False, video_url="", image_urls=None):
     base = {
         "channelId": channel["id"],
         "text": text,
@@ -435,6 +469,11 @@ def create_post(channel, text, image_url, due_at, story=False, video_url=""):
         "mode": "customScheduled",
         "dueAt": due_at,
     }
+    if image_urls:
+        # Several images on one Instagram post make a carousel.
+        base["assets"] = [{"image": {"url": u}} for u in image_urls]
+        base["metadata"] = {"instagram": {"type": "post", "shouldShareToFeed": True}}
+        return send_post([base])
     if video_url:
         base["assets"] = [{"video": {"url": video_url}}]
         if story:
@@ -443,7 +482,12 @@ def create_post(channel, text, image_url, due_at, story=False, video_url=""):
             base["metadata"] = {"instagram": {"type": "story", "shouldShareToFeed": False}}
         else:
             base["metadata"] = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
-        return send_post([base])
+        attempts = [base]
+        if IG_DESIGN and not story:
+            # Cover frame one second in, where the hook has settled. Plain video if Buffer refuses it.
+            cover = {"video": {"url": video_url, "metadata": {"thumbnailOffset": 1000}}}
+            attempts.insert(0, {**base, "assets": [cover]})
+        return send_post(attempts)
     if channel["service"] not in TEXT_ONLY:
         base["assets"] = [{"image": {"url": image_url}}]
     if story:
@@ -514,6 +558,11 @@ def target_day():
     return dt.date.fromisoformat(override) if override else dt.datetime.now(TZ).date()
 
 
+def short_area(practice):
+    area = practice.get("area", "")
+    return AREA_SHORT.get(area.lower(), area)
+
+
 def cmd_render():
     day = target_day()
     stem = day.isoformat()
@@ -522,16 +571,36 @@ def cmd_render():
     for slot in slots:
         tmp = CARDS / "_render.jpg"
         tall = slot.get("story", False) or slot.get("tall", False)
-        render_card(slot["practice"], day, tmp, AREA_SHORT.get(slot["area"].lower(), slot["area"]), tall)
+        focus = AREA_SHORT.get(slot["area"].lower(), slot["area"])
+        if IG_DESIGN and slot["key"] in ("story", "reel"):
+            import ig_design
+            ig_design.story_card(slot["practice"], day, tmp, short_area(slot["practice"]))
+        elif IG_DESIGN and slot["key"] == "carousel":
+            import ig_design
+            slides = ig_design.carousel(slot["practice"], day, focus)
+            slides[0].save(tmp, "JPEG", quality=92, optimize=True)
+        else:
+            render_card(slot["practice"], day, tmp, focus, tall)
         # A new file name whenever the card changes, so no cached old image gets posted.
         digest = hashlib.sha1(tmp.read_bytes()).hexdigest()[:8]
         suffix = "" if slot["key"] == "base" else f"-{slot['key']}"
         slot["image"] = f"{stem}{suffix}-{digest}.jpg"
         tmp.rename(CARDS / slot["image"])
         keep.add(slot["image"])
+        if slot["key"] == "carousel":
+            slot["images"] = [slot["image"]]
+            for n, img in enumerate(slides[1:], start=2):
+                name = f"{stem}-carousel{n}-{digest}.jpg"
+                img.save(CARDS / name, "JPEG", quality=92, optimize=True)
+                slot["images"].append(name)
+                keep.add(name)
         if slot["key"] == "reel":
             slot["video"] = f"{stem}-reel-{digest}.mp4"
-            make_reel(CARDS / slot["image"], CARDS / slot["video"], day, "b" if INSTAGRAM_AUDIO else "a")
+            track_id = "b" if INSTAGRAM_AUDIO else "a"
+            if IG_DESIGN:
+                make_motion_reel(slot["practice"], day, CARDS / slot["video"], focus, track_id)
+            else:
+                make_reel(CARDS / slot["image"], CARDS / slot["video"], day, track_id)
             keep.add(slot["video"])
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
@@ -546,7 +615,10 @@ def cmd_render():
             render_card(base["practice"], day, tall_image, "", True)
         digest = hashlib.sha1(tall_image.read_bytes()).hexdigest()[:8]
         base["ig_video"] = f"{stem}-ig-{digest}.mp4"
-        make_reel(tall_image, CARDS / base["ig_video"], day, "a")
+        if IG_DESIGN:
+            make_motion_reel(base["practice"], day, CARDS / base["ig_video"], short_area(base["practice"]), "a")
+        else:
+            make_reel(tall_image, CARDS / base["ig_video"], day, "a")
         keep.add(base["ig_video"])
         tall_image.with_name("_render.jpg").unlink(missing_ok=True)
     for old in [*CARDS.glob(f"{stem}*.jpg"), *CARDS.glob(f"{stem}*.mp4")]:
@@ -575,7 +647,10 @@ def cmd_publish():
     stem = day.isoformat()
     marker = POSTED / f"{stem}.json"
     redo = os.environ.get("REDO", "").lower() == "true"
-    done = json.loads(marker.read_text())["results"] if marker.exists() and not redo else {}
+    previous = json.loads(marker.read_text())["results"] if marker.exists() else {}
+    done = {} if redo else previous
+    # ONLY_SLOTS limits a manual run to some posts, for example base,story,carousel.
+    only = {x.strip() for x in os.environ.get("ONLY_SLOTS", "").split(",") if x.strip()}
     meta = json.loads((CARDS / f"{stem}.json").read_text())
     base_url = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
     if not base_url:
@@ -584,13 +659,17 @@ def cmd_publish():
     channels = buffer_channels()
     results, failed = {}, []
     for slot in meta["slots"]:
+        if only and slot["key"] not in only:
+            continue
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
         for name in {slot.get("video"), slot.get("ig_video")} - {None}:
             wait_for_url(video_link(name, base_url))
+        for name in slot.get("images", [])[1:]:
+            wait_for_url(f"{base_url}/{name}")
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
-            if (slot.get("story") or slot["key"] == "reel") and ch["service"] != "instagram":
+            if (slot.get("story") or slot["key"] in ("reel", "carousel")) and ch["service"] != "instagram":
                 continue
             if slot["key"].startswith("area") and ch["service"] not in AREA_SERVICES:
                 continue
@@ -604,7 +683,8 @@ def cmd_publish():
             try:
                 video = slot.get("video") or (slot.get("ig_video") if ch["service"] == "instagram" else "")
                 video_url = video_link(video, base_url) if video else ""
-                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url)
+                image_urls = [f"{base_url}/{n}" for n in slot.get("images", [])]
+                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url, image_urls)
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
             except RuntimeError as e:
@@ -618,7 +698,8 @@ def cmd_publish():
                 print(f"FAILED {key} ({ch['name']}): {e}")
 
     POSTED.mkdir(exist_ok=True)
-    marker.write_text(json.dumps({"date": stem, "results": results}, indent=2))
+    # Keep the records of posts this run did not touch.
+    marker.write_text(json.dumps({"date": stem, "results": {**previous, **results}}, indent=2))
     if failed:
         sys.exit(f"Some posts failed: {', '.join(failed)}")
 

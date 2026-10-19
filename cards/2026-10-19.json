@@ -24,7 +24,7 @@
         "bluesky": "Let a silence sit in a conversation without filling it.\n\nSilence is not a problem.",
         "_default": "Let a silence sit in a conversation without filling it.\n\nSilence is not a problem."
       },
-      "ig_video": "2026-10-19-ig-b55545ac.mp4"
+      "ig_video": "2026-10-19-ig-fa8d4bff.mp4"
     },
     {
       "key": "story",
@@ -38,7 +38,7 @@
         "area": "Calm and Mindset"
       },
       "story": true,
-      "image": "2026-10-19-story-b55545ac.jpg",
+      "image": "2026-10-19-story-fa8d4bff.jpg",
       "captions": {
         "twitter": "Let a silence sit in a conversation without filling it.\n\nSilence is not a problem.",
         "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Let a silence sit in a conversation without filling it.\nSilence is not a problem.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
@@ -177,8 +177,8 @@
         "area": "Relationships and Friendships"
       },
       "tall": true,
-      "image": "2026-10-19-reel-7ab083cf.jpg",
-      "video": "2026-10-19-reel-7ab083cf.mp4",
+      "image": "2026-10-19-reel-1a190f7a.jpg",
+      "video": "2026-10-19-reel-1a190f7a.mp4",
       "captions": {
         "twitter": "Hold your ground on a boundary without raising your voice.\n\nCalm firmness holds best.",
         "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Hold your ground on a boundary without raising your voice.\nCalm firmness holds best.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
@@ -188,6 +188,35 @@
         "tiktok": "Hold your ground on a boundary without raising your voice. Calm firmness holds best. #gravitas #dailypractice #selfimprovement",
         "bluesky": "Hold your ground on a boundary without raising your voice.\n\nCalm firmness holds best.",
         "_default": "Hold your ground on a boundary without raising your voice.\n\nCalm firmness holds best."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Fitness and Health",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "FIT-024",
+        "practice": "Keep screens out of your bed tonight.",
+        "why": "Your bed is for rest.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-19-carousel-b896dc31.jpg",
+      "images": [
+        "2026-10-19-carousel-b896dc31.jpg",
+        "2026-10-19-carousel2-b896dc31.jpg",
+        "2026-10-19-carousel3-b896dc31.jpg",
+        "2026-10-19-carousel4-b896dc31.jpg"
+      ],
+      "captions": {
+        "twitter": "Keep screens out of your bed tonight.\n\nYour bed is for rest.",
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Keep screens out of your bed tonight.\nYour bed is for rest.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Keep screens out of your bed tonight.\n\nYour bed is for rest.",
+        "facebook": "The practice: Keep screens out of your bed tonight.\n\nYour bed is for rest.",
+        "tiktok": "Keep screens out of your bed tonight. Your bed is for rest. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Keep screens out of your bed tonight.\n\nYour bed is for rest.",
+        "_default": "Keep screens out of your bed tonight.\n\nYour bed is for rest."
       }
     }
   ]
