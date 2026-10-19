@@ -62,7 +62,7 @@ STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
 # Instagram feed posts go out as videos with music: the 10:00 post becomes a reel, and the
 # 15:00 reel uses a different clip. The Story stays a still image. Other networks keep the card.
 INSTAGRAM_AUDIO = os.environ.get("INSTAGRAM_AUDIO", "true").lower() != "false"
-# Instagram look (ig_design.py): hook-first motion reels, a restyled Story card, and a daily
+# Instagram look (ig_design.py): practice-first motion reels, a restyled Story card, and a daily
 # carousel. IG_DESIGN=false brings back the plain card on Instagram. X and LinkedIn never change.
 IG_DESIGN = os.environ.get("IG_DESIGN", "true").lower() != "false"
 CAROUSEL_POST = os.environ.get("CAROUSEL_POST", "true").lower() != "false"
@@ -398,7 +398,7 @@ def ffmpeg_exe():
 
 
 def make_motion_reel(practice, day, out_path, focus, track_id="a", use=""):
-    """The Instagram reel: hook, then the practice and why, then a share prompt (ig_design.py)."""
+    """The Instagram reel: the practice from the first frame, then the why, then a share prompt (ig_design.py)."""
     import ig_design
     track = reel_track(day, track_id, use)
     ig_design.motion_reel(practice, day, out_path, track, REEL_SECONDS, ffmpeg_exe(), focus)
@@ -502,7 +502,7 @@ def create_post(channel, text, image_url, due_at, story=False, video_url="", ima
             base["metadata"] = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
         attempts = [base]
         if IG_DESIGN and not story:
-            # Cover frame one second in, where the hook has settled. Plain video if Buffer refuses it.
+            # Cover frame one second in, where the practice has settled. Plain video if Buffer refuses it.
             cover = {"video": {"url": video_url, "metadata": {"thumbnailOffset": 1000}}}
             attempts.insert(0, {**base, "assets": [cover]})
         return send_post(attempts)

@@ -1,7 +1,7 @@
-"""Instagram look for @gravitas_ccr: hook-first motion reels, 4-slide carousels, and a restyled Story card.
+"""Instagram look for @gravitas_ccr: practice-first motion reels, 3-slide carousels, and a restyled Story card.
 
-Everything renders from a practice row (practice, why, pillar, area) plus the optional hook,
-concept, and source in ig_extra.csv. X and LinkedIn keep the plain card in post_daily.py.
+Everything renders from a practice row (practice, why, pillar, area) plus the concept and
+source in ig_extra.csv. X and LinkedIn keep the plain card in post_daily.py.
 """
 import csv
 import datetime as dt
@@ -30,7 +30,7 @@ _extra = None
 
 
 def extra(practice):
-    """hook, concept, and source for a practice id, from ig_extra.csv."""
+    """concept and source for a practice id, from ig_extra.csv."""
     global _extra
     if _extra is None:
         _extra = {}
@@ -44,11 +44,6 @@ def extra(practice):
 def sentence(text):
     text = text.strip()
     return text if text.endswith((".", "!", "?")) else text + "."
-
-
-def hook_line(practice):
-    """The first frame. A written hook when there is one, otherwise the why."""
-    return sentence(practice.get("hook") or extra(practice).get("hook") or practice.get("why") or practice["practice"])
 
 
 def rep_number(day):
@@ -157,12 +152,12 @@ def story_card(practice, day, out_path, focus=""):
 # ---------- carousel ----------
 
 def carousel(practice, day, focus=""):
-    """Four 4:5 slides: hook, the practice, why it works, save and send."""
+    """Three 4:5 slides: the practice, why it works, save and send."""
     w, h = 1080, 1350
     color = accent(practice)
     more = extra(practice)
     width = w - 2 * MARGIN
-    hf, pf, wf = font("Inter-Bold.otf", 104), font("Inter-Bold.otf", 74), font("Inter-Italic.otf", 42)
+    hf, wf = font("Inter-Bold.otf", 92), font("Inter-Italic.otf", 42)
     kf, sf = font("Inter-Bold.otf", 30), font("Inter-Medium.otf", 30)
     slides = []
 
@@ -170,26 +165,19 @@ def carousel(practice, day, focus=""):
         img = background(w, h, color, seed=n)
         d = ImageDraw.Draw(img)
         header(d, w, 90, day)
-        page = f"{n} / 4"
+        page = f"{n} / 3"
         spaced(d, (w - MARGIN - spaced_width(d, page, sf, 3), h - 120), page, sf, DIM, 3)
         return img, d
 
     img, d = slide(1)
-    lines = wrap(d, hook_line(practice), hf, width)
+    lines = wrap(d, practice["practice"].rstrip(". "), hf, width)
     y = int(h * 0.5 - len(lines) * 122 / 2)
     spaced(d, (MARGIN, y - 80), kicker(practice, focus), kf, color, 5)
     lines_at(d, lines, hf, y, WHITE, 122)
-    spaced(d, (MARGIN, h - 120), "SWIPE FOR THE PRACTICE  →", sf, GREY, 3)
+    spaced(d, (MARGIN, h - 120), "SWIPE FOR WHY IT WORKS  \u2192", sf, GREY, 3)
     slides.append(img)
 
     img, d = slide(2)
-    lines = wrap(d, practice["practice"].rstrip(". "), pf, width)
-    y = int(h * 0.5 - (len(lines) * 92 + 80) / 2)
-    spaced(d, (MARGIN, y), "THE PRACTICE", kf, color, 5)
-    lines_at(d, lines, pf, y + 80, WHITE, 92)
-    slides.append(img)
-
-    img, d = slide(3)
     bf = font("Inter-Bold.otf", 70)
     y = 360
     spaced(d, (MARGIN, y), "WHY IT WORKS", kf, color, 5)
@@ -202,7 +190,7 @@ def carousel(practice, day, focus=""):
         lines_at(d, wrap(d, f"Source: {sentence(more['source'])}", wf, width), wf, y, GREY, 56)
     slides.append(img)
 
-    img, d = slide(4)
+    img, d = slide(3)
     cf = font("Inter-Bold.otf", 80)
     lines = wrap(d, "Do it once. Then tell us how it went.", cf, width)
     y = lines_at(d, lines, cf, int(h * 0.44 - len(lines) * 98 / 2), WHITE, 98) + 50
@@ -222,7 +210,7 @@ def ease(t):
 
 def reel_frame(practice, day, t, dur, focus=""):
     """One 9:16 frame. Timings are written for 7 seconds and stretch with the length.
-    0 to 2s hook, 2.2 to 5.4s practice and why, 5.6s on the share prompt."""
+    0 to 5.4s the practice, with the why from 1.8s, then the share prompt from 5.6s."""
     w, h = 1080, 1920
     s = t * 7.0 / dur
     color = accent(practice)
@@ -230,7 +218,7 @@ def reel_frame(practice, day, t, dur, focus=""):
     layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     header(d, w, 250, day)
-    hf, pf = font("Inter-Bold.otf", 112), font("Inter-Bold.otf", 80)
+    hf, pf = font("Inter-Bold.otf", 100), font("Inter-Bold.otf", 80)
     wf, kf = font("Inter-Italic.otf", 46), font("Inter-Bold.otf", 32)
     width, cy = w - 2 * MARGIN, 880  # text sits above the caption area at the bottom
     d.rectangle([MARGIN, 320, MARGIN + int(width * min(t / dur, 1)), 324], fill=color + (255,))
@@ -245,27 +233,20 @@ def reel_frame(practice, day, t, dur, focus=""):
         else:
             d.text(xy, value, font=fnt, fill=fill)
 
-    a = 1 - ease((s - 1.9) / 0.35)
+    # The practice is on screen from the first frame; the why follows.
+    a = 1 - ease((s - 5.3) / 0.3)
     if a > 0:
-        lines = wrap(d, hook_line(practice), hf, width)
-        y = cy - len(lines) * 132 / 2 + (1 - ease(s / 0.4)) * 30
+        lines = wrap(d, practice["practice"].rstrip(". "), hf, width)
+        why = wrap(d, sentence(practice.get("why", "")), wf, width) if practice.get("why") else []
+        y = cy - (90 + len(lines) * 124 + 44 + len(why) * 58) / 2
+        text((MARGIN, y), kicker(practice, focus), kf, color, a, 5)
+        y += 90 + (1 - ease(s / 0.4)) * 24
         for ln in lines:
             text((MARGIN, y), ln, hf, WHITE, a)
-            y += 132
-
-    a = ease((s - 2.2) / 0.3) * (1 - ease((s - 5.3) / 0.3))
-    if a > 0:
-        lines = wrap(d, practice["practice"].rstrip(". "), pf, width)
-        y = cy - (90 + len(lines) * 98 + 100) / 2
-        text((MARGIN, y), kicker(practice, focus), kf, color, a, 5)
-        y += 90
-        for i, ln in enumerate(lines):
-            ai = ease((s - 2.35 - i * 0.25) / 0.3) * a
-            text((MARGIN, y + (1 - ai) * 18), ln, pf, WHITE, ai)
-            y += 98
-        y += 40
-        aw = ease((s - 3.6) / 0.4) * a
-        for ln in wrap(d, sentence(practice.get("why", "")), wf, width):
+            y += 124
+        y += 44
+        aw = ease((s - 1.8) / 0.4) * a
+        for ln in why:
             text((MARGIN, y), ln, wf, GREY, aw)
             y += 58
 
