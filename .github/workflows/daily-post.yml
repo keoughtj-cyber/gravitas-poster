@@ -37,6 +37,10 @@ env:
   REEL_MUSIC_FROM_LATEST: ${{ vars.REEL_MUSIC_FROM_LATEST || 'true' }}
   STORY_POST: ${{ vars.STORY_POST || 'true' }}
   INSTAGRAM_AUDIO: ${{ vars.INSTAGRAM_AUDIO || 'true' }}
+  IG_DESIGN: ${{ vars.IG_DESIGN || 'true' }}
+  IG_REP_START: ${{ vars.IG_REP_START || '2026-10-20' }}
+  CAROUSEL_POST: ${{ vars.CAROUSEL_POST || 'true' }}
+  CAROUSEL_TIME: ${{ vars.CAROUSEL_TIME || '12:00' }}
   AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
   AREA_SERVICES: ${{ vars.AREA_SERVICES || 'twitter' }}
   AREA_GAP_HOURS: ${{ vars.AREA_GAP_HOURS || '2' }}
