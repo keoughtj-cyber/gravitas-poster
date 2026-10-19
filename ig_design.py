@@ -20,7 +20,7 @@ EXTRA = ROOT / "ig_extra.csv"
 COLORS = {"confidence": (212, 168, 67), "character": (79, 157, 122), "respect": (91, 141, 239)}
 WHITE, GREY, DIM = (245, 245, 245), (160, 160, 160), (110, 110, 110)
 # REP 001 is the first day of this look; the number counts up one a day from there.
-REP_START = dt.date.fromisoformat(os.environ.get("IG_REP_START", "2026-10-20"))
+REP_START = dt.date.fromisoformat(os.environ.get("IG_REP_START", "2026-10-19"))
 MARGIN = 90
 
 

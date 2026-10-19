@@ -647,7 +647,10 @@ def cmd_publish():
     stem = day.isoformat()
     marker = POSTED / f"{stem}.json"
     redo = os.environ.get("REDO", "").lower() == "true"
-    done = json.loads(marker.read_text())["results"] if marker.exists() and not redo else {}
+    previous = json.loads(marker.read_text())["results"] if marker.exists() else {}
+    done = {} if redo else previous
+    # ONLY_SLOTS limits a manual run to some posts, for example base,story,carousel.
+    only = {x.strip() for x in os.environ.get("ONLY_SLOTS", "").split(",") if x.strip()}
     meta = json.loads((CARDS / f"{stem}.json").read_text())
     base_url = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
     if not base_url:
@@ -656,6 +659,8 @@ def cmd_publish():
     channels = buffer_channels()
     results, failed = {}, []
     for slot in meta["slots"]:
+        if only and slot["key"] not in only:
+            continue
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
         for name in {slot.get("video"), slot.get("ig_video")} - {None}:
@@ -693,7 +698,8 @@ def cmd_publish():
                 print(f"FAILED {key} ({ch['name']}): {e}")
 
     POSTED.mkdir(exist_ok=True)
-    marker.write_text(json.dumps({"date": stem, "results": results}, indent=2))
+    # Keep the records of posts this run did not touch.
+    marker.write_text(json.dumps({"date": stem, "results": {**previous, **results}}, indent=2))
     if failed:
         sys.exit(f"Some posts failed: {', '.join(failed)}")
 

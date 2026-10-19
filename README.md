@@ -16,9 +16,10 @@ Every morning GitHub runs `post_daily.py`, which:
 Instagram gets its own design. X and LinkedIn keep the plain card above.
 
 - Both reels are motion reels: a large hook line on the first frame, then the practice line by line with the why, then "Send this to a friend who needs it." The hook is the `hook` column in `ig_extra.csv` for that practice id, or the why when it is empty.
-- The Story is a restyled 9:16 still: III mark, pillar color, larger type, and a REP number that counts up from `IG_REP_START` (default 2026-10-20).
+- The Story is a restyled 9:16 still: III mark, pillar color, larger type, and a REP number that counts up from `IG_REP_START` (default 2026-10-19).
 - At `CAROUSEL_TIME` (default 12:00) a 4-slide carousel goes to the feed: hook, the practice, why it works (principle and research source from `ig_extra.csv`), and a save and send slide. It uses a Focus area that is not the reel's or the Base post's, with the same practice as that area's X post.
 - `IG_DESIGN=false` brings back the plain card on Instagram. `CAROUSEL_POST=false` stops the carousel.
+- A manual run (Actions, Daily post, Run workflow) can post only some networks (`services`, for example `instagram`) and only some posts (`only`, for example `base,story,carousel`). Tick Post again when that date already ran; posts outside `only` are left alone.
 - `ig_extra.csv` holds id, hook, concept, and source for every library practice. Add or edit hooks there; the sheet does not need to change.
 
 Cost to start: $0 (public GitHub repo, Buffer Free plan, up to 3 accounts).
