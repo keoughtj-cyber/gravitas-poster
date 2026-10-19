@@ -22,6 +22,7 @@ WHITE, GREY, DIM = (245, 245, 245), (160, 160, 160), (110, 110, 110)
 # REP 001 is the first day of this look; the number counts up one a day from there.
 REP_START = dt.date.fromisoformat(os.environ.get("IG_REP_START", "2026-10-19"))
 MARGIN = 90
+FOLLOW_LINE = "Follow for daily practices on how to be a better man."
 
 
 # ---------- content ----------
@@ -144,7 +145,7 @@ def story_card(practice, day, out_path, focus=""):
     y += 54
     y = lines_at(d, lines, pf, y, WHITE, 92) + 34
     lines_at(d, why, wf, y, GREY, 52)
-    spaced(d, (MARGIN, h - 300), "FOLLOW FOR ONE PRACTICE A DAY", font("Inter-Medium.otf", 24), DIM, 3)
+    spaced(d, (MARGIN, h - 300), FOLLOW_LINE.rstrip(".").upper(), font("Inter-Medium.otf", 24), DIM, 2)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "JPEG", quality=92, optimize=True)
 
@@ -194,9 +195,9 @@ def carousel(practice, day, focus=""):
     cf = font("Inter-Bold.otf", 80)
     lines = wrap(d, "Do it once. Then tell us how it went.", cf, width)
     y = lines_at(d, lines, cf, int(h * 0.44 - len(lines) * 98 / 2), WHITE, 98) + 50
-    for t in ("Save this for the next time you need it.", "Send it to a friend building the same thing."):
+    for t in ("Save this for the next time you need it.", FOLLOW_LINE):
         y = lines_at(d, wrap(d, t, wf, width), wf, y, GREY, 56) + 10
-    spaced(d, (MARGIN, y + 40), "FOLLOW @GRAVITAS_CCR", kf, color, 5)
+    spaced(d, (MARGIN, y + 40), "@GRAVITAS_CCR", kf, color, 5)
     slides.append(img)
     return slides
 
@@ -257,7 +258,11 @@ def reel_frame(practice, day, t, dur, focus=""):
         for ln in lines:
             text((MARGIN, y), ln, pf, WHITE, a)
             y += 98
-        text((MARGIN, y + 40), "FOLLOW @GRAVITAS_CCR", kf, color, a, 5)
+        y += 30
+        for ln in wrap(d, FOLLOW_LINE, wf, width):
+            text((MARGIN, y), ln, wf, GREY, a)
+            y += 58
+        text((MARGIN, y + 30), "@GRAVITAS_CCR", kf, color, a, 5)
 
     img = Image.alpha_composite(img, layer)
     # A slow push-in, so no frame is ever fully still.
