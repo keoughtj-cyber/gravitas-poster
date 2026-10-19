@@ -1,25 +1,40 @@
-"""Optional hook for post_daily.py: hands the reel the newest daily music clip.
+"""Hands post_daily.py daily music clips that have never been posted.
 
-Returns the path of music/output/latest/gravitas_7s.mp3 (track "a", the best candidate) or
-gravitas_7s_b.mp3 (track "b", the runner-up) when it exists and was made for the reel's date
-or up to MAX_AGE_DAYS before it. Otherwise returns None, and the reel
-keeps its coded track. This never posts or schedules anything.
+Each dated folder in music/output/ holds up to three 7-second tracks from one run of
+generate.py: a (best), b, and c. Every track is known by its seed in meta.json. A track is
+handed out only if its seed is not in the used set the poster keeps, newest folder first,
+so no clip goes out twice. This never posts or schedules anything.
 """
 
-import datetime as dt
 import json
 from pathlib import Path
 
-LATEST = Path(__file__).resolve().parent / "output" / "latest"
-MAX_AGE_DAYS = 2
+OUTPUT = Path(__file__).resolve().parent / "output"
+SEED_KEYS = {"a": "chosen_seed", "b": "second_seed", "c": "third_seed"}
 
 
-def latest_clip(day, track="a"):
-    name = "gravitas_7s.mp3" if track == "a" else f"gravitas_7s_{track}.mp3"
-    clip, meta = LATEST / name, LATEST / "meta.json"
-    if not (clip.exists() and meta.exists()):
-        return None
-    made = dt.date.fromisoformat(json.loads(meta.read_text())["date"])
-    if not 0 <= (day - made).days <= MAX_AGE_DAYS:
-        return None
-    return clip, made
+def clips():
+    """Every saved track as (path, label, seed), newest folder first."""
+    for folder in sorted((f for f in OUTPUT.iterdir() if f.is_dir() and f.name[:1].isdigit()), reverse=True):
+        meta_path = folder / "meta.json"
+        if not meta_path.exists():
+            continue
+        meta = json.loads(meta_path.read_text())
+        for track, key in SEED_KEYS.items():
+            suffix = "" if track == "a" else f"_{track}"
+            path = folder / f"gravitas_{folder.name}_7s{suffix}.mp3"
+            if meta.get(key) is not None and path.exists():
+                yield path, f"{folder.name} {track}", meta[key]
+
+
+def unused_clip(used_seeds, prefer="a"):
+    """The newest track whose seed is not in used_seeds, preferring the given track letter."""
+    found = list(clips())
+    for path, label, seed in sorted(found, key=lambda c: (c[1].split()[0], c[1].endswith(prefer)), reverse=True):
+        if seed not in used_seeds:
+            return path, label, seed
+    return None
+
+
+def clip_with_seed(seed):
+    return next((c for c in clips() if c[2] == seed), None)

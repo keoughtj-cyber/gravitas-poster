@@ -283,3 +283,21 @@ def motion_reel(practice, day, out_path, audio_path, seconds, ffmpeg="ffmpeg", f
     proc.stdin.close()
     if proc.wait() != 0:
         raise RuntimeError(f"ffmpeg failed making {out_path.name}")
+
+
+def carousel_video(slide, out_path, audio_path, seconds, ffmpeg="ffmpeg", fps=30):
+    """The carousel's first slide as a 4:5 video with music, with the same slow push-in as the reels."""
+    w, h = slide.size
+    cmd = [ffmpeg, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}",
+           "-r", str(fps), "-i", "-", "-i", str(audio_path), "-t", str(seconds), "-c:v", "libx264",
+           "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
+           "-shortest", "-movflags", "+faststart", str(out_path)]
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    for i in range(int(seconds * fps)):
+        z = 1 + 0.035 * (i / (seconds * fps))
+        zw, zh = int(w / z), int(h / z)
+        frame = slide.crop(((w - zw) // 2, (h - zh) // 2, (w + zw) // 2, (h + zh) // 2)).resize((w, h), Image.LANCZOS)
+        proc.stdin.write(frame.convert("RGB").tobytes())
+    proc.stdin.close()
+    if proc.wait() != 0:
+        raise RuntimeError(f"ffmpeg failed making {out_path.name}")
