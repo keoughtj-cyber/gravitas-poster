@@ -316,6 +316,17 @@ def main():
         attempts.append({"prompt": prompt, "source": "template", "candidates": scores})
     if not ranked:
         sys.exit("Every candidate failed the quality checks. No clip was saved.")
+    # The day's three videos each need a track, so keep drawing seeds until three pass.
+    for round_ in range(1, 4):
+        if len(ranked) >= 3:
+            break
+        more = [(s + (4 + 4 * round_) * 1000003) % (2 ** 31) for s in seeds]
+        log(f"Only {len(ranked)} candidate(s) passed, generating {len(more)} more")
+        extra, scores = best_of(prompt, more)
+        attempts.append({"prompt": prompt, "source": "top-up", "candidates": scores})
+        ranked = sorted(ranked + extra, key=lambda r: r[1]["score"], reverse=True)[:3]
+    if len(ranked) < 3:
+        log(f"Only {len(ranked)} track(s) passed after every top-up")
 
     _, metrics, y, sr = ranked[0]
     folder = OUTPUT / day.isoformat()
