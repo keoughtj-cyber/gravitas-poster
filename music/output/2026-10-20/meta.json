@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-20",
+  "pillar": "Character",
+  "prompt": "stoic piano, 75 BPM, brass hit, felt piano, and metallic percussion, solemn, gravelly, instrumental",
+  "take": 0,
+  "date_seed": 1342854356,
+  "chosen_seed": 1343854359,
+  "second_seed": 1345854365,
+  "third_seed": null,
+  "attempts": [
+    {
+      "prompt": "stoic piano, 75 BPM, brass hit, felt piano, and metallic percussion, solemn, gravelly, instrumental",
+      "source": "rotation",
+      "candidates": [
+        {
+          "peak": 0.6817,
+          "rms_dbfs": -24.32,
+          "silent_fraction": 0.314,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 12.82,
+          "score": -12.82,
+          "rejected": [
+            "mostly silent"
+          ],
+          "seed": 1342854356
+        },
+        {
+          "peak": 0.576,
+          "rms_dbfs": -22.02,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 5.99,
+          "score": -5.99,
+          "rejected": [],
+          "seed": 1343854359
+        },
+        {
+          "peak": 0.6258,
+          "rms_dbfs": -22.85,
+          "silent_fraction": 0.371,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 15.53,
+          "score": -15.53,
+          "rejected": [
+            "mostly silent"
+          ],
+          "seed": 1344854362
+        },
+        {
+          "peak": 0.5498,
+          "rms_dbfs": -23.98,
+          "silent_fraction": 0.236,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 13.76,
+          "score": -13.76,
+          "rejected": [],
+          "seed": 1345854365
+        }
+      ]
+    }
+  ],
+  "model": "stabilityai/stable-audio-open-small",
+  "settings": {
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sampler_type": "pingpong",
+    "seconds_total": 11
+  },
+  "post": {
+    "cut_seconds": 7.0,
+    "fade_in": 0.1,
+    "fade_out": 0.8,
+    "target_lufs": -14.0,
+    "true_peak_db": -1.0,
+    "mp3_bitrate": "192k"
+  },
+  "result": {
+    "seconds_7s": 7.0,
+    "seconds_full": 11.0,
+    "lufs": -15.19,
+    "true_peak_db": -1.0,
+    "bytes": {
+      "gravitas_2026-10-20_7s.mp3": 169316,
+      "gravitas_2026-10-20_7s.wav": 1234878,
+      "gravitas_2026-10-20_full.wav": 1940478,
+      "gravitas_2026-10-20_7s_b.mp3": 169316
+    }
+  }
+}
