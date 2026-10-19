@@ -1,7 +1,7 @@
 """Daily GRAVITAS music clip, made with Stable Audio Open Small on CPU.
 
 Each run builds a dark instrumental prompt for the date, generates four 11-second
-candidates, keeps the best one, and saves a 7-second cut and the full clip to
+candidates, keeps the best three as tracks a, b, and c, and saves 7-second cuts and the full clip to
 music/output/YYYY-MM-DD/, with a copy of the newest cut in music/output/latest/.
 
 Usage:
@@ -65,9 +65,10 @@ def load_prompts():
     return json.loads((HERE / "prompts.json").read_text())
 
 
-def date_seed(day):
-    """A stable integer seed for the date, under 2**31."""
-    return int(hashlib.sha256(f"gravitas-music-{day.isoformat()}".encode()).hexdigest()[:8], 16) % (2 ** 31)
+def date_seed(day, take=0):
+    """A stable integer seed for the date (and take, for a second run on one date), under 2**31."""
+    key = f"gravitas-music-{day.isoformat()}" + (f"-take{take}" if take else "")
+    return int(hashlib.sha256(key.encode()).hexdigest()[:8], 16) % (2 ** 31)
 
 
 def pillar_for(day, data):
@@ -83,9 +84,9 @@ def join_list(items):
     return ", ".join(items[:-1]) + ", and " + items[-1]
 
 
-def build_prompt(day, pillar, data):
+def build_prompt(day, pillar, data, take=0):
     bank = data["bank"]
-    rng = random.Random(date_seed(day))
+    rng = random.Random(date_seed(day, take))
     style = rng.choice(bank["style"])
     bpm = rng.choice(bank["bpm"])
     instruments = rng.sample(bank["instruments"], rng.choice([2, 3]))
@@ -101,8 +102,8 @@ def prompt_ok(prompt):
             and prompt.rstrip().endswith("instrumental"))
 
 
-def choose_prompt(day, pillar, data):
-    prompt = build_prompt(day, pillar, data)
+def choose_prompt(day, pillar, data, take=0):
+    prompt = build_prompt(day, pillar, data, take)
     if prompt_ok(prompt):
         return prompt, "rotation"
     log(f"Built prompt failed the check, using the {pillar} template: {prompt}")
@@ -210,9 +211,8 @@ def best_of(prompt, seeds):
         log(f"  {json.dumps(metrics)}")
         results.append((passed, metrics, y, sr))
     passing = sorted((r for r in results if r[0]), key=lambda r: r[1]["score"], reverse=True)
-    best = passing[0] if passing else None
-    runner_up = passing[1] if len(passing) > 1 else None  # a second track for the day's other video
-    return best, runner_up, [r[1] for r in results]
+    # Best first. The next two become extra tracks, so each of the day's videos sounds different.
+    return passing[:3], [r[1] for r in results]
 
 
 # ---------- post-processing ----------
@@ -284,15 +284,21 @@ def main():
     parser = argparse.ArgumentParser(description="Generate the daily GRAVITAS music clip.")
     parser.add_argument("--date", help="YYYY-MM-DD, default today in America/New_York")
     parser.add_argument("--dry-run", action="store_true", help="print the prompt, pillar, and seed, then stop")
+    parser.add_argument("--take", type=int, help="a new set of seeds and prompt for the date; default is one "
+                                                 "more than the date's last run, so a re-run never repeats")
     args = parser.parse_args()
 
     day = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(TZ).date()
+    take = args.take
+    if take is None:
+        old = OUTPUT / day.isoformat() / "meta.json"
+        take = json.loads(old.read_text()).get("take", 0) + 1 if old.exists() else 0
     data = load_prompts()
     pillar = pillar_for(day, data)
-    prompt, source = choose_prompt(day, pillar, data)
-    seed = date_seed(day)
+    prompt, source = choose_prompt(day, pillar, data, take)
+    seed = date_seed(day, take)
     seeds = [(seed + i * 1000003) % (2 ** 31) for i in range(CANDIDATES)]
-    log(f"Date: {day}")
+    log(f"Date: {day}, take {take}")
     log(f"Pillar: {pillar}")
     log(f"Prompt ({source}): {prompt}")
     log(f"Date seed: {seed}")
@@ -300,18 +306,18 @@ def main():
     if args.dry_run:
         return
 
-    best, runner_up, scores = best_of(prompt, seeds)
+    ranked, scores = best_of(prompt, seeds)
     attempts = [{"prompt": prompt, "source": source, "candidates": scores}]
-    if best is None:
+    if not ranked:
         prompt = data["templates"][pillar]
         retry = [(s + 4 * 1000003) % (2 ** 31) for s in seeds]
         log(f"All candidates failed, retrying once with the {pillar} template: {prompt}")
-        best, runner_up, scores = best_of(prompt, retry)
+        ranked, scores = best_of(prompt, retry)
         attempts.append({"prompt": prompt, "source": "template", "candidates": scores})
-    if best is None:
+    if not ranked:
         sys.exit("Every candidate failed the quality checks. No clip was saved.")
 
-    _, metrics, y, sr = best
+    _, metrics, y, sr = ranked[0]
     folder = OUTPUT / day.isoformat()
     folder.mkdir(parents=True, exist_ok=True)
     stem = f"gravitas_{day.isoformat()}"
@@ -329,25 +335,30 @@ def main():
     raw_full.unlink()
     raw_cut.unlink()
 
-    # The runner-up becomes a second 7-second track, so two videos on one day sound different.
-    cut_b = None
-    if runner_up:
-        _, metrics_b, y_b, sr_b = runner_up
-        write_wav(raw_cut, y_b[: int(sr_b * CUT_SECONDS)] / (np.abs(y_b).max() or 1) * 0.9, sr_b)
-        cut_b_wav = folder / "_cut_b.wav"
-        master(raw_cut, cut_b_wav, CUT_SECONDS)
-        cut_b = folder / f"{stem}_7s_b.mp3"
-        ffmpeg("-i", str(cut_b_wav), "-c:a", "libmp3lame", "-b:a", MP3_BITRATE, str(cut_b))
+    # The runner-up and third place become tracks b and c, so the day's videos all sound different.
+    extras = {}
+    for track, (_, metrics_x, y_x, sr_x) in zip("bc", ranked[1:]):
+        write_wav(raw_cut, y_x[: int(sr_x * CUT_SECONDS)] / (np.abs(y_x).max() or 1) * 0.9, sr_x)
+        cut_x_wav = folder / f"_cut_{track}.wav"
+        master(raw_cut, cut_x_wav, CUT_SECONDS)
+        cut_x = folder / f"{stem}_7s_{track}.mp3"
+        ffmpeg("-i", str(cut_x_wav), "-c:a", "libmp3lame", "-b:a", MP3_BITRATE, str(cut_x))
         raw_cut.unlink()
-        cut_b_wav.unlink()
+        cut_x_wav.unlink()
+        extras[track] = (cut_x, metrics_x["seed"])
+    for track in "bc":
+        if track not in extras:
+            (folder / f"{stem}_7s_{track}.mp3").unlink(missing_ok=True)
 
     meta = {
         "date": day.isoformat(),
         "pillar": pillar,
         "prompt": prompt,
+        "take": take,
         "date_seed": seed,
         "chosen_seed": metrics["seed"],
-        "second_seed": runner_up[1]["seed"] if runner_up else None,
+        "second_seed": extras["b"][1] if "b" in extras else None,
+        "third_seed": extras["c"][1] if "c" in extras else None,
         "attempts": attempts,
         "model": MODEL_NAME,
         "settings": SETTINGS,
@@ -357,7 +368,7 @@ def main():
             "seconds_7s": duration(cut_wav),
             "seconds_full": duration(full_wav),
             **measure(cut_wav),
-            "bytes": {p.name: p.stat().st_size for p in (cut_mp3, cut_wav, full_wav, cut_b) if p},
+            "bytes": {p.name: p.stat().st_size for p in (cut_mp3, cut_wav, full_wav, *(x[0] for x in extras.values()))},
         },
     }
     (folder / "meta.json").write_text(json.dumps(meta, indent=2) + "\n")
@@ -366,10 +377,11 @@ def main():
     latest.mkdir(exist_ok=True)
     shutil.copyfile(cut_mp3, latest / "gravitas_7s.mp3")
     shutil.copyfile(folder / "meta.json", latest / "meta.json")
-    if cut_b:
-        shutil.copyfile(cut_b, latest / "gravitas_7s_b.mp3")
-    else:
-        (latest / "gravitas_7s_b.mp3").unlink(missing_ok=True)
+    for track in "bc":
+        if track in extras:
+            shutil.copyfile(extras[track][0], latest / f"gravitas_7s_{track}.mp3")
+        else:
+            (latest / f"gravitas_7s_{track}.mp3").unlink(missing_ok=True)
     prune(day)
 
     log(f"Saved music/output/{folder.name}: {json.dumps(meta['result'])}")

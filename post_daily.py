@@ -362,30 +362,31 @@ MUSIC_USED = CARDS / "music_used.json"
 MUSIC_FRESH = os.environ.get("MUSIC_FRESH", "").lower() == "true"
 
 
-def claim_clip(made, track_id, use):
-    """Each daily clip goes on one post only. Returns False when another post already used it."""
-    used = json.loads(MUSIC_USED.read_text()) if MUSIC_USED.exists() else {}
-    key = f"{made}:{track_id}"
-    if used.get(key, use) != use:
-        print(f"Daily music clip {key} already went out with {used[key]}, composing a new track.")
-        return False
-    used[key] = use
-    MUSIC_USED.write_text(json.dumps(used, indent=2, sort_keys=True))
-    return True
-
-
 def reel_track(day, track_id="a", use=""):
-    """The daily AI clip, or a track composed for this date (music.py).
-    track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ.
-    use names the post (date and slot), so no clip is ever posted twice."""
-    found = None if MUSIC_FRESH else reel_music_from_latest(day, track_id)
-    if found and claim_clip(found[1], track_id, use or f"{day}:{track_id}"):
-        return found[0]
+    """A daily AI clip that has never been posted (music/reel_audio.py), or a track composed
+    for this date (music.py) when none is left. music_used.json maps each clip's seed to the
+    post that used it, so a re-run of the same post gets the same clip and no other post does."""
+    use = use or f"{day}:{track_id}"
+    if not MUSIC_FRESH and os.environ.get("REEL_MUSIC_FROM_LATEST", "true").lower() != "false":
+        sys.path.insert(0, str(ROOT / "music"))
+        import reel_audio
+        used = json.loads(MUSIC_USED.read_text()) if MUSIC_USED.exists() else {}
+        mine = next((k for k, v in used.items() if v == use), None)
+        found = reel_audio.clip_with_seed(int(mine.split(":")[1])) if mine else None
+        if not found:
+            found = reel_audio.unused_clip({int(k.split(":")[1]) for k in used}, track_id)
+        if found:
+            path, label, seed = found
+            used[f"seed:{seed}"] = use
+            MUSIC_USED.write_text(json.dumps(used, indent=2, sort_keys=True))
+            print(f"Music for {use}: daily clip {label}")
+            return path
+        print(f"No unposted daily music clip left for {use}, composing a track instead.")
     import music
     track = CARDS / f"_music_{track_id}.wav"
-    # Track "b" composes from a shifted date so it never matches track "a".
-    seed_day = day if track_id == "a" else day + dt.timedelta(days=500)
-    print(f"Composed reel track: {music.compose(seed_day, REEL_SECONDS, track)}")
+    # Each track letter composes from a shifted date so the day's videos never match.
+    seed_day = day + dt.timedelta(days=500 * "abc".index(track_id))
+    print(f"Composed track for {use}: {music.compose(seed_day, REEL_SECONDS, track)}")
     return track
 
 
@@ -417,22 +418,6 @@ def make_reel(image_path, out_path, day, track_id="a", use=""):
     subprocess.run(cmd, check=True)
     if track.parent == CARDS:
         track.unlink(missing_ok=True)
-
-
-# Optional: put the daily clip from the Daily music workflow (music/) under the reel.
-# Turn off with the repository variable REEL_MUSIC_FROM_LATEST=false.
-def reel_music_from_latest(day, track_id="a"):
-    if os.environ.get("REEL_MUSIC_FROM_LATEST", "true").lower() == "false":
-        return None
-    sys.path.insert(0, str(ROOT / "music"))
-    from reel_audio import latest_clip
-    found = latest_clip(day, track_id)
-    if not found:
-        print("No recent daily music clip, composing the reel track instead.")
-        return None
-    clip, made = found
-    print(f"Reel track: daily music clip {track_id} from {made}")
-    return clip, made
 
 
 # ---------- Buffer ----------
@@ -479,7 +464,7 @@ mutation($input: CreatePostInput!) {
 }"""
 
 
-def create_post(channel, text, image_url, due_at, story=False, video_url="", image_urls=None):
+def create_post(channel, text, image_url, due_at, story=False, video_url="", image_urls=None, lead_video=""):
     base = {
         "channelId": channel["id"],
         "text": text,
@@ -491,7 +476,12 @@ def create_post(channel, text, image_url, due_at, story=False, video_url="", ima
         # Several images on one Instagram post make a carousel.
         base["assets"] = [{"image": {"url": u}} for u in image_urls]
         base["metadata"] = {"instagram": {"type": "post", "shouldShareToFeed": True}}
-        return send_post([base])
+        attempts = [base]
+        if lead_video:
+            # First slide as a video, so the carousel has music. Images only if Buffer refuses it.
+            mixed = [{"video": {"url": lead_video}}] + base["assets"][1:]
+            attempts.insert(0, {**base, "assets": mixed})
+        return send_post(attempts)
     if video_url:
         base["assets"] = [{"video": {"url": video_url}}]
         if story:
@@ -612,6 +602,14 @@ def cmd_render():
                 img.save(CARDS / name, "JPEG", quality=92, optimize=True)
                 slot["images"].append(name)
                 keep.add(name)
+            if INSTAGRAM_AUDIO:
+                import ig_design
+                slot["carousel_video"] = f"{stem}-carousel1-{digest}.mp4"
+                track = reel_track(day, "c", f"{stem}:carousel")
+                ig_design.carousel_video(slides[0], CARDS / slot["carousel_video"], track, REEL_SECONDS, ffmpeg_exe())
+                if track.parent == CARDS:
+                    track.unlink(missing_ok=True)
+                keep.add(slot["carousel_video"])
         if slot["key"] == "reel":
             slot["video"] = f"{stem}-reel-{digest}.mp4"
             track_id = "b" if INSTAGRAM_AUDIO else "a"
@@ -682,7 +680,7 @@ def cmd_publish():
             continue
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
-        for name in {slot.get("video"), slot.get("ig_video")} - {None}:
+        for name in {slot.get("video"), slot.get("ig_video"), slot.get("carousel_video")} - {None}:
             wait_for_url(video_link(name, base_url))
         for name in slot.get("images", [])[1:]:
             wait_for_url(f"{base_url}/{name}")
@@ -703,7 +701,8 @@ def cmd_publish():
                 video = slot.get("video") or (slot.get("ig_video") if ch["service"] == "instagram" else "")
                 video_url = video_link(video, base_url) if video else ""
                 image_urls = [f"{base_url}/{n}" for n in slot.get("images", [])]
-                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url, image_urls)
+                lead = video_link(slot["carousel_video"], base_url) if slot.get("carousel_video") else ""
+                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url, image_urls, lead)
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
             except RuntimeError as e:
