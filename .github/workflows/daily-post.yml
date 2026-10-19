@@ -20,6 +20,10 @@ on:
       only:
         description: "Only these posts, for example base,story,carousel,reel. Leave blank for all."
         required: false
+      fresh_music:
+        description: "Compose new reel tracks instead of using the daily music clips"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -38,6 +42,7 @@ env:
   CARD_FOOTER: ${{ vars.CARD_FOOTER || 'ONE PRACTICE A DAY' }}
   BUFFER_SERVICES: ${{ github.event.inputs.services || vars.BUFFER_SERVICES }}
   ONLY_SLOTS: ${{ github.event.inputs.only }}
+  MUSIC_FRESH: ${{ github.event.inputs.fresh_music }}
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
   REEL_POST: ${{ vars.REEL_POST || 'true' }}
   REEL_TIME: ${{ vars.REEL_TIME || '19:00' }}

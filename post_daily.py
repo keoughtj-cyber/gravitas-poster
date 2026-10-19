@@ -62,7 +62,7 @@ STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
 # Instagram feed posts go out as videos with music: the 10:00 post becomes a reel, and the
 # 15:00 reel uses a different clip. The Story stays a still image. Other networks keep the card.
 INSTAGRAM_AUDIO = os.environ.get("INSTAGRAM_AUDIO", "true").lower() != "false"
-# Instagram look (ig_design.py): hook-first motion reels, a restyled Story card, and a daily
+# Instagram look (ig_design.py): practice-first motion reels, a restyled Story card, and a daily
 # carousel. IG_DESIGN=false brings back the plain card on Instagram. X and LinkedIn never change.
 IG_DESIGN = os.environ.get("IG_DESIGN", "true").lower() != "false"
 CAROUSEL_POST = os.environ.get("CAROUSEL_POST", "true").lower() != "false"
@@ -357,12 +357,30 @@ def render_card(practice, day, out_path, subtitle="", story=False):
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
 
 
-def reel_track(day, track_id="a"):
+MUSIC_USED = CARDS / "music_used.json"
+# A manual run can skip the daily AI clips and compose fresh tracks instead.
+MUSIC_FRESH = os.environ.get("MUSIC_FRESH", "").lower() == "true"
+
+
+def claim_clip(made, track_id, use):
+    """Each daily clip goes on one post only. Returns False when another post already used it."""
+    used = json.loads(MUSIC_USED.read_text()) if MUSIC_USED.exists() else {}
+    key = f"{made}:{track_id}"
+    if used.get(key, use) != use:
+        print(f"Daily music clip {key} already went out with {used[key]}, composing a new track.")
+        return False
+    used[key] = use
+    MUSIC_USED.write_text(json.dumps(used, indent=2, sort_keys=True))
+    return True
+
+
+def reel_track(day, track_id="a", use=""):
     """The daily AI clip, or a track composed for this date (music.py).
-    track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ."""
-    clip = reel_music_from_latest(day, track_id)
-    if clip:
-        return clip
+    track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ.
+    use names the post (date and slot), so no clip is ever posted twice."""
+    found = None if MUSIC_FRESH else reel_music_from_latest(day, track_id)
+    if found and claim_clip(found[1], track_id, use or f"{day}:{track_id}"):
+        return found[0]
     import music
     track = CARDS / f"_music_{track_id}.wav"
     # Track "b" composes from a shifted date so it never matches track "a".
@@ -379,18 +397,18 @@ def ffmpeg_exe():
         return "ffmpeg"
 
 
-def make_motion_reel(practice, day, out_path, focus, track_id="a"):
-    """The Instagram reel: hook, then the practice and why, then a share prompt (ig_design.py)."""
+def make_motion_reel(practice, day, out_path, focus, track_id="a", use=""):
+    """The Instagram reel: the practice from the first frame, then the why, then a share prompt (ig_design.py)."""
     import ig_design
-    track = reel_track(day, track_id)
+    track = reel_track(day, track_id, use)
     ig_design.motion_reel(practice, day, out_path, track, REEL_SECONDS, ffmpeg_exe(), focus)
     if track.parent == CARDS:
         track.unlink(missing_ok=True)
 
 
-def make_reel(image_path, out_path, day, track_id="a"):
+def make_reel(image_path, out_path, day, track_id="a", use=""):
     """A short still-card video with the day's music."""
-    track = reel_track(day, track_id)
+    track = reel_track(day, track_id, use)
     audio = ["-i", str(track)]
     exe = ffmpeg_exe()
     cmd = [exe, "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(image_path), *audio,
@@ -414,7 +432,7 @@ def reel_music_from_latest(day, track_id="a"):
         return None
     clip, made = found
     print(f"Reel track: daily music clip {track_id} from {made}")
-    return clip
+    return clip, made
 
 
 # ---------- Buffer ----------
@@ -484,7 +502,7 @@ def create_post(channel, text, image_url, due_at, story=False, video_url="", ima
             base["metadata"] = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
         attempts = [base]
         if IG_DESIGN and not story:
-            # Cover frame one second in, where the hook has settled. Plain video if Buffer refuses it.
+            # Cover frame one second in, where the practice has settled. Plain video if Buffer refuses it.
             cover = {"video": {"url": video_url, "metadata": {"thumbnailOffset": 1000}}}
             attempts.insert(0, {**base, "assets": [cover]})
         return send_post(attempts)
@@ -598,9 +616,9 @@ def cmd_render():
             slot["video"] = f"{stem}-reel-{digest}.mp4"
             track_id = "b" if INSTAGRAM_AUDIO else "a"
             if IG_DESIGN:
-                make_motion_reel(slot["practice"], day, CARDS / slot["video"], focus, track_id)
+                make_motion_reel(slot["practice"], day, CARDS / slot["video"], focus, track_id, f"{stem}:reel")
             else:
-                make_reel(CARDS / slot["image"], CARDS / slot["video"], day, track_id)
+                make_reel(CARDS / slot["image"], CARDS / slot["video"], day, track_id, f"{stem}:reel")
             keep.add(slot["video"])
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
@@ -616,9 +634,10 @@ def cmd_render():
         digest = hashlib.sha1(tall_image.read_bytes()).hexdigest()[:8]
         base["ig_video"] = f"{stem}-ig-{digest}.mp4"
         if IG_DESIGN:
-            make_motion_reel(base["practice"], day, CARDS / base["ig_video"], short_area(base["practice"]), "a")
+            make_motion_reel(base["practice"], day, CARDS / base["ig_video"], short_area(base["practice"]), "a",
+                             f"{stem}:base")
         else:
-            make_reel(tall_image, CARDS / base["ig_video"], day, "a")
+            make_reel(tall_image, CARDS / base["ig_video"], day, "a", f"{stem}:base")
         keep.add(base["ig_video"])
         tall_image.with_name("_render.jpg").unlink(missing_ok=True)
     for old in [*CARDS.glob(f"{stem}*.jpg"), *CARDS.glob(f"{stem}*.mp4")]:
