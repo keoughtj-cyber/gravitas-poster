@@ -1,60 +1,110 @@
 {
   "date": "2026-10-20",
   "pillar": "Character",
-  "prompt": "stoic piano, 75 BPM, brass hit, felt piano, and metallic percussion, solemn, gravelly, instrumental",
-  "take": 0,
-  "date_seed": 1342854356,
-  "chosen_seed": 1343854359,
-  "second_seed": 1345854365,
-  "third_seed": null,
+  "prompt": "stoic piano, 110 BPM, taiko drums, 808 bass, and felt piano, solemn, warm and dusty, instrumental",
+  "take": 1,
+  "date_seed": 314772172,
+  "chosen_seed": 325772205,
+  "second_seed": 317772181,
+  "third_seed": 322772196,
   "attempts": [
     {
-      "prompt": "stoic piano, 75 BPM, brass hit, felt piano, and metallic percussion, solemn, gravelly, instrumental",
+      "prompt": "stoic piano, 110 BPM, taiko drums, 808 bass, and felt piano, solemn, warm and dusty, instrumental",
       "source": "rotation",
       "candidates": [
         {
-          "peak": 0.6817,
-          "rms_dbfs": -24.32,
-          "silent_fraction": 0.314,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 12.82,
-          "score": -12.82,
-          "rejected": [
-            "mostly silent"
-          ],
-          "seed": 1342854356
-        },
-        {
-          "peak": 0.576,
-          "rms_dbfs": -22.02,
+          "peak": 1.1216,
+          "rms_dbfs": -10.99,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 5.99,
-          "score": -5.99,
-          "rejected": [],
-          "seed": 1343854359
-        },
-        {
-          "peak": 0.6258,
-          "rms_dbfs": -22.85,
-          "silent_fraction": 0.371,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 15.53,
-          "score": -15.53,
+          "loudness_spread_db": 0.79,
+          "score": -0.79,
           "rejected": [
-            "mostly silent"
+            "clipping"
           ],
-          "seed": 1344854362
+          "seed": 314772172
         },
         {
-          "peak": 0.5498,
-          "rms_dbfs": -23.98,
-          "silent_fraction": 0.236,
+          "peak": 1.0845,
+          "rms_dbfs": -10.36,
+          "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 13.76,
-          "score": -13.76,
+          "loudness_spread_db": 1.11,
+          "score": -1.11,
+          "rejected": [
+            "clipping"
+          ],
+          "seed": 315772175
+        },
+        {
+          "peak": 1.083,
+          "rms_dbfs": -9.91,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 1.39,
+          "score": -1.39,
+          "rejected": [
+            "clipping"
+          ],
+          "seed": 316772178
+        },
+        {
+          "peak": 0.9775,
+          "rms_dbfs": -9.51,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 1.08,
+          "score": -1.08,
           "rejected": [],
-          "seed": 1345854365
+          "seed": 317772181
+        }
+      ]
+    },
+    {
+      "prompt": "stoic piano, 110 BPM, taiko drums, 808 bass, and felt piano, solemn, warm and dusty, instrumental",
+      "source": "top-up",
+      "candidates": [
+        {
+          "peak": 0.7002,
+          "rms_dbfs": -18.29,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 1.81,
+          "score": -1.81,
+          "rejected": [],
+          "seed": 322772196
+        },
+        {
+          "peak": 0.9407,
+          "rms_dbfs": -12.42,
+          "silent_fraction": 0.029,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 3.01,
+          "score": -3.01,
+          "rejected": [],
+          "seed": 323772199
+        },
+        {
+          "peak": 1.044,
+          "rms_dbfs": -10.78,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 2.64,
+          "score": -2.64,
+          "rejected": [
+            "clipping"
+          ],
+          "seed": 324772202
+        },
+        {
+          "peak": 0.8394,
+          "rms_dbfs": -14.59,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 0.96,
+          "score": -0.96,
+          "rejected": [],
+          "seed": 325772205
         }
       ]
     }
@@ -77,13 +127,14 @@
   "result": {
     "seconds_7s": 7.0,
     "seconds_full": 11.0,
-    "lufs": -15.19,
-    "true_peak_db": -1.0,
+    "lufs": -13.99,
+    "true_peak_db": -2.84,
     "bytes": {
       "gravitas_2026-10-20_7s.mp3": 169316,
       "gravitas_2026-10-20_7s.wav": 1234878,
       "gravitas_2026-10-20_full.wav": 1940478,
-      "gravitas_2026-10-20_7s_b.mp3": 169316
+      "gravitas_2026-10-20_7s_b.mp3": 169316,
+      "gravitas_2026-10-20_7s_c.mp3": 169316
     }
   }
 }
