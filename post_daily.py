@@ -357,12 +357,30 @@ def render_card(practice, day, out_path, subtitle="", story=False):
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
 
 
-def reel_track(day, track_id="a"):
+MUSIC_USED = CARDS / "music_used.json"
+# A manual run can skip the daily AI clips and compose fresh tracks instead.
+MUSIC_FRESH = os.environ.get("MUSIC_FRESH", "").lower() == "true"
+
+
+def claim_clip(made, track_id, use):
+    """Each daily clip goes on one post only. Returns False when another post already used it."""
+    used = json.loads(MUSIC_USED.read_text()) if MUSIC_USED.exists() else {}
+    key = f"{made}:{track_id}"
+    if used.get(key, use) != use:
+        print(f"Daily music clip {key} already went out with {used[key]}, composing a new track.")
+        return False
+    used[key] = use
+    MUSIC_USED.write_text(json.dumps(used, indent=2, sort_keys=True))
+    return True
+
+
+def reel_track(day, track_id="a", use=""):
     """The daily AI clip, or a track composed for this date (music.py).
-    track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ."""
-    clip = reel_music_from_latest(day, track_id)
-    if clip:
-        return clip
+    track_id "a" is the day's best clip and "b" the runner-up, so the day's two videos differ.
+    use names the post (date and slot), so no clip is ever posted twice."""
+    found = None if MUSIC_FRESH else reel_music_from_latest(day, track_id)
+    if found and claim_clip(found[1], track_id, use or f"{day}:{track_id}"):
+        return found[0]
     import music
     track = CARDS / f"_music_{track_id}.wav"
     # Track "b" composes from a shifted date so it never matches track "a".
@@ -379,18 +397,18 @@ def ffmpeg_exe():
         return "ffmpeg"
 
 
-def make_motion_reel(practice, day, out_path, focus, track_id="a"):
+def make_motion_reel(practice, day, out_path, focus, track_id="a", use=""):
     """The Instagram reel: hook, then the practice and why, then a share prompt (ig_design.py)."""
     import ig_design
-    track = reel_track(day, track_id)
+    track = reel_track(day, track_id, use)
     ig_design.motion_reel(practice, day, out_path, track, REEL_SECONDS, ffmpeg_exe(), focus)
     if track.parent == CARDS:
         track.unlink(missing_ok=True)
 
 
-def make_reel(image_path, out_path, day, track_id="a"):
+def make_reel(image_path, out_path, day, track_id="a", use=""):
     """A short still-card video with the day's music."""
-    track = reel_track(day, track_id)
+    track = reel_track(day, track_id, use)
     audio = ["-i", str(track)]
     exe = ffmpeg_exe()
     cmd = [exe, "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(image_path), *audio,
@@ -414,7 +432,7 @@ def reel_music_from_latest(day, track_id="a"):
         return None
     clip, made = found
     print(f"Reel track: daily music clip {track_id} from {made}")
-    return clip
+    return clip, made
 
 
 # ---------- Buffer ----------
@@ -598,9 +616,9 @@ def cmd_render():
             slot["video"] = f"{stem}-reel-{digest}.mp4"
             track_id = "b" if INSTAGRAM_AUDIO else "a"
             if IG_DESIGN:
-                make_motion_reel(slot["practice"], day, CARDS / slot["video"], focus, track_id)
+                make_motion_reel(slot["practice"], day, CARDS / slot["video"], focus, track_id, f"{stem}:reel")
             else:
-                make_reel(CARDS / slot["image"], CARDS / slot["video"], day, track_id)
+                make_reel(CARDS / slot["image"], CARDS / slot["video"], day, track_id, f"{stem}:reel")
             keep.add(slot["video"])
         slot["captions"] = build_captions(slot["practice"], idx, slot["key"] != "base")
         print(f"Rendered {stem} {slot['key']}: {slot['practice'].get('id', '')} {slot['practice']['practice']}")
@@ -616,9 +634,10 @@ def cmd_render():
         digest = hashlib.sha1(tall_image.read_bytes()).hexdigest()[:8]
         base["ig_video"] = f"{stem}-ig-{digest}.mp4"
         if IG_DESIGN:
-            make_motion_reel(base["practice"], day, CARDS / base["ig_video"], short_area(base["practice"]), "a")
+            make_motion_reel(base["practice"], day, CARDS / base["ig_video"], short_area(base["practice"]), "a",
+                             f"{stem}:base")
         else:
-            make_reel(tall_image, CARDS / base["ig_video"], day, "a")
+            make_reel(tall_image, CARDS / base["ig_video"], day, "a", f"{stem}:base")
         keep.add(base["ig_video"])
         tall_image.with_name("_render.jpg").unlink(missing_ok=True)
     for old in [*CARDS.glob(f"{stem}*.jpg"), *CARDS.glob(f"{stem}*.mp4")]:

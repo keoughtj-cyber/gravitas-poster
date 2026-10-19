@@ -20,6 +20,7 @@ Instagram gets its own design. X and LinkedIn keep the plain card above.
 - At `CAROUSEL_TIME` (default 12:00) a 4-slide carousel goes to the feed: hook, the practice, why it works (principle and research source from `ig_extra.csv`), and a save and send slide. It uses a Focus area that is not the reel's or the Base post's, with the same practice as that area's X post.
 - `IG_DESIGN=false` brings back the plain card on Instagram. `CAROUSEL_POST=false` stops the carousel.
 - A manual run (Actions, Daily post, Run workflow) can post only some networks (`services`, for example `instagram`) and only some posts (`only`, for example `base,story,carousel`). Tick Post again when that date already ran; posts outside `only` are left alone.
+- Each daily music clip goes on one post only. `cards/music_used.json` records which post used it; when a clip has already gone out, the reel gets a track composed by `music.py` instead. The manual run's `fresh_music` box composes new tracks for that run.
 - `ig_extra.csv` holds id, hook, concept, and source for every library practice. Add or edit hooks there; the sheet does not need to change.
 
 Cost to start: $0 (public GitHub repo, Buffer Free plan, up to 3 accounts).
