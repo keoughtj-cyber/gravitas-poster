@@ -1,21 +1,21 @@
 {
-  "_readme": "Prompt data for music/generate.py. The pillar is (days since start_date) mod 3, in pillar_order. Each day picks one style, one bpm, two or three instruments, one mood for that day's pillar, and one texture, seeded by the date. Keep everything English, no artist names, no song titles, no vocals.",
+  "_readme": "Prompt data for music/generate.py. Every day is dark cinematic hybrid, the style Tyler picked from Music test run 5 on 2026-10-20 (prompt2_take1: dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty). The pillar is (days since start_date) mod 3, in pillar_order. Each day picks one style, one bpm, two or three instruments, one mood for that day's pillar, and one texture, seeded by the date, so tracks stay in this style but differ day to day. Keep everything English, no artist names, no song titles, no vocals.",
   "start_date": "2026-01-01",
   "pillar_order": ["Confidence", "Character", "Respect"],
   "templates": {
-    "Confidence": "dark cinematic trap beat, 90 BPM, deep 808 sub bass, sparse crisp hi-hats, low brass hit, driving and bold, tight and punchy, instrumental",
-    "Character": "dark ambient orchestral, 70 BPM, low cello drone, steady taiko drum pulse, solemn and determined, heavy and dry, instrumental",
-    "Respect": "calm dark piano and strings, 65 BPM, soft felt piano, warm low strings, quiet and dignified, spacious reverb, instrumental"
+    "Confidence": "dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty, instrumental",
+    "Character": "dark cinematic hybrid, 110 BPM, war drums, distorted cello ostinato, low brass, determined and relentless, huge and gritty, instrumental",
+    "Respect": "dark cinematic hybrid, 100 BPM, pounding low drums, staccato low strings, deep braams, steady and powerful, huge and dark, instrumental"
   },
   "bank": {
-    "style": ["dark trap", "boom bap", "dark ambient", "cinematic percussion", "minimal techno", "stoic piano"],
-    "bpm": [60, 70, 75, 80, 90, 110],
-    "instruments": ["808 bass", "taiko drums", "low cello", "felt piano", "analog synth drone", "brass hit", "vinyl drums", "metallic percussion"],
+    "style": ["dark cinematic hybrid", "dark cinematic hybrid", "dark hybrid orchestral", "dark cinematic hybrid trailer"],
+    "bpm": [100, 110, 115, 120, 125, 130],
+    "instruments": ["pounding low drums", "distorted cello ostinato", "deep braams", "war drums", "low brass", "staccato low strings", "taiko drums", "distorted synth bass", "metallic hits"],
     "mood": {
-      "Confidence": ["bold", "driving", "tense"],
-      "Character": ["solemn", "determined", "steady"],
-      "Respect": ["dignified", "calm", "steady"]
+      "Confidence": ["intense and relentless", "bold and driving", "fierce and unstoppable"],
+      "Character": ["determined and relentless", "grim and steady", "intense and focused"],
+      "Respect": ["steady and powerful", "solemn and heavy", "controlled and intense"]
     },
-    "texture": ["dry and punchy", "spacious reverb", "gravelly", "clean and cold", "warm and dusty"]
+    "texture": ["huge and gritty", "huge and dark", "heavy and gritty", "wide and distorted"]
   }
 }
