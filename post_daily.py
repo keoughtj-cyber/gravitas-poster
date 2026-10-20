@@ -464,7 +464,7 @@ mutation($input: CreatePostInput!) {
 }"""
 
 
-def create_post(channel, text, image_url, due_at, story=False, video_url="", image_urls=None, lead_video=""):
+def create_post(channel, text, image_url, due_at, story=False, video_url="", image_urls=None, slide_videos=None):
     base = {
         "channelId": channel["id"],
         "text": text,
@@ -477,10 +477,11 @@ def create_post(channel, text, image_url, due_at, story=False, video_url="", ima
         base["assets"] = [{"image": {"url": u}} for u in image_urls]
         base["metadata"] = {"instagram": {"type": "post", "shouldShareToFeed": True}}
         attempts = [base]
-        if lead_video:
-            # First slide as a video, so the carousel has music. Images only if Buffer refuses it.
-            mixed = [{"video": {"url": lead_video}}] + base["assets"][1:]
-            attempts.insert(0, {**base, "assets": mixed})
+        if slide_videos:
+            # Every slide as a video so each one has music, then only the first, then images only.
+            videos = [{"video": {"url": u}} for u in slide_videos]
+            attempts.insert(0, {**base, "assets": videos[:1] + base["assets"][1:]})
+            attempts.insert(0, {**base, "assets": videos})
         return send_post(attempts)
     if video_url:
         base["assets"] = [{"video": {"url": video_url}}]
@@ -603,13 +604,17 @@ def cmd_render():
                 slot["images"].append(name)
                 keep.add(name)
             if INSTAGRAM_AUDIO:
+                # Every slide is a short video with the same track, so the music plays on each one.
                 import ig_design
-                slot["carousel_video"] = f"{stem}-carousel1-{digest}.mp4"
                 track = reel_track(day, "c", f"{stem}:carousel")
-                ig_design.carousel_video(slides[0], CARDS / slot["carousel_video"], track, REEL_SECONDS, ffmpeg_exe())
+                slot["carousel_videos"] = []
+                for n, img in enumerate(slides, start=1):
+                    name = f"{stem}-carousel{n}-{digest}.mp4"
+                    ig_design.carousel_video(img, CARDS / name, track, REEL_SECONDS, ffmpeg_exe())
+                    slot["carousel_videos"].append(name)
+                    keep.add(name)
                 if track.parent == CARDS:
                     track.unlink(missing_ok=True)
-                keep.add(slot["carousel_video"])
         if slot["key"] == "reel":
             slot["video"] = f"{stem}-reel-{digest}.mp4"
             track_id = "b" if INSTAGRAM_AUDIO else "a"
@@ -680,7 +685,7 @@ def cmd_publish():
             continue
         image_url = f"{base_url}/{slot['image']}"
         wait_for_url(image_url)
-        for name in {slot.get("video"), slot.get("ig_video"), slot.get("carousel_video")} - {None}:
+        for name in {slot.get("video"), slot.get("ig_video"), *slot.get("carousel_videos", [])} - {None}:
             wait_for_url(video_link(name, base_url))
         for name in slot.get("images", [])[1:]:
             wait_for_url(f"{base_url}/{name}")
@@ -701,8 +706,8 @@ def cmd_publish():
                 video = slot.get("video") or (slot.get("ig_video") if ch["service"] == "instagram" else "")
                 video_url = video_link(video, base_url) if video else ""
                 image_urls = [f"{base_url}/{n}" for n in slot.get("images", [])]
-                lead = video_link(slot["carousel_video"], base_url) if slot.get("carousel_video") else ""
-                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url, image_urls, lead)
+                slide_videos = [video_link(n, base_url) for n in slot.get("carousel_videos", [])]
+                post = create_post(ch, text, image_url, due, slot.get("story", False), video_url, image_urls, slide_videos)
                 results[key] = {"channel": ch["name"], "post_id": post["id"], "due_at": post.get("dueAt")}
                 print(f"Scheduled {key} ({ch['name']}) for {due}")
             except RuntimeError as e:
