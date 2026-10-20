@@ -1,0 +1,23 @@
+prompt1_take1.mp3  seed 684185524
+  dark phonk, 140 BPM, distorted 808 bass, cowbell melody, hard trap drums, menacing and aggressive, gritty, instrumental
+
+prompt1_take2.mp3  seed 650932435
+  dark phonk, 140 BPM, distorted 808 bass, cowbell melody, hard trap drums, menacing and aggressive, gritty, instrumental
+
+prompt2_take1.mp3  seed 434234038
+  epic dark orchestral, 85 BPM, low brass, war drums, staccato strings, ominous and powerful, huge and wide, instrumental
+
+prompt2_take2.mp3  seed 575064832 (failed the quality check, the daily job would skip it)
+  epic dark orchestral, 85 BPM, low brass, war drums, staccato strings, ominous and powerful, huge and wide, instrumental
+
+prompt3_take1.mp3  seed 531172539
+  dark synthwave, 100 BPM, analog bass arpeggio, gated drums, cold lead synth, brooding and driven, neon and cold, instrumental
+
+prompt3_take2.mp3  seed 1046822001
+  dark synthwave, 100 BPM, analog bass arpeggio, gated drums, cold lead synth, brooding and driven, neon and cold, instrumental
+
+prompt4_take1.mp3  seed 173587146 (failed the quality check, the daily job would skip it)
+  dark drill beat, 142 BPM, sliding 808 bass, dark piano, rapid hi-hats, cold and serious, tight and punchy, instrumental
+
+prompt4_take2.mp3  seed 464960136 (failed the quality check, the daily job would skip it)
+  dark drill beat, 142 BPM, sliding 808 bass, dark piano, rapid hi-hats, cold and serious, tight and punchy, instrumental
