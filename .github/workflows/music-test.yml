@@ -1,0 +1,78 @@
+name: Music test
+
+# Tries up to four music prompts and saves two clips of each to music/tests/ to listen to.
+# Leave every prompt blank to try four built-in dark styles. It never posts anything.
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt_1:
+        description: "Prompt 1 (blank for the built-in styles)"
+        required: false
+      prompt_2:
+        description: "Prompt 2"
+        required: false
+      prompt_3:
+        description: "Prompt 3"
+        required: false
+      prompt_4:
+        description: "Prompt 4"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-music
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: music/requirements.txt
+
+      - name: Cache the Hugging Face model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-${{ runner.os }}-stable-audio-open-small
+
+      - name: Install requirements
+        run: pip install -r music/requirements.txt
+
+      - name: Make the test clips
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          P1: ${{ github.event.inputs.prompt_1 }}
+          P2: ${{ github.event.inputs.prompt_2 }}
+          P3: ${{ github.event.inputs.prompt_3 }}
+          P4: ${{ github.event.inputs.prompt_4 }}
+        run: |
+          NAME="$(date -u +%Y-%m-%d)-run${GITHUB_RUN_NUMBER}"
+          echo "NAME=$NAME" >> "$GITHUB_ENV"
+          python music/test.py --name "$NAME" --prompt "$P1" --prompt "$P2" --prompt "$P3" --prompt "$P4"
+          cat "music/tests/$NAME/list.txt" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Keep the clips as a run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: music-test-${{ env.NAME }}
+          path: music/tests/${{ env.NAME }}/
+          retention-days: 30
+
+      - name: Commit the clips
+        run: |
+          git config user.name "gravitas-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A music/tests
+          git commit -m "Add music test $NAME"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -4,8 +4,6 @@ Everything renders from a practice row (practice, why, pillar, area) plus the co
 source in ig_extra.csv. X and LinkedIn keep the plain card in post_daily.py.
 """
 import csv
-import datetime as dt
-import os
 import subprocess
 from pathlib import Path
 
@@ -19,8 +17,6 @@ EXTRA = ROOT / "ig_extra.csv"
 # Pillar colors from the app.
 COLORS = {"confidence": (212, 168, 67), "character": (79, 157, 122), "respect": (91, 141, 239)}
 WHITE, GREY, DIM = (245, 245, 245), (160, 160, 160), (110, 110, 110)
-# REP 001 is the first day of this look; the number counts up one a day from there.
-REP_START = dt.date.fromisoformat(os.environ.get("IG_REP_START", "2026-10-19"))
 MARGIN = 90
 FOLLOW_LINE = "Follow for daily practices on how to be a better man."
 
@@ -45,10 +41,6 @@ def extra(practice):
 def sentence(text):
     text = text.strip()
     return text if text.endswith((".", "!", "?")) else text + "."
-
-
-def rep_number(day):
-    return max(1, (day - REP_START).days + 1)
 
 
 def accent(practice):
@@ -116,14 +108,14 @@ def background(w, h, color, seed=7):
 
 
 def header(d, w, top, day):
-    """III mark and GRAVITAS on the left, REP number on the right."""
+    """III mark and GRAVITAS on the left, the date on the right."""
     bar, x = 5, MARGIN
     for i in range(3):
         d.rectangle([x + i * (bar + 5), top, x + i * (bar + 5) + bar, top + 30], fill=WHITE)
     spaced(d, (x + 3 * bar + 10 + 18, top + 1), "GRAVITAS", font("Inter-Bold.otf", 26), WHITE, 6)
-    rep = f"REP {rep_number(day):03d}"
+    date = day.strftime("%B %-d, %Y").upper()
     rf = font("Inter-Medium.otf", 24)
-    spaced(d, (w - MARGIN - spaced_width(d, rep, rf, 4), top + 2), rep, rf, DIM, 4)
+    spaced(d, (w - MARGIN - spaced_width(d, date, rf, 4), top + 2), date, rf, DIM, 4)
 
 
 # ---------- Story card ----------
@@ -286,7 +278,7 @@ def motion_reel(practice, day, out_path, audio_path, seconds, ffmpeg="ffmpeg", f
 
 
 def carousel_video(slide, out_path, audio_path, seconds, ffmpeg="ffmpeg", fps=30):
-    """The carousel's first slide as a 4:5 video with music, with the same slow push-in as the reels."""
+    """One carousel slide as a 4:5 video with music, with the same slow push-in as the reels."""
     w, h = slide.size
     cmd = [ffmpeg, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}",
            "-r", str(fps), "-i", "-", "-i", str(audio_path), "-t", str(seconds), "-c:v", "libx264",
