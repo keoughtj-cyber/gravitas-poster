@@ -1,110 +1,56 @@
 {
   "date": "2026-10-20",
   "pillar": "Character",
-  "prompt": "stoic piano, 110 BPM, taiko drums, 808 bass, and felt piano, solemn, warm and dusty, instrumental",
-  "take": 1,
-  "date_seed": 314772172,
-  "chosen_seed": 325772205,
-  "second_seed": 317772181,
-  "third_seed": 322772196,
+  "prompt": "stoic piano, 70 BPM, 808 bass, analog synth drone, and felt piano, determined, dry and punchy, instrumental",
+  "take": 2,
+  "date_seed": 953395859,
+  "chosen_seed": 953395859,
+  "second_seed": 956395868,
+  "third_seed": 954395862,
   "attempts": [
     {
-      "prompt": "stoic piano, 110 BPM, taiko drums, 808 bass, and felt piano, solemn, warm and dusty, instrumental",
+      "prompt": "stoic piano, 70 BPM, 808 bass, analog synth drone, and felt piano, determined, dry and punchy, instrumental",
       "source": "rotation",
       "candidates": [
         {
-          "peak": 1.1216,
-          "rms_dbfs": -10.99,
+          "peak": 0.655,
+          "rms_dbfs": -16.94,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 0.79,
-          "score": -0.79,
-          "rejected": [
-            "clipping"
-          ],
-          "seed": 314772172
-        },
-        {
-          "peak": 1.0845,
-          "rms_dbfs": -10.36,
-          "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.11,
-          "score": -1.11,
-          "rejected": [
-            "clipping"
-          ],
-          "seed": 315772175
-        },
-        {
-          "peak": 1.083,
-          "rms_dbfs": -9.91,
-          "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.39,
-          "score": -1.39,
-          "rejected": [
-            "clipping"
-          ],
-          "seed": 316772178
-        },
-        {
-          "peak": 0.9775,
-          "rms_dbfs": -9.51,
-          "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.08,
-          "score": -1.08,
+          "loudness_spread_db": 1.1,
+          "score": -1.1,
           "rejected": [],
-          "seed": 317772181
-        }
-      ]
-    },
-    {
-      "prompt": "stoic piano, 110 BPM, taiko drums, 808 bass, and felt piano, solemn, warm and dusty, instrumental",
-      "source": "top-up",
-      "candidates": [
-        {
-          "peak": 0.7002,
-          "rms_dbfs": -18.29,
-          "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.81,
-          "score": -1.81,
-          "rejected": [],
-          "seed": 322772196
+          "seed": 953395859
         },
         {
-          "peak": 0.9407,
-          "rms_dbfs": -12.42,
-          "silent_fraction": 0.029,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 3.01,
-          "score": -3.01,
-          "rejected": [],
-          "seed": 323772199
-        },
-        {
-          "peak": 1.044,
-          "rms_dbfs": -10.78,
+          "peak": 0.65,
+          "rms_dbfs": -16.54,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 2.64,
-          "score": -2.64,
-          "rejected": [
-            "clipping"
-          ],
-          "seed": 324772202
+          "loudness_spread_db": 1.41,
+          "score": -1.41,
+          "rejected": [],
+          "seed": 954395862
         },
         {
-          "peak": 0.8394,
-          "rms_dbfs": -14.59,
+          "peak": 0.6943,
+          "rms_dbfs": -15.89,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 0.96,
-          "score": -0.96,
+          "loudness_spread_db": 1.66,
+          "score": -1.66,
           "rejected": [],
-          "seed": 325772205
+          "seed": 955395865
+        },
+        {
+          "peak": 0.8881,
+          "rms_dbfs": -16.2,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 1.33,
+          "score": -1.33,
+          "rejected": [],
+          "seed": 956395868
         }
       ]
     }
@@ -127,8 +73,8 @@
   "result": {
     "seconds_7s": 7.0,
     "seconds_full": 11.0,
-    "lufs": -13.99,
-    "true_peak_db": -2.84,
+    "lufs": -14.0,
+    "true_peak_db": -3.88,
     "bytes": {
       "gravitas_2026-10-20_7s.mp3": 169316,
       "gravitas_2026-10-20_7s.wav": 1234878,
