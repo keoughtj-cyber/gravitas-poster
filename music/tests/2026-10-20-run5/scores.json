@@ -1,0 +1,110 @@
+[
+  {
+    "file": "prompt1_take1.mp3",
+    "prompt": "dark trap, 75 BPM, slow heavy 808 bass, eerie choir pad, sparse hi-hats, menacing and slow, wide and cold, instrumental",
+    "seed": 509806012,
+    "passed": true,
+    "peak": 0.8628,
+    "rms_dbfs": -13.59,
+    "silent_fraction": 0.007,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 1.89,
+    "score": -1.89,
+    "rejected": []
+  },
+  {
+    "file": "prompt1_take2.mp3",
+    "prompt": "dark trap, 75 BPM, slow heavy 808 bass, eerie choir pad, sparse hi-hats, menacing and slow, wide and cold, instrumental",
+    "seed": 1351698040,
+    "passed": true,
+    "peak": 0.681,
+    "rms_dbfs": -12.99,
+    "silent_fraction": 0.0,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 1.84,
+    "score": -1.84,
+    "rejected": []
+  },
+  {
+    "file": "prompt2_take1.mp3",
+    "prompt": "dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty, instrumental",
+    "seed": 1735260012,
+    "passed": true,
+    "peak": 0.8965,
+    "rms_dbfs": -10.37,
+    "silent_fraction": 0.0,
+    "clipped_fraction": 2e-05,
+    "loudness_spread_db": 7.16,
+    "score": -7.16,
+    "rejected": []
+  },
+  {
+    "file": "prompt2_take2.mp3",
+    "prompt": "dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty, instrumental",
+    "seed": 426656308,
+    "passed": true,
+    "peak": 0.7245,
+    "rms_dbfs": -16.74,
+    "silent_fraction": 0.0,
+    "clipped_fraction": 1e-05,
+    "loudness_spread_db": 4.77,
+    "score": -4.77,
+    "rejected": []
+  },
+  {
+    "file": "prompt3_take1.mp3",
+    "prompt": "dark lo-fi, 80 BPM, muffled piano chords, dusty vinyl drums, deep sub bass, moody and focused, warm and gritty, instrumental",
+    "seed": 1662215033,
+    "passed": true,
+    "peak": 0.1237,
+    "rms_dbfs": -32.15,
+    "silent_fraction": 0.179,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 6.45,
+    "score": -6.45,
+    "rejected": []
+  },
+  {
+    "file": "prompt3_take2.mp3",
+    "prompt": "dark lo-fi, 80 BPM, muffled piano chords, dusty vinyl drums, deep sub bass, moody and focused, warm and gritty, instrumental",
+    "seed": 1780647885,
+    "passed": true,
+    "peak": 0.1991,
+    "rms_dbfs": -27.96,
+    "silent_fraction": 0.114,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 8.55,
+    "score": -8.55,
+    "rejected": []
+  },
+  {
+    "file": "prompt4_take1.mp3",
+    "prompt": "industrial techno, 128 BPM, hard kick drum, metallic percussion, dark acid bassline, cold and driving, raw and loud, instrumental",
+    "seed": 400106952,
+    "passed": false,
+    "peak": 2.1441,
+    "rms_dbfs": -8.1,
+    "silent_fraction": 0.0,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 0.55,
+    "score": -0.55,
+    "rejected": [
+      "clipping"
+    ]
+  },
+  {
+    "file": "prompt4_take2.mp3",
+    "prompt": "industrial techno, 128 BPM, hard kick drum, metallic percussion, dark acid bassline, cold and driving, raw and loud, instrumental",
+    "seed": 239530790,
+    "passed": false,
+    "peak": 1.4467,
+    "rms_dbfs": -12.27,
+    "silent_fraction": 0.114,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 0.55,
+    "score": -0.55,
+    "rejected": [
+      "clipping"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+prompt1_take1.mp3  seed 509806012
+  dark trap, 75 BPM, slow heavy 808 bass, eerie choir pad, sparse hi-hats, menacing and slow, wide and cold, instrumental
+
+prompt1_take2.mp3  seed 1351698040
+  dark trap, 75 BPM, slow heavy 808 bass, eerie choir pad, sparse hi-hats, menacing and slow, wide and cold, instrumental
+
+prompt2_take1.mp3  seed 1735260012
+  dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty, instrumental
+
+prompt2_take2.mp3  seed 426656308
+  dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty, instrumental
+
+prompt3_take1.mp3  seed 1662215033
+  dark lo-fi, 80 BPM, muffled piano chords, dusty vinyl drums, deep sub bass, moody and focused, warm and gritty, instrumental
+
+prompt3_take2.mp3  seed 1780647885
+  dark lo-fi, 80 BPM, muffled piano chords, dusty vinyl drums, deep sub bass, moody and focused, warm and gritty, instrumental
+
+prompt4_take1.mp3  seed 400106952 (failed the quality check, the daily job would skip it)
+  industrial techno, 128 BPM, hard kick drum, metallic percussion, dark acid bassline, cold and driving, raw and loud, instrumental
+
+prompt4_take2.mp3  seed 239530790 (failed the quality check, the daily job would skip it)
+  industrial techno, 128 BPM, hard kick drum, metallic percussion, dark acid bassline, cold and driving, raw and loud, instrumental
