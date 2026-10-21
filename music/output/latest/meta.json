@@ -1,56 +1,56 @@
 {
   "date": "2026-10-20",
   "pillar": "Character",
-  "prompt": "stoic piano, 70 BPM, 808 bass, analog synth drone, and felt piano, determined, dry and punchy, instrumental",
-  "take": 2,
-  "date_seed": 953395859,
-  "chosen_seed": 953395859,
-  "second_seed": 956395868,
-  "third_seed": 954395862,
+  "prompt": "dark cinematic hybrid, 110 BPM, pounding low drums, distorted synth bass, distorted cello ostinato, ominous and powerful, huge and gritty, instrumental",
+  "take": 3,
+  "date_seed": 1970768370,
+  "chosen_seed": 1971768373,
+  "second_seed": 1972768376,
+  "third_seed": 1970768370,
   "attempts": [
     {
-      "prompt": "stoic piano, 70 BPM, 808 bass, analog synth drone, and felt piano, determined, dry and punchy, instrumental",
+      "prompt": "dark cinematic hybrid, 110 BPM, pounding low drums, distorted synth bass, distorted cello ostinato, ominous and powerful, huge and gritty, instrumental",
       "source": "rotation",
       "candidates": [
         {
-          "peak": 0.655,
-          "rms_dbfs": -16.94,
+          "peak": 1.0851,
+          "rms_dbfs": -7.09,
           "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.1,
-          "score": -1.1,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 3.7,
+          "score": -3.7,
           "rejected": [],
-          "seed": 953395859
+          "seed": 1970768370
         },
         {
-          "peak": 0.65,
-          "rms_dbfs": -16.54,
+          "peak": 1.0482,
+          "rms_dbfs": -6.68,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.41,
-          "score": -1.41,
+          "loudness_spread_db": 1.16,
+          "score": -1.16,
           "rejected": [],
-          "seed": 954395862
+          "seed": 1971768373
         },
         {
-          "peak": 0.6943,
-          "rms_dbfs": -15.89,
+          "peak": 1.132,
+          "rms_dbfs": -8.14,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.66,
-          "score": -1.66,
+          "loudness_spread_db": 1.39,
+          "score": -1.39,
           "rejected": [],
-          "seed": 955395865
+          "seed": 1972768376
         },
         {
-          "peak": 0.8881,
-          "rms_dbfs": -16.2,
+          "peak": 1.0833,
+          "rms_dbfs": -10.75,
           "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.33,
-          "score": -1.33,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 4.26,
+          "score": -4.26,
           "rejected": [],
-          "seed": 956395868
+          "seed": 1973768379
         }
       ]
     }
@@ -73,8 +73,8 @@
   "result": {
     "seconds_7s": 7.0,
     "seconds_full": 11.0,
-    "lufs": -14.0,
-    "true_peak_db": -3.88,
+    "lufs": -14.01,
+    "true_peak_db": -4.23,
     "bytes": {
       "gravitas_2026-10-20_7s.mp3": 169316,
       "gravitas_2026-10-20_7s.wav": 1234878,
