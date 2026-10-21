@@ -51,7 +51,6 @@ MAX_SILENT_FRACTION = 0.25    # reject if more than this share of frames is sile
 MIN_RMS_DBFS = -40.0          # reject if the overall level is below this
 CLIP_NEAR_PEAK = 0.999        # samples this close to the peak count as flat-topped
 MAX_CLIPPED_FRACTION = 0.002  # reject if more than this share of samples is flat-topped
-MAX_PEAK = 1.0                # reject if the raw peak goes past full scale
 STEADY_WINDOW_SECONDS = 0.5   # window for the loudness steadiness score
 
 
@@ -85,14 +84,16 @@ def join_list(items):
 
 
 def build_prompt(day, pillar, data, take=0):
-    bank = data["bank"]
     rng = random.Random(date_seed(day, take))
-    style = rng.choice(bank["style"])
-    bpm = rng.choice(bank["bpm"])
-    instruments = rng.sample(bank["instruments"], rng.choice([2, 3]))
-    mood = rng.choice(bank["mood"][pillar])
-    texture = rng.choice(bank["texture"])
-    return f"{style}, {bpm} BPM, {join_list(instruments)}, {mood}, {texture}, instrumental"
+    # The style turns over every day (no two days in a row match) and meets each pillar in turn.
+    days = max(0, (day - dt.date.fromisoformat(data["start_date"])).days)
+    styles = data["styles"]
+    pick = styles[(days + days // len(styles) + take) % len(styles)]
+    bpm = rng.choice(pick["bpm"])
+    instruments = rng.sample(pick["instruments"], 3)
+    mood = rng.choice(data["moods"][pillar])
+    texture = rng.choice(pick["texture"])
+    return f"{pick['style']}, {bpm} BPM, {', '.join(instruments)}, {mood}, {texture}, instrumental"
 
 
 def prompt_ok(prompt):
@@ -187,7 +188,8 @@ def score(y, sr):
         reasons.append("mostly silent")
     if rms_dbfs < MIN_RMS_DBFS:
         reasons.append("too quiet")
-    if peak > MAX_PEAK or clipped_fraction > MAX_CLIPPED_FRACTION:
+    # A raw peak over 1.0 is fine: the clip is scaled down before it is saved. Only flat tops count.
+    if clipped_fraction > MAX_CLIPPED_FRACTION:
         reasons.append("clipping")
     metrics = {
         "peak": round(peak, 4),
