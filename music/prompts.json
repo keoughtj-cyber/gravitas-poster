@@ -1,7 +1,11 @@
 {
-  "_readme": "Prompt data for music/generate.py. The three styles are the ones Tyler said fit GRAVITAS in Music test runs 5 and 6 on 2026-10-20: dark cinematic hybrid (run 5 prompt2_take1), epic dark orchestral (run 6 prompt 2), and dark drill (run 6 prompt 4). The pillar is (days since start_date) mod 3, in pillar_order. The style turns over daily so no two days in a row match. Each day then picks a bpm, three instruments, and a texture from that style, and a mood for the day's pillar, seeded by the date. The written prompt keeps the shape of the winning test prompts. Keep everything English, no artist names, no song titles, no vocals.",
+  "_readme": "Prompt data for music/generate.py. The four styles are the ones Tyler said fit GRAVITAS in Music test runs 5, 6, and 7 (2026-10-20 and 21): dark cinematic hybrid, epic dark orchestral, dark drill, and dark orchestral drill (run 7 prompt 4, a mix of the drill and orchestral styles). The pillar is (days since start_date) mod 3, in pillar_order. The style turns over daily (days + days // number of styles), so no two days in a row match and each style meets each pillar. Each day then picks a bpm, three instruments, and a texture from that style, and a mood for the day's pillar, seeded by the date. The written prompt keeps the shape of the winning test prompts. Keep everything English, no artist names, no song titles, no vocals.",
   "start_date": "2026-01-01",
-  "pillar_order": ["Confidence", "Character", "Respect"],
+  "pillar_order": [
+    "Confidence",
+    "Character",
+    "Respect"
+  ],
   "templates": {
     "Confidence": "dark cinematic hybrid, 120 BPM, pounding low drums, distorted cello ostinato, deep braams, intense and relentless, huge and gritty, instrumental",
     "Character": "epic dark orchestral, 85 BPM, low brass, war drums, staccato strings, ominous and powerful, huge and wide, instrumental",
@@ -10,26 +14,108 @@
   "styles": [
     {
       "style": "dark cinematic hybrid",
-      "bpm": [110, 115, 120, 125, 130],
-      "instruments": ["pounding low drums", "distorted cello ostinato", "deep braams", "war drums", "low brass", "distorted synth bass"],
-      "texture": ["huge and gritty", "heavy and gritty", "wide and distorted"]
+      "bpm": [
+        110,
+        115,
+        120,
+        125,
+        130
+      ],
+      "instruments": [
+        "pounding low drums",
+        "distorted cello ostinato",
+        "deep braams",
+        "war drums",
+        "low brass",
+        "distorted synth bass"
+      ],
+      "texture": [
+        "huge and gritty",
+        "heavy and gritty",
+        "wide and distorted"
+      ]
     },
     {
       "style": "epic dark orchestral",
-      "bpm": [75, 80, 85, 90],
-      "instruments": ["low brass", "war drums", "staccato strings", "taiko drums", "timpani", "low cello"],
-      "texture": ["huge and wide", "huge and dark", "vast and heavy"]
+      "bpm": [
+        75,
+        80,
+        85,
+        90
+      ],
+      "instruments": [
+        "low brass",
+        "war drums",
+        "staccato strings",
+        "taiko drums",
+        "timpani",
+        "low cello"
+      ],
+      "texture": [
+        "huge and wide",
+        "huge and dark",
+        "vast and heavy"
+      ]
     },
     {
       "style": "dark drill beat",
-      "bpm": [138, 140, 142, 144],
-      "instruments": ["sliding 808 bass", "dark piano", "rapid hi-hats", "dark strings", "snappy snare"],
-      "texture": ["tight and punchy", "cold and punchy", "dark and tight"]
+      "bpm": [
+        138,
+        140,
+        142,
+        144
+      ],
+      "instruments": [
+        "sliding 808 bass",
+        "dark piano",
+        "rapid hi-hats",
+        "dark strings",
+        "snappy snare"
+      ],
+      "texture": [
+        "tight and punchy",
+        "cold and punchy",
+        "dark and tight"
+      ]
+    },
+    {
+      "style": "dark orchestral drill",
+      "bpm": [
+        138,
+        140,
+        142,
+        144
+      ],
+      "instruments": [
+        "sliding 808 bass",
+        "low brass",
+        "war drums",
+        "staccato strings",
+        "rapid hi-hats",
+        "timpani"
+      ],
+      "texture": [
+        "huge and punchy",
+        "heavy and punchy",
+        "dark and wide"
+      ]
     }
   ],
   "moods": {
-    "Confidence": ["intense and relentless", "ominous and powerful", "cold and serious"],
-    "Character": ["ominous and powerful", "determined and relentless", "cold and serious"],
-    "Respect": ["cold and serious", "steady and powerful", "intense and relentless"]
+    "Confidence": [
+      "intense and relentless",
+      "ominous and powerful",
+      "cold and serious"
+    ],
+    "Character": [
+      "ominous and powerful",
+      "determined and relentless",
+      "cold and serious"
+    ],
+    "Respect": [
+      "cold and serious",
+      "steady and powerful",
+      "intense and relentless"
+    ]
   }
 }

@@ -87,7 +87,8 @@ def build_prompt(day, pillar, data, take=0):
     rng = random.Random(date_seed(day, take))
     # The style turns over every day (no two days in a row match) and meets each pillar in turn.
     days = max(0, (day - dt.date.fromisoformat(data["start_date"])).days)
-    pick = data["styles"][(days + days // 3 + take) % len(data["styles"])]
+    styles = data["styles"]
+    pick = styles[(days + days // len(styles) + take) % len(styles)]
     bpm = rng.choice(pick["bpm"])
     instruments = rng.sample(pick["instruments"], 3)
     mood = rng.choice(data["moods"][pillar])
