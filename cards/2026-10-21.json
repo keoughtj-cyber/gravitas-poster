@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-21",
+  "day_index": 293,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-194",
+        "practice": "Close the news app before it closes your mood.",
+        "why": "Your attention is yours to guard.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-21-e9ed8d88.jpg",
+      "captions": {
+        "twitter": "Close the news app before it closes your mood.\n\nYour attention is yours to guard.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Close the news app before it closes your mood.\n\nYour attention is yours to guard.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Close the news app before it closes your mood.\n\nThat is it. Your attention is yours to guard.",
+        "facebook": "The practice: Close the news app before it closes your mood.\n\nYour attention is yours to guard.",
+        "tiktok": "Close the news app before it closes your mood. Your attention is yours to guard. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Close the news app before it closes your mood.\n\nYour attention is yours to guard.",
+        "_default": "Close the news app before it closes your mood.\n\nYour attention is yours to guard."
+      },
+      "ig_video": "2026-10-21-ig-cd897277.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-194",
+        "practice": "Close the news app before it closes your mood.",
+        "why": "Your attention is yours to guard.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-10-21-story-cd897277.jpg",
+      "captions": {
+        "twitter": "Close the news app before it closes your mood.\n\nYour attention is yours to guard.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Close the news app before it closes your mood.\n\nYour attention is yours to guard.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Close the news app before it closes your mood.\n\nThat is it. Your attention is yours to guard.",
+        "facebook": "The practice: Close the news app before it closes your mood.\n\nYour attention is yours to guard.",
+        "tiktok": "Close the news app before it closes your mood. Your attention is yours to guard. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Close the news app before it closes your mood.\n\nYour attention is yours to guard.",
+        "_default": "Close the news app before it closes your mood.\n\nYour attention is yours to guard."
+      }
+    },
+    {
+      "key": "area1",
+      "area": "Habits and Discipline",
+      "offset_hours": 2.0,
+      "practice": {
+        "id": "HAB-140",
+        "practice": "Try a habit you think is beyond you for one week.",
+        "why": "You may surprise yourself.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-21-area1-7c19100a.jpg",
+      "captions": {
+        "twitter": "Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Try a habit you think is beyond you for one week.\n\nThat is it. You may surprise yourself.",
+        "facebook": "The practice: Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.",
+        "tiktok": "Try a habit you think is beyond you for one week. You may surprise yourself. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.",
+        "_default": "Try a habit you think is beyond you for one week.\n\nYou may surprise yourself."
+      }
+    },
+    {
+      "key": "area2",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-008",
+        "practice": "Celebrate a friend's good news with real questions.",
+        "why": "Shared joy grows when you engage.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-21-area2-bd9af2a6.jpg",
+      "captions": {
+        "twitter": "Celebrate a friend's good news with real questions.\n\nShared joy grows when you engage.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Celebrate a friend's good news with real questions.\n\nShared joy grows when you engage.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Celebrate a friend's good news with real questions.\n\nThat is it. Shared joy grows when you engage.",
+        "facebook": "The practice: Celebrate a friend's good news with real questions.\n\nShared joy grows when you engage.",
+        "tiktok": "Celebrate a friend's good news with real questions. Shared joy grows when you engage. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Celebrate a friend's good news with real questions.\n\nShared joy grows when you engage.",
+        "_default": "Celebrate a friend's good news with real questions.\n\nShared joy grows when you engage."
+      }
+    },
+    {
+      "key": "area3",
+      "area": "Career and Leadership",
+      "offset_hours": 8.0,
+      "practice": {
+        "id": "CAR-116",
+        "practice": "Write down your boundaries for work and keep them.",
+        "why": "Clear limits prevent burnout.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-10-21-area3-982d4e35.jpg",
+      "captions": {
+        "twitter": "Write down your boundaries for work and keep them.\n\nClear limits prevent burnout.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Write down your boundaries for work and keep them.\n\nClear limits prevent burnout.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Write down your boundaries for work and keep them.\n\nThat is it. Clear limits prevent burnout.",
+        "facebook": "The practice: Write down your boundaries for work and keep them.\n\nClear limits prevent burnout.",
+        "tiktok": "Write down your boundaries for work and keep them. Clear limits prevent burnout. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Write down your boundaries for work and keep them.\n\nClear limits prevent burnout.",
+        "_default": "Write down your boundaries for work and keep them.\n\nClear limits prevent burnout."
+      }
+    },
+    {
+      "key": "area4",
+      "area": "Calm and Mindset",
+      "offset_hours": 11.0,
+      "practice": {
+        "id": "CAL-092",
+        "practice": "Ask yourself what you would advise a friend in your spot.",
+        "why": "You give better advice to others.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-21-area4-7f0b962e.jpg",
+      "captions": {
+        "twitter": "Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask yourself what you would advise a friend in your spot.\n\nThat is it. You give better advice to others.",
+        "facebook": "The practice: Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.",
+        "tiktok": "Ask yourself what you would advise a friend in your spot. You give better advice to others. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.",
+        "_default": "Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others."
+      }
+    },
+    {
+      "key": "area5",
+      "area": "Fitness and Health",
+      "offset_hours": 14.0,
+      "practice": {
+        "id": "FIT-083",
+        "practice": "Choose whole grains over refined ones for one meal.",
+        "why": "Fiber supports digestion.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-21-area5-49c07dcf.jpg",
+      "captions": {
+        "twitter": "Choose whole grains over refined ones for one meal.\n\nFiber supports digestion.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Choose whole grains over refined ones for one meal.\n\nFiber supports digestion.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Choose whole grains over refined ones for one meal.\n\nThat is it. Fiber supports digestion.",
+        "facebook": "The practice: Choose whole grains over refined ones for one meal.\n\nFiber supports digestion.",
+        "tiktok": "Choose whole grains over refined ones for one meal. Fiber supports digestion. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Choose whole grains over refined ones for one meal.\n\nFiber supports digestion.",
+        "_default": "Choose whole grains over refined ones for one meal.\n\nFiber supports digestion."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Calm and Mindset",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAL-092",
+        "practice": "Ask yourself what you would advise a friend in your spot.",
+        "why": "You give better advice to others.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "tall": true,
+      "image": "2026-10-21-reel-59069033.jpg",
+      "video": "2026-10-21-reel-59069033.mp4",
+      "captions": {
+        "twitter": "Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask yourself what you would advise a friend in your spot.\n\nThat is it. You give better advice to others.",
+        "facebook": "The practice: Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.",
+        "tiktok": "Ask yourself what you would advise a friend in your spot. You give better advice to others. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others.",
+        "_default": "Ask yourself what you would advise a friend in your spot.\n\nYou give better advice to others."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-140",
+        "practice": "Try a habit you think is beyond you for one week.",
+        "why": "You may surprise yourself.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-21-carousel-b5371b29.jpg",
+      "images": [
+        "2026-10-21-carousel-b5371b29.jpg",
+        "2026-10-21-carousel2-b5371b29.jpg",
+        "2026-10-21-carousel3-b5371b29.jpg"
+      ],
+      "captions": {
+        "twitter": "Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Try a habit you think is beyond you for one week.\n\nThat is it. You may surprise yourself.",
+        "facebook": "The practice: Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.",
+        "tiktok": "Try a habit you think is beyond you for one week. You may surprise yourself. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Try a habit you think is beyond you for one week.\n\nYou may surprise yourself.",
+        "_default": "Try a habit you think is beyond you for one week.\n\nYou may surprise yourself."
+      }
+    }
+  ]
+}
