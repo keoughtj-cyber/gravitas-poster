@@ -1,7 +1,7 @@
 """Daily GRAVITAS music clip, made with Stable Audio Open Small on CPU.
 
 Each run builds a dark instrumental prompt for the date, generates four 11-second
-candidates, keeps the best three as tracks a, b, and c, and saves 7-second cuts and the full clip to
+candidates, keeps the best two as tracks a and b, and saves 7-second cuts and the full clip to
 music/output/YYYY-MM-DD/, with a copy of the newest cut in music/output/latest/.
 
 Usage:
@@ -36,6 +36,7 @@ TZ = ZoneInfo("America/New_York")
 MODEL_NAME = "stabilityai/stable-audio-open-small"
 SETTINGS = {"steps": 8, "cfg_scale": 1.0, "sampler_type": "pingpong", "seconds_total": 11}
 CANDIDATES = 4
+TRACKS = 2          # one per reel: a for the morning reel, b for the evening reel
 CUT_SECONDS = 7.0
 FADE_IN = 0.1
 FADE_OUT = 0.8
@@ -214,7 +215,7 @@ def best_of(prompt, seeds):
         results.append((passed, metrics, y, sr))
     passing = sorted((r for r in results if r[0]), key=lambda r: r[1]["score"], reverse=True)
     # Best first. The next two become extra tracks, so each of the day's videos sounds different.
-    return passing[:3], [r[1] for r in results]
+    return passing[:TRACKS], [r[1] for r in results]
 
 
 # ---------- post-processing ----------
@@ -318,16 +319,16 @@ def main():
         attempts.append({"prompt": prompt, "source": "template", "candidates": scores})
     if not ranked:
         sys.exit("Every candidate failed the quality checks. No clip was saved.")
-    # The day's three videos each need a track, so keep drawing seeds until three pass.
+    # Each of the day's reels needs its own track, so keep drawing seeds until TRACKS pass.
     for round_ in range(1, 4):
-        if len(ranked) >= 3:
+        if len(ranked) >= TRACKS:
             break
         more = [(s + (4 + 4 * round_) * 1000003) % (2 ** 31) for s in seeds]
         log(f"Only {len(ranked)} candidate(s) passed, generating {len(more)} more")
         extra, scores = best_of(prompt, more)
         attempts.append({"prompt": prompt, "source": "top-up", "candidates": scores})
-        ranked = sorted(ranked + extra, key=lambda r: r[1]["score"], reverse=True)[:3]
-    if len(ranked) < 3:
+        ranked = sorted(ranked + extra, key=lambda r: r[1]["score"], reverse=True)[:TRACKS]
+    if len(ranked) < TRACKS:
         log(f"Only {len(ranked)} track(s) passed after every top-up")
 
     _, metrics, y, sr = ranked[0]
@@ -348,9 +349,9 @@ def main():
     raw_full.unlink()
     raw_cut.unlink()
 
-    # The runner-up and third place become tracks b and c, so the day's videos all sound different.
+    # The runner-up becomes track b, so the two reels sound different.
     extras = {}
-    for track, (_, metrics_x, y_x, sr_x) in zip("bc", ranked[1:]):
+    for track, (_, metrics_x, y_x, sr_x) in zip("b", ranked[1:]):
         write_wav(raw_cut, y_x[: int(sr_x * CUT_SECONDS)] / (np.abs(y_x).max() or 1) * 0.9, sr_x)
         cut_x_wav = folder / f"_cut_{track}.wav"
         master(raw_cut, cut_x_wav, CUT_SECONDS)
@@ -371,7 +372,6 @@ def main():
         "date_seed": seed,
         "chosen_seed": metrics["seed"],
         "second_seed": extras["b"][1] if "b" in extras else None,
-        "third_seed": extras["c"][1] if "c" in extras else None,
         "attempts": attempts,
         "model": MODEL_NAME,
         "settings": SETTINGS,

@@ -385,7 +385,7 @@ def reel_track(day, track_id="a", use=""):
     import music
     track = CARDS / f"_music_{track_id}.wav"
     # Each track letter composes from a shifted date so the day's videos never match.
-    seed_day = day + dt.timedelta(days=500 * "abc".index(track_id))
+    seed_day = day + dt.timedelta(days=500 * "ab".index(track_id))
     print(f"Composed track for {use}: {music.compose(seed_day, REEL_SECONDS, track)}")
     return track
 

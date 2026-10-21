@@ -6,7 +6,7 @@ GitHub's free CPU runner. It never posts anything.
 
 Output, per day, in `music/output/YYYY-MM-DD/`:
 - `gravitas_YYYY-MM-DD_7s.mp3` (192 kbps) and `gravitas_YYYY-MM-DD_7s.wav`: the 7-second cut for reels.
-- `gravitas_YYYY-MM-DD_7s_b.mp3` and `_7s_c.mp3`: the second and third best candidates, so the day's reels and carousel each get their own track. If fewer than three of the four candidates pass the checks, it generates up to three more rounds of four until three do.
+- `gravitas_YYYY-MM-DD_7s_b.mp3`: the second best candidate, so the two reels each get their own track. If fewer than two of the four candidates pass the checks, it generates up to three more rounds of four until two do.
 - `gravitas_YYYY-MM-DD_full.wav`: the full 11-second clip.
 - `meta.json`: date, pillar, prompt, seeds, every candidate's scores, model, and settings.
 
