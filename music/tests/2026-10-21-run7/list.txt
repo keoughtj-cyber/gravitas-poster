@@ -1,0 +1,23 @@
+prompt1_take1.mp3  seed 1204021953 (failed the quality check, the daily job would skip it)
+  dark cinematic hybrid, 115 BPM, pounding low drums, distorted cello ostinato, low brass, intense and relentless, huge and gritty, instrumental
+
+prompt1_take2.mp3  seed 103642944 (failed the quality check, the daily job would skip it)
+  dark cinematic hybrid, 115 BPM, pounding low drums, distorted cello ostinato, low brass, intense and relentless, huge and gritty, instrumental
+
+prompt2_take1.mp3  seed 748000825
+  epic dark orchestral, 80 BPM, low brass, war drums, staccato strings, timpani, ominous and powerful, huge and dark, instrumental
+
+prompt2_take2.mp3  seed 1956486144
+  epic dark orchestral, 80 BPM, low brass, war drums, staccato strings, timpani, ominous and powerful, huge and dark, instrumental
+
+prompt3_take1.mp3  seed 1805692439 (failed the quality check, the daily job would skip it)
+  dark drill beat, 140 BPM, sliding 808 bass, dark strings, rapid hi-hats, cold and serious, tight and punchy, instrumental
+
+prompt3_take2.mp3  seed 1355372553 (failed the quality check, the daily job would skip it)
+  dark drill beat, 140 BPM, sliding 808 bass, dark strings, rapid hi-hats, cold and serious, tight and punchy, instrumental
+
+prompt4_take1.mp3  seed 1453308501 (failed the quality check, the daily job would skip it)
+  dark orchestral drill, 142 BPM, sliding 808 bass, low brass, war drums, staccato strings, ominous and powerful, huge and punchy, instrumental
+
+prompt4_take2.mp3  seed 1477579036
+  dark orchestral drill, 142 BPM, sliding 808 bass, low brass, war drums, staccato strings, ominous and powerful, huge and punchy, instrumental
