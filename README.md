@@ -15,7 +15,7 @@ Every morning GitHub runs `post_daily.py`, which:
 
 Instagram gets its own design. X and LinkedIn keep the plain card above.
 
-- Both reels are motion reels: the practice in large type from the first frame, the why fading in under it, then "Send this to a friend who needs it."
+- Both reels are motion reels: the practice in large type from the first frame, the why fading in under it, then "Do it once. Then tell us how it went." with the follow line
 - The Story is a restyled 9:16 still: III mark, pillar color, larger type, and the date in the top right.
 - At `CAROUSEL_TIME` (default 12:00) a 3-slide carousel goes to the feed: the practice, why it works (principle and research source from `ig_extra.csv`), and a save and send slide. It uses a Focus area that is not the reel's or the Base post's, with the same practice as that area's X post.
 - `IG_DESIGN=false` brings back the plain card on Instagram. `CAROUSEL_POST=false` stops the carousel.

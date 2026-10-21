@@ -245,7 +245,7 @@ def reel_frame(practice, day, t, dur, focus=""):
 
     a = ease((s - 5.6) / 0.3)
     if a > 0:
-        lines = wrap(d, "Send this to a friend who needs it.", pf, width)
+        lines = wrap(d, "Do it once. Then tell us how it went.", pf, width)
         y = cy - (len(lines) * 98 + 100) / 2
         for ln in lines:
             text((MARGIN, y), ln, pf, WHITE, a)
