@@ -1,0 +1,28 @@
+[
+  {
+    "file": "prompt1_take1.mp3",
+    "prompt": "final stand music, deep and dark, instrumental",
+    "seed": 450091308,
+    "passed": true,
+    "peak": 0.3727,
+    "rms_dbfs": -20.58,
+    "silent_fraction": 0.0,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 1.01,
+    "score": -1.01,
+    "rejected": []
+  },
+  {
+    "file": "prompt1_take2.mp3",
+    "prompt": "final stand music, deep and dark, instrumental",
+    "seed": 297282626,
+    "passed": true,
+    "peak": 0.6088,
+    "rms_dbfs": -19.15,
+    "silent_fraction": 0.0,
+    "clipped_fraction": 0.0,
+    "loudness_spread_db": 2.26,
+    "score": -2.26,
+    "rejected": []
+  }
+]
