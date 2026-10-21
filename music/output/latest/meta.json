@@ -1,56 +1,56 @@
 {
-  "date": "2026-10-20",
-  "pillar": "Character",
-  "prompt": "dark cinematic hybrid, 110 BPM, pounding low drums, distorted synth bass, distorted cello ostinato, ominous and powerful, huge and gritty, instrumental",
-  "take": 3,
-  "date_seed": 1970768370,
-  "chosen_seed": 1971768373,
-  "second_seed": 1972768376,
-  "third_seed": 1970768370,
+  "date": "2026-10-21",
+  "pillar": "Respect",
+  "prompt": "dark drill beat, 140 BPM, snappy snare, dark piano, dark strings, intense and relentless, tight and punchy, instrumental",
+  "take": 0,
+  "date_seed": 512616189,
+  "chosen_seed": 515616198,
+  "second_seed": 512616189,
+  "third_seed": 513616192,
   "attempts": [
     {
-      "prompt": "dark cinematic hybrid, 110 BPM, pounding low drums, distorted synth bass, distorted cello ostinato, ominous and powerful, huge and gritty, instrumental",
+      "prompt": "dark drill beat, 140 BPM, snappy snare, dark piano, dark strings, intense and relentless, tight and punchy, instrumental",
       "source": "rotation",
       "candidates": [
         {
-          "peak": 1.0851,
-          "rms_dbfs": -7.09,
-          "silent_fraction": 0.0,
-          "clipped_fraction": 1e-05,
-          "loudness_spread_db": 3.7,
-          "score": -3.7,
-          "rejected": [],
-          "seed": 1970768370
-        },
-        {
-          "peak": 1.0482,
-          "rms_dbfs": -6.68,
+          "peak": 0.6093,
+          "rms_dbfs": -16.53,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.16,
-          "score": -1.16,
+          "loudness_spread_db": 1.3,
+          "score": -1.3,
           "rejected": [],
-          "seed": 1971768373
+          "seed": 512616189
         },
         {
-          "peak": 1.132,
-          "rms_dbfs": -8.14,
+          "peak": 0.5184,
+          "rms_dbfs": -18.58,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.39,
-          "score": -1.39,
+          "loudness_spread_db": 1.5,
+          "score": -1.5,
           "rejected": [],
-          "seed": 1972768376
+          "seed": 513616192
         },
         {
-          "peak": 1.0833,
-          "rms_dbfs": -10.75,
+          "peak": 0.4942,
+          "rms_dbfs": -20.48,
           "silent_fraction": 0.0,
-          "clipped_fraction": 1e-05,
-          "loudness_spread_db": 4.26,
-          "score": -4.26,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 1.58,
+          "score": -1.58,
           "rejected": [],
-          "seed": 1973768379
+          "seed": 514616195
+        },
+        {
+          "peak": 0.4765,
+          "rms_dbfs": -19.26,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 1.1,
+          "score": -1.1,
+          "rejected": [],
+          "seed": 515616198
         }
       ]
     }
@@ -73,14 +73,14 @@
   "result": {
     "seconds_7s": 7.0,
     "seconds_full": 11.0,
-    "lufs": -14.01,
-    "true_peak_db": -4.23,
+    "lufs": -13.99,
+    "true_peak_db": -3.28,
     "bytes": {
-      "gravitas_2026-10-20_7s.mp3": 169316,
-      "gravitas_2026-10-20_7s.wav": 1234878,
-      "gravitas_2026-10-20_full.wav": 1940478,
-      "gravitas_2026-10-20_7s_b.mp3": 169316,
-      "gravitas_2026-10-20_7s_c.mp3": 169316
+      "gravitas_2026-10-21_7s.mp3": 169316,
+      "gravitas_2026-10-21_7s.wav": 1234878,
+      "gravitas_2026-10-21_full.wav": 1940478,
+      "gravitas_2026-10-21_7s_b.mp3": 169316,
+      "gravitas_2026-10-21_7s_c.mp3": 169316
     }
   }
 }
