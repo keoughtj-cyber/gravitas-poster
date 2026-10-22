@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-22",
+  "day_index": 294,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-147",
+        "practice": "Start one project with the simplest possible version.",
+        "why": "Simple versions get finished.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-22-7762d4bc.jpg",
+      "captions": {
+        "twitter": "Start one project with the simplest possible version.\n\nSimple versions get finished.",
+        "linkedin": "Start one project with the simplest possible version.\n\nThat is the whole assignment. Simple versions get finished.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Start one project with the simplest possible version.\n\nSimple versions get finished.",
+        "facebook": "Start one project with the simplest possible version.\n\nSimple versions get finished.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Start one project with the simplest possible version. Simple versions get finished. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Start one project with the simplest possible version.\n\nSimple versions get finished.",
+        "_default": "Start one project with the simplest possible version.\n\nSimple versions get finished."
+      },
+      "ig_video": "2026-10-22-ig-981f1aa5.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-147",
+        "practice": "Start one project with the simplest possible version.",
+        "why": "Simple versions get finished.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "story": true,
+      "image": "2026-10-22-story-981f1aa5.jpg",
+      "captions": {
+        "twitter": "Start one project with the simplest possible version.\n\nSimple versions get finished.",
+        "linkedin": "Start one project with the simplest possible version.\n\nThat is the whole assignment. Simple versions get finished.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Start one project with the simplest possible version.\n\nSimple versions get finished.",
+        "facebook": "Start one project with the simplest possible version.\n\nSimple versions get finished.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Start one project with the simplest possible version. Simple versions get finished. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Start one project with the simplest possible version.\n\nSimple versions get finished.",
+        "_default": "Start one project with the simplest possible version.\n\nSimple versions get finished."
+      }
+    },
+    {
+      "key": "area1",
+      "area": "Habits and Discipline",
+      "offset_hours": 2.0,
+      "practice": {
+        "id": "HAB-125",
+        "practice": "Keep your list of new habits to three or fewer.",
+        "why": "Too many goals dilute effort.",
+        "pillar": "Character",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-22-area1-08ea925f.jpg",
+      "captions": {
+        "twitter": "Keep your list of new habits to three or fewer.\n\nToo many goals dilute effort.",
+        "linkedin": "Keep your list of new habits to three or fewer.\n\nThat is the whole assignment. Too many goals dilute effort.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Keep your list of new habits to three or fewer.\n\nToo many goals dilute effort.",
+        "facebook": "Keep your list of new habits to three or fewer.\n\nToo many goals dilute effort.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Keep your list of new habits to three or fewer. Too many goals dilute effort. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Keep your list of new habits to three or fewer.\n\nToo many goals dilute effort.",
+        "_default": "Keep your list of new habits to three or fewer.\n\nToo many goals dilute effort."
+      }
+    },
+    {
+      "key": "area2",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-148",
+        "practice": "Turn off the TV when someone needs to talk.",
+        "why": "Their words matter more than the show.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-22-area2-22dca66e.jpg",
+      "captions": {
+        "twitter": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.",
+        "linkedin": "Turn off the TV when someone needs to talk.\n\nThat is the whole assignment. Their words matter more than the show.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.",
+        "facebook": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Turn off the TV when someone needs to talk. Their words matter more than the show. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.",
+        "_default": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show."
+      }
+    },
+    {
+      "key": "area3",
+      "area": "Career and Leadership",
+      "offset_hours": 8.0,
+      "practice": {
+        "id": "CAR-006",
+        "practice": "Volunteer to lead one small part of a project.",
+        "why": "Leading starts small.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-10-22-area3-d83b1f47.jpg",
+      "captions": {
+        "twitter": "Volunteer to lead one small part of a project.\n\nLeading starts small.",
+        "linkedin": "Volunteer to lead one small part of a project.\n\nThat is the whole assignment. Leading starts small.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Volunteer to lead one small part of a project.\n\nLeading starts small.",
+        "facebook": "Volunteer to lead one small part of a project.\n\nLeading starts small.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Volunteer to lead one small part of a project. Leading starts small. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Volunteer to lead one small part of a project.\n\nLeading starts small.",
+        "_default": "Volunteer to lead one small part of a project.\n\nLeading starts small."
+      }
+    },
+    {
+      "key": "area4",
+      "area": "Calm and Mindset",
+      "offset_hours": 11.0,
+      "practice": {
+        "id": "CAL-006",
+        "practice": "Write down the facts of a situation, then your story about it.",
+        "why": "Facts and stories are not the same.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-22-area4-0d008054.jpg",
+      "captions": {
+        "twitter": "Write down the facts of a situation, then your story about it.\n\nFacts and stories are not the same.",
+        "linkedin": "Write down the facts of a situation, then your story about it.\n\nThat is the whole assignment. Facts and stories are not the same.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Write down the facts of a situation, then your story about it.\n\nFacts and stories are not the same.",
+        "facebook": "Write down the facts of a situation, then your story about it.\n\nFacts and stories are not the same.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Write down the facts of a situation, then your story about it. Facts and stories are not the same. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Write down the facts of a situation, then your story about it.\n\nFacts and stories are not the same.",
+        "_default": "Write down the facts of a situation, then your story about it.\n\nFacts and stories are not the same."
+      }
+    },
+    {
+      "key": "area5",
+      "area": "Fitness and Health",
+      "offset_hours": 14.0,
+      "practice": {
+        "id": "FIT-060",
+        "practice": "Take a rest day without guilt.",
+        "why": "Recovery is training too.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-22-area5-28876749.jpg",
+      "captions": {
+        "twitter": "Take a rest day without guilt.\n\nRecovery is training too.",
+        "linkedin": "Take a rest day without guilt.\n\nThat is the whole assignment. Recovery is training too.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a rest day without guilt.\n\nRecovery is training too.",
+        "facebook": "Take a rest day without guilt.\n\nRecovery is training too.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Take a rest day without guilt. Recovery is training too. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a rest day without guilt.\n\nRecovery is training too.",
+        "_default": "Take a rest day without guilt.\n\nRecovery is training too."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-060",
+        "practice": "Take a rest day without guilt.",
+        "why": "Recovery is training too.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-10-22-reel-ec903711.jpg",
+      "video": "2026-10-22-reel-ec903711.mp4",
+      "captions": {
+        "twitter": "Take a rest day without guilt.\n\nRecovery is training too.",
+        "linkedin": "Take a rest day without guilt.\n\nThat is the whole assignment. Recovery is training too.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a rest day without guilt.\n\nRecovery is training too.",
+        "facebook": "Take a rest day without guilt.\n\nRecovery is training too.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Take a rest day without guilt. Recovery is training too. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a rest day without guilt.\n\nRecovery is training too.",
+        "_default": "Take a rest day without guilt.\n\nRecovery is training too."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-148",
+        "practice": "Turn off the TV when someone needs to talk.",
+        "why": "Their words matter more than the show.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-22-carousel-59db5ca6.jpg",
+      "images": [
+        "2026-10-22-carousel-59db5ca6.jpg",
+        "2026-10-22-carousel2-59db5ca6.jpg",
+        "2026-10-22-carousel3-59db5ca6.jpg"
+      ],
+      "captions": {
+        "twitter": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.",
+        "linkedin": "Turn off the TV when someone needs to talk.\n\nThat is the whole assignment. Their words matter more than the show.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.",
+        "facebook": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Turn off the TV when someone needs to talk. Their words matter more than the show. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show.",
+        "_default": "Turn off the TV when someone needs to talk.\n\nTheir words matter more than the show."
+      }
+    }
+  ]
+}
