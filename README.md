@@ -53,7 +53,7 @@ Secrets tab:
 
 Variables tab:
 - `LIBRARY_CSV_URL` (required): the published CSV link of the `library_publish` tab. In the sheet: File, Share, Publish to web, pick the `library_publish` tab, Comma-separated values, Publish, copy the link.
-- `POST_TIME` (optional, default `07:00`), `AREA_TIMES` (X focus posts, default `09:00,12:00,15:00,18:00,21:00`), `REEL_TIME` (default `19:00`), and `POST_TZ` (default `America/New_York`).
+- `POST_TIME` (optional, default `07:00`), `AREA_TIME` (the one X focus post, default `19:00`; X gets two posts a day), `REEL_TIME` (default `19:00`), and `POST_TZ` (default `America/New_York`).
 - `APP_LINK` (optional): App Store link once the app is live. Added to LinkedIn and Facebook captions only.
 - `BUFFER_SERVICES` (optional): limit which Buffer channels get posts, for example `instagram,twitter,linkedin`. Blank means every connected channel.
 

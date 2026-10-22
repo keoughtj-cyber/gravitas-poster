@@ -54,8 +54,7 @@ env:
   CAROUSEL_TIME: ${{ vars.CAROUSEL_TIME || '12:00' }}
   AREA_POSTS: ${{ vars.AREA_POSTS || 'true' }}
   AREA_SERVICES: ${{ vars.AREA_SERVICES || 'twitter' }}
-  AREA_GAP_HOURS: ${{ vars.AREA_GAP_HOURS || '2' }}
-  AREA_TIMES: ${{ vars.AREA_TIMES || '09:00,12:00,15:00,18:00,21:00' }}
+  AREA_TIME: ${{ vars.AREA_TIME || '19:00' }}
   BASE_SEED: ${{ vars.BASE_SEED || '0x6761766974617321' }}
   BASE_EPOCH: ${{ vars.BASE_EPOCH || '2026-01-01' }}
   BASE_PILLAR_ORDER: ${{ vars.BASE_PILLAR_ORDER || 'Confidence,Character,Respect' }}

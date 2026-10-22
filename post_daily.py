@@ -41,7 +41,7 @@ PILLARS = [p.strip() for p in os.environ.get("BASE_PILLAR_ORDER", "Confidence,Ch
 BASE_EPOCH = dt.date.fromisoformat(os.environ.get("BASE_EPOCH", "2026-01-01"))
 BASE_SEED = int(os.environ.get("BASE_SEED", "0x6761766974617321"), 0)
 
-# Extra posts: one per Focus area, AREA_GAP_HOURS apart after the main post.
+# One extra X post a day from a Focus area, rotating through AREA_ORDER by day.
 AREA_ORDER = [a.strip() for a in os.environ.get(
     "AREA_ORDER",
     "Habits and Discipline,Relationships and Friendships,Career and Leadership,Calm and Mindset,Fitness and Health",
@@ -49,9 +49,8 @@ AREA_ORDER = [a.strip() for a in os.environ.get(
 AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
 # Which networks get the area posts. Instagram keeps one post a day.
 AREA_SERVICES = {x.strip() for x in os.environ.get("AREA_SERVICES", "twitter").split(",") if x.strip()}
-AREA_GAP_HOURS = float(os.environ.get("AREA_GAP_HOURS", "2"))
-# Clock times for the five area posts, in AREA_ORDER. Blank falls back to AREA_GAP_HOURS spacing.
-AREA_TIMES = [t.strip() for t in os.environ.get("AREA_TIMES", "09:00,12:00,15:00,18:00,21:00").split(",") if t.strip()]
+# Clock time of the area post. Two X posts a day (main + one area) since 2026-10-22; six looked automated.
+AREA_TIME = os.environ.get("AREA_TIME", "19:00")
 # A daily Instagram reel of one focus post, rotating through the areas by day.
 REEL_POST = os.environ.get("REEL_POST", "true").lower() != "false"
 REEL_TIME = os.environ.get("REEL_TIME", "19:00")
@@ -197,14 +196,14 @@ def day_slots(rows, day):
     slots = [{"key": "base", "area": "", "offset_hours": 0, "practice": base}]
     if STORY_POST:
         slots.append({"key": "story", "area": "", "offset_hours": 0, "practice": base, "story": True})
-    if AREA_POSTS:
-        for n, area in enumerate(AREA_ORDER, start=1):
-            # Each later post moves to the next pillar, so the day mixes all three.
-            pillar = PILLARS[(idx + n) % len(PILLARS)]
-            practice = pick_area(rows, day, area, pillar, base.get("id", ""))
-            if practice:
-                slots.append({"key": f"area{n}", "area": area,
-                              "offset_hours": area_offset(n), "practice": practice})
+    if AREA_POSTS and AREA_ORDER:
+        # One area a day, the same one and pick as the reel, so the evening posts agree.
+        n = idx % len(AREA_ORDER) + 1
+        area = AREA_ORDER[n - 1]
+        practice = pick_area(rows, day, area, PILLARS[(idx + n) % len(PILLARS)], base.get("id", ""))
+        if practice:
+            slots.append({"key": f"area{n}", "area": area,
+                          "offset_hours": hours_after_post(AREA_TIME), "practice": practice})
     if REEL_POST and AREA_ORDER:
         # Same pick as that area's X post, so the reel and the post agree.
         n = idx % len(AREA_ORDER) + 1
@@ -224,13 +223,6 @@ def day_slots(rows, day):
             slots.append({"key": "carousel", "area": area, "offset_hours": hours_after_post(CAROUSEL_TIME),
                           "practice": practice})
     return slots, idx
-
-
-def area_offset(n):
-    """Hours after POST_TIME for area post n (1 to 5)."""
-    if len(AREA_TIMES) >= n:
-        return hours_after_post(AREA_TIMES[n - 1])
-    return n * AREA_GAP_HOURS
 
 
 def hours_after_post(clock):
