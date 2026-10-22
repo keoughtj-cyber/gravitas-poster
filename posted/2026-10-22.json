@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-22",
+  "results": {
+    "instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db2d81158a0b17959c00",
+      "due_at": "2026-10-22T11:00:00.000Z"
+    },
+    "twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db2d81158a0b17959c2a",
+      "due_at": "2026-10-22T11:00:00.000Z"
+    },
+    "story:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db2e194287d6a1efe4b1",
+      "due_at": "2026-10-22T11:00:00.000Z"
+    },
+    "area1:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db2ed7259dd11b14f9f7",
+      "due_at": "2026-10-22T13:00:00.000Z"
+    },
+    "area2:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db2f4187d54841a1d70b",
+      "due_at": "2026-10-22T16:00:00.000Z"
+    },
+    "area3:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db2f81158a0b17959c86",
+      "due_at": "2026-10-22T19:00:00.000Z"
+    },
+    "area4:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db30d7259dd11b14fa4c",
+      "due_at": "2026-10-22T22:00:00.000Z"
+    },
+    "area5:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db30194287d6a1efe524",
+      "due_at": "2026-10-23T01:00:00.000Z"
+    },
+    "reel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db38194287d6a1efe6da",
+      "due_at": "2026-10-22T23:00:00.000Z"
+    },
+    "carousel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ad9db391ddfbd0b4bda24dd",
+      "due_at": "2026-10-22T16:00:00.000Z"
+    }
+  }
+}
