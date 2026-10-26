@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "results": {
+    "instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6adf2314b8acd12b70f3b782",
+      "due_at": "2026-10-26T11:00:00.000Z"
+    },
+    "twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6adf231447c45bda994ae2b5",
+      "due_at": "2026-10-26T11:00:00.000Z"
+    },
+    "story:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6adf2315067017422242b292",
+      "due_at": "2026-10-26T11:00:00.000Z"
+    },
+    "area4:twitter": {
+      "channel": "gravitas_ccr",
+      "post_id": "6adf2315067017422242b2cb",
+      "due_at": "2026-10-26T23:00:00.000Z"
+    },
+    "reel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6adf23193ee2303e9600d0ad",
+      "due_at": "2026-10-26T23:00:00.000Z"
+    },
+    "carousel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6adf231a067017422242b452",
+      "due_at": "2026-10-26T16:00:00.000Z"
+    }
+  }
+}
