@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-27",
+  "day_index": 299,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-171",
+        "practice": "Take a rest week after a hard training block.",
+        "why": "Deloads help you grow.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-27-a88e79b1.jpg",
+      "captions": {
+        "twitter": "Take a rest week after a hard training block.\n\nDeloads help you grow.",
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Take a rest week after a hard training block.\nDeloads help you grow.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a rest week after a hard training block.\n\nThat is it. Deloads help you grow.",
+        "facebook": "The practice: Take a rest week after a hard training block.\n\nDeloads help you grow.",
+        "tiktok": "Take a rest week after a hard training block. Deloads help you grow. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a rest week after a hard training block.\n\nDeloads help you grow.",
+        "_default": "Take a rest week after a hard training block.\n\nDeloads help you grow."
+      },
+      "ig_video": "2026-10-27-ig-14b72574.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-171",
+        "practice": "Take a rest week after a hard training block.",
+        "why": "Deloads help you grow.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "story": true,
+      "image": "2026-10-27-story-14b72574.jpg",
+      "captions": {
+        "twitter": "Take a rest week after a hard training block.\n\nDeloads help you grow.",
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Take a rest week after a hard training block.\nDeloads help you grow.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a rest week after a hard training block.\n\nThat is it. Deloads help you grow.",
+        "facebook": "The practice: Take a rest week after a hard training block.\n\nDeloads help you grow.",
+        "tiktok": "Take a rest week after a hard training block. Deloads help you grow. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a rest week after a hard training block.\n\nDeloads help you grow.",
+        "_default": "Take a rest week after a hard training block.\n\nDeloads help you grow."
+      }
+    },
+    {
+      "key": "area5",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-110",
+        "practice": "Check your step count and add a walk if you are short.",
+        "why": "Small walks close gaps.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-27-area5-330af113.jpg",
+      "captions": {
+        "twitter": "Check your step count and add a walk if you are short.\n\nSmall walks close gaps.",
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Check your step count and add a walk if you are short.\nSmall walks close gaps.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Check your step count and add a walk if you are short.\n\nThat is it. Small walks close gaps.",
+        "facebook": "The practice: Check your step count and add a walk if you are short.\n\nSmall walks close gaps.",
+        "tiktok": "Check your step count and add a walk if you are short. Small walks close gaps. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Check your step count and add a walk if you are short.\n\nSmall walks close gaps.",
+        "_default": "Check your step count and add a walk if you are short.\n\nSmall walks close gaps."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-110",
+        "practice": "Check your step count and add a walk if you are short.",
+        "why": "Small walks close gaps.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-10-27-reel-00dcb245.jpg",
+      "video": "2026-10-27-reel-00dcb245.mp4",
+      "captions": {
+        "twitter": "Check your step count and add a walk if you are short.\n\nSmall walks close gaps.",
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Check your step count and add a walk if you are short.\nSmall walks close gaps.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Check your step count and add a walk if you are short.\n\nThat is it. Small walks close gaps.",
+        "facebook": "The practice: Check your step count and add a walk if you are short.\n\nSmall walks close gaps.",
+        "tiktok": "Check your step count and add a walk if you are short. Small walks close gaps. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Check your step count and add a walk if you are short.\n\nSmall walks close gaps.",
+        "_default": "Check your step count and add a walk if you are short.\n\nSmall walks close gaps."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-004",
+        "practice": "Ask a follow-up question before you share your own story.",
+        "why": "Curiosity makes people feel heard.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-27-carousel-e6c9dd6f.jpg",
+      "images": [
+        "2026-10-27-carousel-e6c9dd6f.jpg",
+        "2026-10-27-carousel2-e6c9dd6f.jpg",
+        "2026-10-27-carousel3-e6c9dd6f.jpg"
+      ],
+      "captions": {
+        "twitter": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Ask a follow-up question before you share your own story.\nCuriosity makes people feel heard.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask a follow-up question before you share your own story.\n\nThat is it. Curiosity makes people feel heard.",
+        "facebook": "The practice: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "tiktok": "Ask a follow-up question before you share your own story. Curiosity makes people feel heard. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "_default": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard."
+      }
+    }
+  ]
+}
