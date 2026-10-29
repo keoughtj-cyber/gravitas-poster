@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-29",
+  "day_index": 301,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-120",
+        "practice": "Fix a mistake you made with a friend before they ask.",
+        "why": "Taking ownership builds trust.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-29-8ca38885.jpg",
+      "captions": {
+        "twitter": "Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust. One rep is enough.",
+        "facebook": "The practice: Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.",
+        "tiktok": "Fix a mistake you made with a friend before they ask. Taking ownership builds trust. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.",
+        "_default": "Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust."
+      },
+      "ig_video": "2026-10-29-ig-c37b4e50.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-120",
+        "practice": "Fix a mistake you made with a friend before they ask.",
+        "why": "Taking ownership builds trust.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-10-29-story-c37b4e50.jpg",
+      "captions": {
+        "twitter": "Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust. One rep is enough.",
+        "facebook": "The practice: Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.",
+        "tiktok": "Fix a mistake you made with a friend before they ask. Taking ownership builds trust. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust.",
+        "_default": "Fix a mistake you made with a friend before they ask.\n\nTaking ownership builds trust."
+      }
+    },
+    {
+      "key": "area2",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-065",
+        "practice": "Ask a coworker to lunch.",
+        "why": "Workplace friends make work better.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-10-29-area2-ee173448.jpg",
+      "captions": {
+        "twitter": "Ask a coworker to lunch.\n\nWorkplace friends make work better.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask a coworker to lunch.\n\nWorkplace friends make work better.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask a coworker to lunch.\n\nWorkplace friends make work better. One rep is enough.",
+        "facebook": "The practice: Ask a coworker to lunch.\n\nWorkplace friends make work better.",
+        "tiktok": "Ask a coworker to lunch. Workplace friends make work better. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a coworker to lunch.\n\nWorkplace friends make work better.",
+        "_default": "Ask a coworker to lunch.\n\nWorkplace friends make work better."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-065",
+        "practice": "Ask a coworker to lunch.",
+        "why": "Workplace friends make work better.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "tall": true,
+      "image": "2026-10-29-reel-84a98dc8.jpg",
+      "video": "2026-10-29-reel-84a98dc8.mp4",
+      "captions": {
+        "twitter": "Ask a coworker to lunch.\n\nWorkplace friends make work better.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask a coworker to lunch.\n\nWorkplace friends make work better.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask a coworker to lunch.\n\nWorkplace friends make work better. One rep is enough.",
+        "facebook": "The practice: Ask a coworker to lunch.\n\nWorkplace friends make work better.",
+        "tiktok": "Ask a coworker to lunch. Workplace friends make work better. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a coworker to lunch.\n\nWorkplace friends make work better.",
+        "_default": "Ask a coworker to lunch.\n\nWorkplace friends make work better."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-055",
+        "practice": "Leave a little space in your schedule for nothing.",
+        "why": "Empty time is healthy.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-10-29-carousel-2cba5cb8.jpg",
+      "images": [
+        "2026-10-29-carousel-2cba5cb8.jpg",
+        "2026-10-29-carousel2-2cba5cb8.jpg",
+        "2026-10-29-carousel3-2cba5cb8.jpg"
+      ],
+      "captions": {
+        "twitter": "Leave a little space in your schedule for nothing.\n\nEmpty time is healthy.",
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Leave a little space in your schedule for nothing.\n\nEmpty time is healthy.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Leave a little space in your schedule for nothing.\n\nEmpty time is healthy. One rep is enough.",
+        "facebook": "The practice: Leave a little space in your schedule for nothing.\n\nEmpty time is healthy.",
+        "tiktok": "Leave a little space in your schedule for nothing. Empty time is healthy. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Leave a little space in your schedule for nothing.\n\nEmpty time is healthy.",
+        "_default": "Leave a little space in your schedule for nothing.\n\nEmpty time is healthy."
+      }
+    }
+  ]
+}
