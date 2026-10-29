@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-29",
+  "pillar": "Character",
+  "prompt": "dark cinematic hybrid, 130 BPM, low brass, deep braams, distorted cello ostinato, ominous and powerful, heavy and gritty, instrumental",
+  "take": 0,
+  "date_seed": 1686754706,
+  "chosen_seed": 1686754706,
+  "second_seed": 1687754709,
+  "attempts": [
+    {
+      "prompt": "dark cinematic hybrid, 130 BPM, low brass, deep braams, distorted cello ostinato, ominous and powerful, heavy and gritty, instrumental",
+      "source": "rotation",
+      "candidates": [
+        {
+          "peak": 0.8273,
+          "rms_dbfs": -13.34,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 3.61,
+          "score": -3.61,
+          "rejected": [],
+          "seed": 1686754706
+        },
+        {
+          "peak": 1.0272,
+          "rms_dbfs": -10.82,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 3.62,
+          "score": -3.62,
+          "rejected": [],
+          "seed": 1687754709
+        },
+        {
+          "peak": 1.1319,
+          "rms_dbfs": -10.37,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 4.24,
+          "score": -4.24,
+          "rejected": [],
+          "seed": 1688754712
+        },
+        {
+          "peak": 1.0089,
+          "rms_dbfs": -8.52,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 6.43,
+          "score": -6.43,
+          "rejected": [],
+          "seed": 1689754715
+        }
+      ]
+    }
+  ],
+  "model": "stabilityai/stable-audio-open-small",
+  "settings": {
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sampler_type": "pingpong",
+    "seconds_total": 11
+  },
+  "post": {
+    "cut_seconds": 7.0,
+    "fade_in": 0.1,
+    "fade_out": 0.8,
+    "target_lufs": -14.0,
+    "true_peak_db": -1.0,
+    "mp3_bitrate": "192k"
+  },
+  "result": {
+    "seconds_7s": 7.0,
+    "seconds_full": 11.0,
+    "lufs": -14.0,
+    "true_peak_db": -1.76,
+    "bytes": {
+      "gravitas_2026-10-29_7s.mp3": 169316,
+      "gravitas_2026-10-29_7s.wav": 1234878,
+      "gravitas_2026-10-29_full.wav": 1940478,
+      "gravitas_2026-10-29_7s_b.mp3": 169316
+    }
+  }
+}
