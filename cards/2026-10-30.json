@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-30",
+  "day_index": 302,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-117",
+        "practice": "Avoid heavy meals late in the evening.",
+        "why": "Light evenings help sleep.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-10-30-25f31eb7.jpg",
+      "captions": {
+        "twitter": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep.",
+        "linkedin": "Avoid heavy meals late in the evening.\n\nThat is the whole assignment. Light evenings help sleep.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Avoid heavy meals late in the evening.\n\nThat is it. Light evenings help sleep.",
+        "facebook": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Avoid heavy meals late in the evening. Light evenings help sleep. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep.",
+        "_default": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep."
+      },
+      "ig_video": "2026-10-30-ig-fc07e28d.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-117",
+        "practice": "Avoid heavy meals late in the evening.",
+        "why": "Light evenings help sleep.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "story": true,
+      "image": "2026-10-30-story-fc07e28d.jpg",
+      "captions": {
+        "twitter": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep.",
+        "linkedin": "Avoid heavy meals late in the evening.\n\nThat is the whole assignment. Light evenings help sleep.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Avoid heavy meals late in the evening.\n\nThat is it. Light evenings help sleep.",
+        "facebook": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Avoid heavy meals late in the evening. Light evenings help sleep. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep.",
+        "_default": "Avoid heavy meals late in the evening.\n\nLight evenings help sleep."
+      }
+    },
+    {
+      "key": "area3",
+      "area": "Career and Leadership",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAR-026",
+        "practice": "Mute group chats while you focus.",
+        "why": "Your attention is your output.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-10-30-area3-7e9e21f6.jpg",
+      "captions": {
+        "twitter": "Mute group chats while you focus.\n\nYour attention is your output.",
+        "linkedin": "Mute group chats while you focus.\n\nThat is the whole assignment. Your attention is your output.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Mute group chats while you focus.\n\nThat is it. Your attention is your output.",
+        "facebook": "Mute group chats while you focus.\n\nYour attention is your output.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Mute group chats while you focus. Your attention is your output. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Mute group chats while you focus.\n\nYour attention is your output.",
+        "_default": "Mute group chats while you focus.\n\nYour attention is your output."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Career and Leadership",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAR-026",
+        "practice": "Mute group chats while you focus.",
+        "why": "Your attention is your output.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "tall": true,
+      "image": "2026-10-30-reel-ef10ce63.jpg",
+      "video": "2026-10-30-reel-ef10ce63.mp4",
+      "captions": {
+        "twitter": "Mute group chats while you focus.\n\nYour attention is your output.",
+        "linkedin": "Mute group chats while you focus.\n\nThat is the whole assignment. Your attention is your output.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Mute group chats while you focus.\n\nThat is it. Your attention is your output.",
+        "facebook": "Mute group chats while you focus.\n\nYour attention is your output.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Mute group chats while you focus. Your attention is your output. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Mute group chats while you focus.\n\nYour attention is your output.",
+        "_default": "Mute group chats while you focus.\n\nYour attention is your output."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-090",
+        "practice": "Call yourself someone who trains, then go train.",
+        "why": "Who you are shapes what you do.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-10-30-carousel-1d228a64.jpg",
+      "images": [
+        "2026-10-30-carousel-1d228a64.jpg",
+        "2026-10-30-carousel2-1d228a64.jpg",
+        "2026-10-30-carousel3-1d228a64.jpg"
+      ],
+      "captions": {
+        "twitter": "Call yourself someone who trains, then go train.\n\nWho you are shapes what you do.",
+        "linkedin": "Call yourself someone who trains, then go train.\n\nThat is the whole assignment. Who you are shapes what you do.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Call yourself someone who trains, then go train.\n\nThat is it. Who you are shapes what you do.",
+        "facebook": "Call yourself someone who trains, then go train.\n\nWho you are shapes what you do.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Call yourself someone who trains, then go train. Who you are shapes what you do. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Call yourself someone who trains, then go train.\n\nWho you are shapes what you do.",
+        "_default": "Call yourself someone who trains, then go train.\n\nWho you are shapes what you do."
+      }
+    }
+  ]
+}
