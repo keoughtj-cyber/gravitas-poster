@@ -1,8 +1,5 @@
 {
   "_readme": "One caption list per Buffer service. The script picks variant (day number mod list length) so posts rotate. Placeholders: {practice} {why} {area} {pillar} {link}. {pillar} is the day's pillar in capitals (CONFIDENCE, CHARACTER, RESPECT). {link} is APP_LINK, or empty. No emojis, Oxford comma, never the words confidence, character, or respect, and never start with Today. A key ending in _area (for example instagram_area) replaces that service's caption on the Focus area posts.",
-  "twitter": [
-    "{practice}.\n\n{why}"
-  ],
   "linkedin": [
     "{practice}.\n\n{why}\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.{link}",
     "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: {practice}.\n\n{why}\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.{link}",

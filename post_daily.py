@@ -41,16 +41,11 @@ PILLARS = [p.strip() for p in os.environ.get("BASE_PILLAR_ORDER", "Confidence,Ch
 BASE_EPOCH = dt.date.fromisoformat(os.environ.get("BASE_EPOCH", "2026-01-01"))
 BASE_SEED = int(os.environ.get("BASE_SEED", "0x6761766974617321"), 0)
 
-# One extra X post a day from a Focus area, rotating through AREA_ORDER by day.
+# Focus areas, used by the reel and the carousel.
 AREA_ORDER = [a.strip() for a in os.environ.get(
     "AREA_ORDER",
     "Habits and Discipline,Relationships and Friendships,Career and Leadership,Calm and Mindset,Fitness and Health",
 ).split(",") if a.strip()]
-AREA_POSTS = os.environ.get("AREA_POSTS", "true").lower() != "false"
-# Which networks get the area posts. Instagram keeps one post a day.
-AREA_SERVICES = {x.strip() for x in os.environ.get("AREA_SERVICES", "twitter").split(",") if x.strip()}
-# Clock time of the area post. Two X posts a day (main + one area) since 2026-10-22; six looked automated.
-AREA_TIME = os.environ.get("AREA_TIME", "19:00")
 # A daily Instagram reel of one focus post, rotating through the areas by day.
 REEL_POST = os.environ.get("REEL_POST", "true").lower() != "false"
 REEL_TIME = os.environ.get("REEL_TIME", "19:00")
@@ -62,7 +57,7 @@ STORY_POST = os.environ.get("STORY_POST", "true").lower() != "false"
 # 15:00 reel uses a different clip. The Story stays a still image. Other networks keep the card.
 INSTAGRAM_AUDIO = os.environ.get("INSTAGRAM_AUDIO", "true").lower() != "false"
 # Instagram look (ig_design.py): practice-first motion reels, a restyled Story card, and a daily
-# carousel. IG_DESIGN=false brings back the plain card on Instagram. X and LinkedIn never change.
+# carousel. IG_DESIGN=false brings back the plain card on Instagram. LinkedIn never changes.
 IG_DESIGN = os.environ.get("IG_DESIGN", "true").lower() != "false"
 CAROUSEL_POST = os.environ.get("CAROUSEL_POST", "true").lower() != "false"
 CAROUSEL_TIME = os.environ.get("CAROUSEL_TIME", "12:00")
@@ -74,9 +69,6 @@ AREA_SHORT = {
     "calm and mindset": "Calm",
     "fitness and health": "Fitness",
 }
-
-# Services that get the caption only, no card image.
-TEXT_ONLY = {x.strip() for x in os.environ.get("TEXT_ONLY_SERVICES", "twitter").split(",") if x.strip()}
 
 
 
@@ -196,16 +188,8 @@ def day_slots(rows, day):
     slots = [{"key": "base", "area": "", "offset_hours": 0, "practice": base}]
     if STORY_POST:
         slots.append({"key": "story", "area": "", "offset_hours": 0, "practice": base, "story": True})
-    if AREA_POSTS and AREA_ORDER:
-        # One area a day, the same one and pick as the reel, so the evening posts agree.
-        n = idx % len(AREA_ORDER) + 1
-        area = AREA_ORDER[n - 1]
-        practice = pick_area(rows, day, area, PILLARS[(idx + n) % len(PILLARS)], base.get("id", ""))
-        if practice:
-            slots.append({"key": f"area{n}", "area": area,
-                          "offset_hours": hours_after_post(AREA_TIME), "practice": practice})
     if REEL_POST and AREA_ORDER:
-        # Same pick as that area's X post, so the reel and the post agree.
+        # One focus area a day, rotating through AREA_ORDER.
         n = idx % len(AREA_ORDER) + 1
         area = AREA_ORDER[n - 1]
         practice = pick_area(rows, day, area, PILLARS[(idx + n) % len(PILLARS)], base.get("id", ""))
@@ -213,7 +197,7 @@ def day_slots(rows, day):
             slots.append({"key": "reel", "area": area, "offset_hours": hours_after_post(REEL_TIME),
                           "practice": practice, "tall": True})
     if IG_DESIGN and CAROUSEL_POST and AREA_ORDER:
-        # A different area from the reel and the Base post, with the same pick as that area's X post.
+        # A different area from the reel and the Base post.
         taken = {s["area"].lower() for s in slots if s["key"] == "reel"} | {base.get("area", "").lower()}
         order = [(idx + 2 + k) % len(AREA_ORDER) + 1 for k in range(len(AREA_ORDER))]
         n = next((m for m in order if AREA_ORDER[m - 1].lower() not in taken), order[0])
@@ -444,7 +428,8 @@ def buffer_channels():
         {"org": org},
     )["channels"]
     only = {s.strip() for s in os.environ.get("BUFFER_SERVICES", "").split(",") if s.strip()}
-    return [c for c in chans if not only or c["service"] in only]
+    # X was dropped on 2026-11-01, so it never gets posts even while still connected in Buffer.
+    return [c for c in chans if c["service"] != "twitter" and (not only or c["service"] in only)]
 
 
 CREATE = """
@@ -484,8 +469,7 @@ def create_post(channel, text, image_url, due_at, story=False, video_url="", ima
             cover = {"video": {"url": video_url, "metadata": {"thumbnailOffset": 1000}}}
             attempts.insert(0, {**base, "assets": [cover]})
         return send_post(attempts)
-    if channel["service"] not in TEXT_ONLY:
-        base["assets"] = [{"image": {"url": image_url}}]
+    base["assets"] = [{"image": {"url": image_url}}]
     if story:
         # Stories publish automatically only with no caption, stickers, or links.
         base["text"] = ""
@@ -633,7 +617,7 @@ def cmd_preview():
         p = slot["practice"]
         print(f"\n=== {slot['key']} +{slot['offset_hours']:g}h {slot['area'] or 'Base'}: {p.get('id', '')} ({p['pillar']})")
         for service, text in build_captions(p, idx, slot["key"] != "base").items():
-            if service in ("instagram", "twitter"):
+            if service == "instagram":
                 print(f"--- {service} ---\n{text}")
         render_card(p, day, CARDS / f"preview-{slot['key']}.jpg", AREA_SHORT.get(slot["area"].lower(), slot["area"]),
                     slot.get("story", False) or slot.get("tall", False))
@@ -667,8 +651,6 @@ def cmd_publish():
         due = due_at_iso(day, slot["offset_hours"])
         for ch in channels:
             if (slot.get("story") or slot["key"] in ("reel", "carousel")) and ch["service"] != "instagram":
-                continue
-            if slot["key"].startswith("area") and ch["service"] not in AREA_SERVICES:
                 continue
             # The main post keeps the plain service name so older records still count.
             key = ch["service"] if slot["key"] == "base" else f"{slot['key']}:{ch['service']}"
