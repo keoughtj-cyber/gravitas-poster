@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-02",
+  "results": {
+    "facebook": {
+      "channel": "NA Beer Club",
+      "error": "Invalid post: Facebook posts require a type (post, story, or reel)."
+    },
+    "instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ae86291c100ba337af307b4",
+      "due_at": "2026-11-02T12:00:00.000Z"
+    },
+    "story:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ae862913931d53669363d39",
+      "due_at": "2026-11-02T12:00:00.000Z"
+    },
+    "reel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ae86296796ca84be0ce2d98",
+      "due_at": "2026-11-03T00:00:00.000Z"
+    },
+    "carousel:instagram": {
+      "channel": "gravitas_ccr",
+      "post_id": "6ae86297b0da614b553f7232",
+      "due_at": "2026-11-02T17:00:00.000Z"
+    }
+  }
+}
