@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-02",
+  "pillar": "Respect",
+  "prompt": "epic dark orchestral, 75 BPM, low brass, taiko drums, timpani, intense and relentless, vast and heavy, instrumental",
+  "take": 0,
+  "date_seed": 1247311148,
+  "chosen_seed": 1247311148,
+  "second_seed": 1249311154,
+  "attempts": [
+    {
+      "prompt": "epic dark orchestral, 75 BPM, low brass, taiko drums, timpani, intense and relentless, vast and heavy, instrumental",
+      "source": "rotation",
+      "candidates": [
+        {
+          "peak": 0.7529,
+          "rms_dbfs": -14.99,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 2.09,
+          "score": -2.09,
+          "rejected": [],
+          "seed": 1247311148
+        },
+        {
+          "peak": 0.5783,
+          "rms_dbfs": -16.48,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 3.15,
+          "score": -3.15,
+          "rejected": [],
+          "seed": 1248311151
+        },
+        {
+          "peak": 0.5272,
+          "rms_dbfs": -16.63,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 2.24,
+          "score": -2.24,
+          "rejected": [],
+          "seed": 1249311154
+        },
+        {
+          "peak": 0.6186,
+          "rms_dbfs": -16.3,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 2.89,
+          "score": -2.89,
+          "rejected": [],
+          "seed": 1250311157
+        }
+      ]
+    }
+  ],
+  "model": "stabilityai/stable-audio-open-small",
+  "settings": {
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sampler_type": "pingpong",
+    "seconds_total": 11
+  },
+  "post": {
+    "cut_seconds": 7.0,
+    "fade_in": 0.1,
+    "fade_out": 0.8,
+    "target_lufs": -14.0,
+    "true_peak_db": -1.0,
+    "mp3_bitrate": "192k"
+  },
+  "result": {
+    "seconds_7s": 7.0,
+    "seconds_full": 11.0,
+    "lufs": -14.17,
+    "true_peak_db": -1.12,
+    "bytes": {
+      "gravitas_2026-11-02_7s.mp3": 169316,
+      "gravitas_2026-11-02_7s.wav": 1234878,
+      "gravitas_2026-11-02_full.wav": 1940478,
+      "gravitas_2026-11-02_7s_b.mp3": 169316
+    }
+  }
+}
