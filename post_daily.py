@@ -428,8 +428,12 @@ def buffer_channels():
         {"org": org},
     )["channels"]
     only = {s.strip() for s in os.environ.get("BUFFER_SERVICES", "").split(",") if s.strip()}
+    # Only GRAVITAS's own channels, by Buffer channel name: the Buffer account also holds other
+    # brands (NA Beer Club's Facebook got a post attempt on 2026-11-02).
+    names = {n.strip().lower() for n in os.environ.get("BUFFER_CHANNEL_NAMES", "gravitas_ccr").split(",") if n.strip()}
     # X was dropped on 2026-11-01, so it never gets posts even while still connected in Buffer.
-    return [c for c in chans if c["service"] != "twitter" and (not only or c["service"] in only)]
+    return [c for c in chans if c["name"].lower() in names and c["service"] != "twitter"
+            and (not only or c["service"] in only)]
 
 
 CREATE = """

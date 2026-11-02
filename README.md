@@ -56,6 +56,7 @@ Variables tab:
 - `POST_TIME` (optional, default `07:00`), `REEL_TIME` (default `19:00`), and `POST_TZ` (default `America/New_York`).
 - `APP_LINK` (optional): App Store link once the app is live. Added to LinkedIn and Facebook captions only.
 - `BUFFER_SERVICES` (optional): limit which Buffer channels get posts, for example `instagram,linkedin`. Blank means every connected channel.
+- `BUFFER_CHANNEL_NAMES` (optional, default `gravitas_ccr`): only Buffer channels with these names get posts, so other brands in the same Buffer account are never touched. Add a name here when connecting a new GRAVITAS channel, such as a LinkedIn page.
 
 ### 5. Test run
 

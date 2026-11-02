@@ -41,6 +41,7 @@ env:
   APP_LINK: ${{ vars.APP_LINK }}
   CARD_FOOTER: ${{ vars.CARD_FOOTER || 'ONE PRACTICE A DAY' }}
   BUFFER_SERVICES: ${{ github.event.inputs.services || vars.BUFFER_SERVICES }}
+  BUFFER_CHANNEL_NAMES: ${{ vars.BUFFER_CHANNEL_NAMES || 'gravitas_ccr' }}
   ONLY_SLOTS: ${{ github.event.inputs.only }}
   MUSIC_FRESH: ${{ github.event.inputs.fresh_music }}
   BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
