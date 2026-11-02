@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-02",
+  "day_index": 305,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-151",
+        "practice": "Drink water slowly when you feel stressed.",
+        "why": "Slowing down calms the body.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-02-f3ad7c60.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Drink water slowly when you feel stressed.\n\nSlowing down calms the body.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Drink water slowly when you feel stressed.\n\nThat is it. Slowing down calms the body.",
+        "facebook": "The practice: Drink water slowly when you feel stressed.\n\nSlowing down calms the body.",
+        "tiktok": "Drink water slowly when you feel stressed. Slowing down calms the body. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Drink water slowly when you feel stressed.\n\nSlowing down calms the body.",
+        "_default": "Drink water slowly when you feel stressed.\n\nSlowing down calms the body."
+      },
+      "ig_video": "2026-11-02-ig-00dda45c.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-151",
+        "practice": "Drink water slowly when you feel stressed.",
+        "why": "Slowing down calms the body.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-11-02-story-00dda45c.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Drink water slowly when you feel stressed.\n\nSlowing down calms the body.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Drink water slowly when you feel stressed.\n\nThat is it. Slowing down calms the body.",
+        "facebook": "The practice: Drink water slowly when you feel stressed.\n\nSlowing down calms the body.",
+        "tiktok": "Drink water slowly when you feel stressed. Slowing down calms the body. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Drink water slowly when you feel stressed.\n\nSlowing down calms the body.",
+        "_default": "Drink water slowly when you feel stressed.\n\nSlowing down calms the body."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "HAB-077",
+        "practice": "Start your morning with one task you can finish fast.",
+        "why": "Early wins build momentum.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-11-02-reel-71b54e08.jpg",
+      "video": "2026-11-02-reel-71b54e08.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Start your morning with one task you can finish fast.\n\nEarly wins build momentum.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Start your morning with one task you can finish fast.\n\nThat is it. Early wins build momentum.",
+        "facebook": "The practice: Start your morning with one task you can finish fast.\n\nEarly wins build momentum.",
+        "tiktok": "Start your morning with one task you can finish fast. Early wins build momentum. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Start your morning with one task you can finish fast.\n\nEarly wins build momentum.",
+        "_default": "Start your morning with one task you can finish fast.\n\nEarly wins build momentum."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Career and Leadership",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAR-044",
+        "practice": "Say no to one request with a clear reason.",
+        "why": "Clear limits earn trust.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-02-carousel-b9e5075e.jpg",
+      "images": [
+        "2026-11-02-carousel-b9e5075e.jpg",
+        "2026-11-02-carousel2-b9e5075e.jpg",
+        "2026-11-02-carousel3-b9e5075e.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Say no to one request with a clear reason.\n\nClear limits earn trust.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Say no to one request with a clear reason.\n\nThat is it. Clear limits earn trust.",
+        "facebook": "The practice: Say no to one request with a clear reason.\n\nClear limits earn trust.",
+        "tiktok": "Say no to one request with a clear reason. Clear limits earn trust. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Say no to one request with a clear reason.\n\nClear limits earn trust.",
+        "_default": "Say no to one request with a clear reason.\n\nClear limits earn trust."
+      }
+    }
+  ]
+}
