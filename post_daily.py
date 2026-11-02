@@ -432,8 +432,16 @@ def buffer_channels():
     # brands (NA Beer Club's Facebook got a post attempt on 2026-11-02).
     names = {n.strip().lower() for n in os.environ.get("BUFFER_CHANNEL_NAMES", "gravitas_ccr").split(",") if n.strip()}
     # X was dropped on 2026-11-01, so it never gets posts even while still connected in Buffer.
-    return [c for c in chans if c["name"].lower() in names and c["service"] != "twitter"
+    keep = [c for c in chans if c["name"].lower() in names and c["service"] != "twitter"
             and (not only or c["service"] in only)]
+    # Records are keyed by service, so a second channel of one service would post unseen. Stop instead.
+    services = [c["service"] for c in keep]
+    twins = sorted({x for x in services if services.count(x) > 1})
+    if twins:
+        sys.exit(f"More than one allowed Buffer channel for {', '.join(twins)}: "
+                 f"{', '.join(c['name'] for c in keep if c['service'] in twins)}. Fix BUFFER_CHANNEL_NAMES.")
+    print("Posting to: " + ", ".join(f"{c['name']} ({c['service']})" for c in keep))
+    return keep
 
 
 CREATE = """
