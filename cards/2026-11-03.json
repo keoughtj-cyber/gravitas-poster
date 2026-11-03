@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-03",
+  "day_index": 306,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-182",
+        "practice": "Ask a friend to be honest about how you came across.",
+        "why": "Honest feedback helps you grow.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-03-2b98c529.jpg",
+      "captions": {
+        "linkedin": "Ask a friend to be honest about how you came across.\n\nThat is the whole assignment. Honest feedback helps you grow.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow.",
+        "facebook": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Ask a friend to be honest about how you came across. Honest feedback helps you grow. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow.",
+        "_default": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow."
+      },
+      "ig_video": "2026-11-03-ig-b5099f29.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-182",
+        "practice": "Ask a friend to be honest about how you came across.",
+        "why": "Honest feedback helps you grow.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-03-story-b5099f29.jpg",
+      "captions": {
+        "linkedin": "Ask a friend to be honest about how you came across.\n\nThat is the whole assignment. Honest feedback helps you grow.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow.",
+        "facebook": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Ask a friend to be honest about how you came across. Honest feedback helps you grow. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow.",
+        "_default": "Ask a friend to be honest about how you came across.\n\nHonest feedback helps you grow."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-082",
+        "practice": "Spend one hour with a friend with no screens around.",
+        "why": "Undivided time feels rare.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "tall": true,
+      "image": "2026-11-03-reel-0b6fb5df.jpg",
+      "video": "2026-11-03-reel-0b6fb5df.mp4",
+      "captions": {
+        "linkedin": "Spend one hour with a friend with no screens around.\n\nThat is the whole assignment. Undivided time feels rare.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Spend one hour with a friend with no screens around.\n\nUndivided time feels rare.",
+        "facebook": "Spend one hour with a friend with no screens around.\n\nUndivided time feels rare.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Spend one hour with a friend with no screens around. Undivided time feels rare. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend one hour with a friend with no screens around.\n\nUndivided time feels rare.",
+        "_default": "Spend one hour with a friend with no screens around.\n\nUndivided time feels rare."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-135",
+        "practice": "Spend a moment noticing your breath before meals.",
+        "why": "Pausing brings presence.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-03-carousel-b2fc14f3.jpg",
+      "images": [
+        "2026-11-03-carousel-b2fc14f3.jpg",
+        "2026-11-03-carousel2-b2fc14f3.jpg",
+        "2026-11-03-carousel3-b2fc14f3.jpg"
+      ],
+      "captions": {
+        "linkedin": "Spend a moment noticing your breath before meals.\n\nThat is the whole assignment. Pausing brings presence.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Spend a moment noticing your breath before meals.\n\nPausing brings presence.",
+        "facebook": "Spend a moment noticing your breath before meals.\n\nPausing brings presence.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Spend a moment noticing your breath before meals. Pausing brings presence. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend a moment noticing your breath before meals.\n\nPausing brings presence.",
+        "_default": "Spend a moment noticing your breath before meals.\n\nPausing brings presence."
+      }
+    }
+  ]
+}
