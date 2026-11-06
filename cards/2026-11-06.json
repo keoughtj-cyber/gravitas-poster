@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-06",
+  "day_index": 309,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-007",
+        "practice": "Introduce yourself to a neighbor you have not met.",
+        "why": "Weak ties still matter.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-06-13adc2a6.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.",
+        "facebook": "The practice: Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.",
+        "tiktok": "Introduce yourself to a neighbor you have not met. Weak ties still matter. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.",
+        "_default": "Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter."
+      },
+      "ig_video": "2026-11-06-ig-9038a88f.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-007",
+        "practice": "Introduce yourself to a neighbor you have not met.",
+        "why": "Weak ties still matter.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-06-story-9038a88f.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.",
+        "facebook": "The practice: Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.",
+        "tiktok": "Introduce yourself to a neighbor you have not met. Weak ties still matter. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter.",
+        "_default": "Introduce yourself to a neighbor you have not met.\n\nWeak ties still matter."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-090",
+        "practice": "Wash your face and brush your teeth before bed.",
+        "why": "Routine signals rest.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-11-06-reel-ff3775c7.jpg",
+      "video": "2026-11-06-reel-ff3775c7.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Wash your face and brush your teeth before bed.\n\nRoutine signals rest.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Wash your face and brush your teeth before bed.\n\nRoutine signals rest.",
+        "facebook": "The practice: Wash your face and brush your teeth before bed.\n\nRoutine signals rest.",
+        "tiktok": "Wash your face and brush your teeth before bed. Routine signals rest. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Wash your face and brush your teeth before bed.\n\nRoutine signals rest.",
+        "_default": "Wash your face and brush your teeth before bed.\n\nRoutine signals rest."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Career and Leadership",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAR-171",
+        "practice": "Ask your team for ideas before giving your own.",
+        "why": "Their ideas build ownership.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-06-carousel-89d1a661.jpg",
+      "images": [
+        "2026-11-06-carousel-89d1a661.jpg",
+        "2026-11-06-carousel2-89d1a661.jpg",
+        "2026-11-06-carousel3-89d1a661.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask your team for ideas before giving your own.\n\nTheir ideas build ownership.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask your team for ideas before giving your own.\n\nTheir ideas build ownership.",
+        "facebook": "The practice: Ask your team for ideas before giving your own.\n\nTheir ideas build ownership.",
+        "tiktok": "Ask your team for ideas before giving your own. Their ideas build ownership. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask your team for ideas before giving your own.\n\nTheir ideas build ownership.",
+        "_default": "Ask your team for ideas before giving your own.\n\nTheir ideas build ownership."
+      }
+    }
+  ]
+}
