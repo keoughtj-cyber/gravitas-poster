@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-07",
+  "day_index": 310,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-058",
+        "practice": "Recognize someone's work in your team chat.",
+        "why": "Recognition is cheap and lifts a lot.",
+        "pillar": "Character",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-07-607d942e.jpg",
+      "captions": {
+        "linkedin": "Recognize someone's work in your team chat.\n\nThat is the whole assignment. Recognition is cheap and lifts a lot.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot. One rep is enough.",
+        "facebook": "Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Recognize someone's work in your team chat. Recognition is cheap and lifts a lot. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot.",
+        "_default": "Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot."
+      },
+      "ig_video": "2026-11-07-ig-e643cb19.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-058",
+        "practice": "Recognize someone's work in your team chat.",
+        "why": "Recognition is cheap and lifts a lot.",
+        "pillar": "Character",
+        "area": "Career and Leadership"
+      },
+      "story": true,
+      "image": "2026-11-07-story-e643cb19.jpg",
+      "captions": {
+        "linkedin": "Recognize someone's work in your team chat.\n\nThat is the whole assignment. Recognition is cheap and lifts a lot.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot. One rep is enough.",
+        "facebook": "Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Recognize someone's work in your team chat. Recognition is cheap and lifts a lot. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot.",
+        "_default": "Recognize someone's work in your team chat.\n\nRecognition is cheap and lifts a lot."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "HAB-193",
+        "practice": "Hide the snacks you want to eat less of.",
+        "why": "Out of sight, less often.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-11-07-reel-54815292.jpg",
+      "video": "2026-11-07-reel-54815292.mp4",
+      "captions": {
+        "linkedin": "Hide the snacks you want to eat less of.\n\nThat is the whole assignment. Out of sight, less often.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Hide the snacks you want to eat less of.\n\nOut of sight, less often. One rep is enough.",
+        "facebook": "Hide the snacks you want to eat less of.\n\nOut of sight, less often.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Hide the snacks you want to eat less of. Out of sight, less often. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Hide the snacks you want to eat less of.\n\nOut of sight, less often.",
+        "_default": "Hide the snacks you want to eat less of.\n\nOut of sight, less often."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-100",
+        "practice": "Avoid caffeine after early afternoon.",
+        "why": "Late caffeine can cost you sleep.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-07-carousel-8181129e.jpg",
+      "images": [
+        "2026-11-07-carousel-8181129e.jpg",
+        "2026-11-07-carousel2-8181129e.jpg",
+        "2026-11-07-carousel3-8181129e.jpg"
+      ],
+      "captions": {
+        "linkedin": "Avoid caffeine after early afternoon.\n\nThat is the whole assignment. Late caffeine can cost you sleep.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Avoid caffeine after early afternoon.\n\nLate caffeine can cost you sleep. One rep is enough.",
+        "facebook": "Avoid caffeine after early afternoon.\n\nLate caffeine can cost you sleep.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Avoid caffeine after early afternoon. Late caffeine can cost you sleep. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Avoid caffeine after early afternoon.\n\nLate caffeine can cost you sleep.",
+        "_default": "Avoid caffeine after early afternoon.\n\nLate caffeine can cost you sleep."
+      }
+    }
+  ]
+}
