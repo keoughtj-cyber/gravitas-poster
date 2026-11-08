@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-08",
+  "day_index": 311,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-081",
+        "practice": "Take a few deep breaths after a workout to cool down.",
+        "why": "Cooling down helps recovery.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-11-08-f8e5ccf2.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Take a few deep breaths after a workout to cool down.\nCooling down helps recovery.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a few deep breaths after a workout to cool down.\n\nThat is it. Cooling down helps recovery.",
+        "facebook": "The practice: Take a few deep breaths after a workout to cool down.\n\nCooling down helps recovery.",
+        "tiktok": "Take a few deep breaths after a workout to cool down. Cooling down helps recovery. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a few deep breaths after a workout to cool down.\n\nCooling down helps recovery.",
+        "_default": "Take a few deep breaths after a workout to cool down.\n\nCooling down helps recovery."
+      },
+      "ig_video": "2026-11-08-ig-323c1ff5.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-081",
+        "practice": "Take a few deep breaths after a workout to cool down.",
+        "why": "Cooling down helps recovery.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "story": true,
+      "image": "2026-11-08-story-323c1ff5.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Take a few deep breaths after a workout to cool down.\nCooling down helps recovery.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a few deep breaths after a workout to cool down.\n\nThat is it. Cooling down helps recovery.",
+        "facebook": "The practice: Take a few deep breaths after a workout to cool down.\n\nCooling down helps recovery.",
+        "tiktok": "Take a few deep breaths after a workout to cool down. Cooling down helps recovery. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a few deep breaths after a workout to cool down.\n\nCooling down helps recovery.",
+        "_default": "Take a few deep breaths after a workout to cool down.\n\nCooling down helps recovery."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-081",
+        "practice": "Visit or call a family member just to talk.",
+        "why": "Family ties need tending too.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "tall": true,
+      "image": "2026-11-08-reel-11e0b0d2.jpg",
+      "video": "2026-11-08-reel-11e0b0d2.mp4",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Visit or call a family member just to talk.\nFamily ties need tending too.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Visit or call a family member just to talk.\n\nThat is it. Family ties need tending too.",
+        "facebook": "The practice: Visit or call a family member just to talk.\n\nFamily ties need tending too.",
+        "tiktok": "Visit or call a family member just to talk. Family ties need tending too. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Visit or call a family member just to talk.\n\nFamily ties need tending too.",
+        "_default": "Visit or call a family member just to talk.\n\nFamily ties need tending too."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-155",
+        "practice": "Tell yourself one true, kind thing when doubt shows up.",
+        "why": "Truth beats doubt.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-08-carousel-ee409aec.jpg",
+      "images": [
+        "2026-11-08-carousel-ee409aec.jpg",
+        "2026-11-08-carousel2-ee409aec.jpg",
+        "2026-11-08-carousel3-ee409aec.jpg"
+      ],
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Tell yourself one true, kind thing when doubt shows up.\nTruth beats doubt.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Tell yourself one true, kind thing when doubt shows up.\n\nThat is it. Truth beats doubt.",
+        "facebook": "The practice: Tell yourself one true, kind thing when doubt shows up.\n\nTruth beats doubt.",
+        "tiktok": "Tell yourself one true, kind thing when doubt shows up. Truth beats doubt. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Tell yourself one true, kind thing when doubt shows up.\n\nTruth beats doubt.",
+        "_default": "Tell yourself one true, kind thing when doubt shows up.\n\nTruth beats doubt."
+      }
+    }
+  ]
+}
