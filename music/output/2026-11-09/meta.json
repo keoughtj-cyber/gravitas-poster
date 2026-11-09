@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-09",
+  "pillar": "Confidence",
+  "prompt": "dark drill beat, 138 BPM, dark strings, dark piano, sliding 808 bass, ominous and powerful, dark and tight, instrumental",
+  "take": 0,
+  "date_seed": 1174943085,
+  "chosen_seed": 1175943088,
+  "second_seed": 1177943094,
+  "attempts": [
+    {
+      "prompt": "dark drill beat, 138 BPM, dark strings, dark piano, sliding 808 bass, ominous and powerful, dark and tight, instrumental",
+      "source": "rotation",
+      "candidates": [
+        {
+          "peak": 1.0596,
+          "rms_dbfs": -7.75,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 3.09,
+          "score": -3.09,
+          "rejected": [],
+          "seed": 1174943085
+        },
+        {
+          "peak": 1.0927,
+          "rms_dbfs": -8.38,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 2e-05,
+          "loudness_spread_db": 1.43,
+          "score": -1.43,
+          "rejected": [],
+          "seed": 1175943088
+        },
+        {
+          "peak": 1.0636,
+          "rms_dbfs": -10.04,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 4.34,
+          "score": -4.34,
+          "rejected": [],
+          "seed": 1176943091
+        },
+        {
+          "peak": 0.923,
+          "rms_dbfs": -10.77,
+          "silent_fraction": 0.0,
+          "clipped_fraction": 0.0,
+          "loudness_spread_db": 2.53,
+          "score": -2.53,
+          "rejected": [],
+          "seed": 1177943094
+        }
+      ]
+    }
+  ],
+  "model": "stabilityai/stable-audio-open-small",
+  "settings": {
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sampler_type": "pingpong",
+    "seconds_total": 11
+  },
+  "post": {
+    "cut_seconds": 7.0,
+    "fade_in": 0.1,
+    "fade_out": 0.8,
+    "target_lufs": -14.0,
+    "true_peak_db": -1.0,
+    "mp3_bitrate": "192k"
+  },
+  "result": {
+    "seconds_7s": 7.0,
+    "seconds_full": 11.0,
+    "lufs": -14.0,
+    "true_peak_db": -3.68,
+    "bytes": {
+      "gravitas_2026-11-09_7s.mp3": 169316,
+      "gravitas_2026-11-09_7s.wav": 1234878,
+      "gravitas_2026-11-09_full.wav": 1940478,
+      "gravitas_2026-11-09_7s_b.mp3": 169316
+    }
+  }
+}
