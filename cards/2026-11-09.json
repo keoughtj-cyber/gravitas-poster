@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-09",
+  "day_index": 312,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-177",
+        "practice": "Do one thing well instead of three things halfway.",
+        "why": "Depth beats scatter.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-09-0f7c59f6.jpg",
+      "captions": {
+        "linkedin": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.",
+        "facebook": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Do one thing well instead of three things halfway. Depth beats scatter. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.",
+        "_default": "Do one thing well instead of three things halfway.\n\nDepth beats scatter."
+      },
+      "ig_video": "2026-11-09-ig-08715afd.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-177",
+        "practice": "Do one thing well instead of three things halfway.",
+        "why": "Depth beats scatter.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "story": true,
+      "image": "2026-11-09-story-08715afd.jpg",
+      "captions": {
+        "linkedin": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.",
+        "facebook": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Do one thing well instead of three things halfway. Depth beats scatter. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Do one thing well instead of three things halfway.\n\nDepth beats scatter.",
+        "_default": "Do one thing well instead of three things halfway.\n\nDepth beats scatter."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Career and Leadership",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAR-051",
+        "practice": "Write down three wins from this week at work.",
+        "why": "Progress fuels motivation.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "tall": true,
+      "image": "2026-11-09-reel-e513e598.jpg",
+      "video": "2026-11-09-reel-e513e598.mp4",
+      "captions": {
+        "linkedin": "Write down three wins from this week at work.\n\nProgress fuels motivation.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Write down three wins from this week at work.\n\nProgress fuels motivation.",
+        "facebook": "Write down three wins from this week at work.\n\nProgress fuels motivation.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Write down three wins from this week at work. Progress fuels motivation. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Write down three wins from this week at work.\n\nProgress fuels motivation.",
+        "_default": "Write down three wins from this week at work.\n\nProgress fuels motivation."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Fitness and Health",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "FIT-054",
+        "practice": "Drink water with every meal.",
+        "why": "Hydration supports energy.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-11-09-carousel-2b24e009.jpg",
+      "images": [
+        "2026-11-09-carousel-2b24e009.jpg",
+        "2026-11-09-carousel2-2b24e009.jpg",
+        "2026-11-09-carousel3-2b24e009.jpg"
+      ],
+      "captions": {
+        "linkedin": "Drink water with every meal.\n\nHydration supports energy.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Drink water with every meal.\n\nHydration supports energy.",
+        "facebook": "Drink water with every meal.\n\nHydration supports energy.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Drink water with every meal. Hydration supports energy. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Drink water with every meal.\n\nHydration supports energy.",
+        "_default": "Drink water with every meal.\n\nHydration supports energy."
+      }
+    }
+  ]
+}
