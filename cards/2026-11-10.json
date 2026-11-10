@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-10",
+  "day_index": 313,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-004",
+        "practice": "Ask a follow-up question before you share your own story.",
+        "why": "Curiosity makes people feel heard.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-10-cae6137a.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard. One rep is enough.",
+        "facebook": "The practice: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "tiktok": "Ask a follow-up question before you share your own story. Curiosity makes people feel heard. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "_default": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard."
+      },
+      "ig_video": "2026-11-10-ig-87075f39.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-004",
+        "practice": "Ask a follow-up question before you share your own story.",
+        "why": "Curiosity makes people feel heard.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-10-story-87075f39.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard. One rep is enough.",
+        "facebook": "The practice: Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "tiktok": "Ask a follow-up question before you share your own story. Curiosity makes people feel heard. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard.",
+        "_default": "Ask a follow-up question before you share your own story.\n\nCuriosity makes people feel heard."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Calm and Mindset",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAL-040",
+        "practice": "Savor your first sip of coffee or tea.",
+        "why": "Small pleasures steady the day.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "tall": true,
+      "image": "2026-11-10-reel-74e9830a.jpg",
+      "video": "2026-11-10-reel-74e9830a.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Savor your first sip of coffee or tea.\n\nSmall pleasures steady the day.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Savor your first sip of coffee or tea.\n\nSmall pleasures steady the day. One rep is enough.",
+        "facebook": "The practice: Savor your first sip of coffee or tea.\n\nSmall pleasures steady the day.",
+        "tiktok": "Savor your first sip of coffee or tea. Small pleasures steady the day. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Savor your first sip of coffee or tea.\n\nSmall pleasures steady the day.",
+        "_default": "Savor your first sip of coffee or tea.\n\nSmall pleasures steady the day."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-169",
+        "practice": "Set your bedtime first and plan the evening back from it.",
+        "why": "Sleep sets up the next day.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-10-carousel-d55684df.jpg",
+      "images": [
+        "2026-11-10-carousel-d55684df.jpg",
+        "2026-11-10-carousel2-d55684df.jpg",
+        "2026-11-10-carousel3-d55684df.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Set your bedtime first and plan the evening back from it.\n\nSleep sets up the next day.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Set your bedtime first and plan the evening back from it.\n\nSleep sets up the next day. One rep is enough.",
+        "facebook": "The practice: Set your bedtime first and plan the evening back from it.\n\nSleep sets up the next day.",
+        "tiktok": "Set your bedtime first and plan the evening back from it. Sleep sets up the next day. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Set your bedtime first and plan the evening back from it.\n\nSleep sets up the next day.",
+        "_default": "Set your bedtime first and plan the evening back from it.\n\nSleep sets up the next day."
+      }
+    }
+  ]
+}
