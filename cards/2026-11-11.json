@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-11",
+  "day_index": 314,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-016",
+        "practice": "Put your phone away for the first thirty minutes after waking.",
+        "why": "Quiet mornings set calm days.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-11-2564392b.jpg",
+      "captions": {
+        "linkedin": "Put your phone away for the first thirty minutes after waking.\n\nThat is the whole assignment. Quiet mornings set calm days.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Put your phone away for the first thirty minutes after waking.\n\nThat is it. Quiet mornings set calm days.",
+        "facebook": "Put your phone away for the first thirty minutes after waking.\n\nQuiet mornings set calm days.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Put your phone away for the first thirty minutes after waking. Quiet mornings set calm days. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Put your phone away for the first thirty minutes after waking.\n\nQuiet mornings set calm days.",
+        "_default": "Put your phone away for the first thirty minutes after waking.\n\nQuiet mornings set calm days."
+      },
+      "ig_video": "2026-11-11-ig-3949944f.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-016",
+        "practice": "Put your phone away for the first thirty minutes after waking.",
+        "why": "Quiet mornings set calm days.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-11-11-story-3949944f.jpg",
+      "captions": {
+        "linkedin": "Put your phone away for the first thirty minutes after waking.\n\nThat is the whole assignment. Quiet mornings set calm days.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Put your phone away for the first thirty minutes after waking.\n\nThat is it. Quiet mornings set calm days.",
+        "facebook": "Put your phone away for the first thirty minutes after waking.\n\nQuiet mornings set calm days.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Put your phone away for the first thirty minutes after waking. Quiet mornings set calm days. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Put your phone away for the first thirty minutes after waking.\n\nQuiet mornings set calm days.",
+        "_default": "Put your phone away for the first thirty minutes after waking.\n\nQuiet mornings set calm days."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-059",
+        "practice": "Get at least 150 minutes of movement this week.",
+        "why": "Weekly minutes add up to health.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-11-11-reel-81de6047.jpg",
+      "video": "2026-11-11-reel-81de6047.mp4",
+      "captions": {
+        "linkedin": "Get at least 150 minutes of movement this week.\n\nThat is the whole assignment. Weekly minutes add up to health.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Get at least 150 minutes of movement this week.\n\nThat is it. Weekly minutes add up to health.",
+        "facebook": "Get at least 150 minutes of movement this week.\n\nWeekly minutes add up to health.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Get at least 150 minutes of movement this week. Weekly minutes add up to health. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Get at least 150 minutes of movement this week.\n\nWeekly minutes add up to health.",
+        "_default": "Get at least 150 minutes of movement this week.\n\nWeekly minutes add up to health."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-156",
+        "practice": "Cook a meal for someone you care about.",
+        "why": "Food made by hand says love.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-11-carousel-b962ed76.jpg",
+      "images": [
+        "2026-11-11-carousel-b962ed76.jpg",
+        "2026-11-11-carousel2-b962ed76.jpg",
+        "2026-11-11-carousel3-b962ed76.jpg"
+      ],
+      "captions": {
+        "linkedin": "Cook a meal for someone you care about.\n\nThat is the whole assignment. Food made by hand says love.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Cook a meal for someone you care about.\n\nThat is it. Food made by hand says love.",
+        "facebook": "Cook a meal for someone you care about.\n\nFood made by hand says love.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Cook a meal for someone you care about. Food made by hand says love. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Cook a meal for someone you care about.\n\nFood made by hand says love.",
+        "_default": "Cook a meal for someone you care about.\n\nFood made by hand says love."
+      }
+    }
+  ]
+}
