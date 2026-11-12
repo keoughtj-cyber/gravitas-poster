@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-12",
+  "day_index": 315,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-038",
+        "practice": "Choose the harder option once when the easy one tempts you.",
+        "why": "Every choice is a vote.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-12-e653019e.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Choose the harder option once when the easy one tempts you.\nEvery choice is a vote.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote.",
+        "facebook": "The practice: Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote.",
+        "tiktok": "Choose the harder option once when the easy one tempts you. Every choice is a vote. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote.",
+        "_default": "Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote."
+      },
+      "ig_video": "2026-11-12-ig-b98d64a2.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-038",
+        "practice": "Choose the harder option once when the easy one tempts you.",
+        "why": "Every choice is a vote.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "story": true,
+      "image": "2026-11-12-story-b98d64a2.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Choose the harder option once when the easy one tempts you.\nEvery choice is a vote.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote.",
+        "facebook": "The practice: Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote.",
+        "tiktok": "Choose the harder option once when the easy one tempts you. Every choice is a vote. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote.",
+        "_default": "Choose the harder option once when the easy one tempts you.\n\nEvery choice is a vote."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "HAB-152",
+        "practice": "Plan your week before Monday arrives.",
+        "why": "A plan makes the week yours.",
+        "pillar": "Character",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-11-12-reel-4d307002.jpg",
+      "video": "2026-11-12-reel-4d307002.mp4",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Plan your week before Monday arrives.\nA plan makes the week yours.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Plan your week before Monday arrives.\n\nA plan makes the week yours.",
+        "facebook": "The practice: Plan your week before Monday arrives.\n\nA plan makes the week yours.",
+        "tiktok": "Plan your week before Monday arrives. A plan makes the week yours. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Plan your week before Monday arrives.\n\nA plan makes the week yours.",
+        "_default": "Plan your week before Monday arrives.\n\nA plan makes the week yours."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Career and Leadership",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAR-009",
+        "practice": "Ask one question in a meeting that others are thinking.",
+        "why": "Questions show engagement.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-12-carousel-65448885.jpg",
+      "images": [
+        "2026-11-12-carousel-65448885.jpg",
+        "2026-11-12-carousel2-65448885.jpg",
+        "2026-11-12-carousel3-65448885.jpg"
+      ],
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Ask one question in a meeting that others are thinking.\nQuestions show engagement.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask one question in a meeting that others are thinking.\n\nQuestions show engagement.",
+        "facebook": "The practice: Ask one question in a meeting that others are thinking.\n\nQuestions show engagement.",
+        "tiktok": "Ask one question in a meeting that others are thinking. Questions show engagement. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask one question in a meeting that others are thinking.\n\nQuestions show engagement.",
+        "_default": "Ask one question in a meeting that others are thinking.\n\nQuestions show engagement."
+      }
+    }
+  ]
+}
