@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-13",
+  "day_index": 316,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-047",
+        "practice": "Fill half your plate with vegetables.",
+        "why": "Vegetables fill you up well.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-11-13-6b941d23.jpg",
+      "captions": {
+        "linkedin": "Fill half your plate with vegetables.\n\nVegetables fill you up well.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Fill half your plate with vegetables.\n\nVegetables fill you up well. One rep is enough.",
+        "facebook": "Fill half your plate with vegetables.\n\nVegetables fill you up well.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Fill half your plate with vegetables. Vegetables fill you up well. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Fill half your plate with vegetables.\n\nVegetables fill you up well.",
+        "_default": "Fill half your plate with vegetables.\n\nVegetables fill you up well."
+      },
+      "ig_video": "2026-11-13-ig-9efe569d.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-047",
+        "practice": "Fill half your plate with vegetables.",
+        "why": "Vegetables fill you up well.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "story": true,
+      "image": "2026-11-13-story-9efe569d.jpg",
+      "captions": {
+        "linkedin": "Fill half your plate with vegetables.\n\nVegetables fill you up well.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Fill half your plate with vegetables.\n\nVegetables fill you up well. One rep is enough.",
+        "facebook": "Fill half your plate with vegetables.\n\nVegetables fill you up well.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Fill half your plate with vegetables. Vegetables fill you up well. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Fill half your plate with vegetables.\n\nVegetables fill you up well.",
+        "_default": "Fill half your plate with vegetables.\n\nVegetables fill you up well."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-077",
+        "practice": "Ask someone you admire how they got where they are.",
+        "why": "Most people enjoy being asked.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "tall": true,
+      "image": "2026-11-13-reel-b62af287.jpg",
+      "video": "2026-11-13-reel-b62af287.mp4",
+      "captions": {
+        "linkedin": "Ask someone you admire how they got where they are.\n\nMost people enjoy being asked.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask someone you admire how they got where they are.\n\nMost people enjoy being asked. One rep is enough.",
+        "facebook": "Ask someone you admire how they got where they are.\n\nMost people enjoy being asked.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Ask someone you admire how they got where they are. Most people enjoy being asked. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask someone you admire how they got where they are.\n\nMost people enjoy being asked.",
+        "_default": "Ask someone you admire how they got where they are.\n\nMost people enjoy being asked."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-200",
+        "practice": "Let a bad day end at bedtime.",
+        "why": "Tomorrow starts clean.",
+        "pillar": "Respect",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-13-carousel-f80d4040.jpg",
+      "images": [
+        "2026-11-13-carousel-f80d4040.jpg",
+        "2026-11-13-carousel2-f80d4040.jpg",
+        "2026-11-13-carousel3-f80d4040.jpg"
+      ],
+      "captions": {
+        "linkedin": "Let a bad day end at bedtime.\n\nTomorrow starts clean.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Let a bad day end at bedtime.\n\nTomorrow starts clean. One rep is enough.",
+        "facebook": "Let a bad day end at bedtime.\n\nTomorrow starts clean.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Let a bad day end at bedtime. Tomorrow starts clean. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Let a bad day end at bedtime.\n\nTomorrow starts clean.",
+        "_default": "Let a bad day end at bedtime.\n\nTomorrow starts clean."
+      }
+    }
+  ]
+}
