@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-14",
+  "day_index": 317,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-124",
+        "practice": "Spend fifteen minutes on a chore you have been avoiding.",
+        "why": "Avoided tasks feel heavier.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-14-d9549ffb.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Spend fifteen minutes on a chore you have been avoiding.\n\nThat is it. Avoided tasks feel heavier.",
+        "facebook": "The practice: Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier.",
+        "tiktok": "Spend fifteen minutes on a chore you have been avoiding. Avoided tasks feel heavier. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier.",
+        "_default": "Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier."
+      },
+      "ig_video": "2026-11-14-ig-70f3c1d9.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-124",
+        "practice": "Spend fifteen minutes on a chore you have been avoiding.",
+        "why": "Avoided tasks feel heavier.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "story": true,
+      "image": "2026-11-14-story-70f3c1d9.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Spend fifteen minutes on a chore you have been avoiding.\n\nThat is it. Avoided tasks feel heavier.",
+        "facebook": "The practice: Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier.",
+        "tiktok": "Spend fifteen minutes on a chore you have been avoiding. Avoided tasks feel heavier. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier.",
+        "_default": "Spend fifteen minutes on a chore you have been avoiding.\n\nAvoided tasks feel heavier."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Career and Leadership",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAR-032",
+        "practice": "Take a short walk between long work blocks.",
+        "why": "Movement resets the mind.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "tall": true,
+      "image": "2026-11-14-reel-ce1189af.jpg",
+      "video": "2026-11-14-reel-ce1189af.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Take a short walk between long work blocks.\n\nMovement resets the mind.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a short walk between long work blocks.\n\nThat is it. Movement resets the mind.",
+        "facebook": "The practice: Take a short walk between long work blocks.\n\nMovement resets the mind.",
+        "tiktok": "Take a short walk between long work blocks. Movement resets the mind. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a short walk between long work blocks.\n\nMovement resets the mind.",
+        "_default": "Take a short walk between long work blocks.\n\nMovement resets the mind."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Fitness and Health",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "FIT-173",
+        "practice": "Go for a walk before you check your phone in the morning.",
+        "why": "Morning walks wake you up.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-11-14-carousel-84dc4deb.jpg",
+      "images": [
+        "2026-11-14-carousel-84dc4deb.jpg",
+        "2026-11-14-carousel2-84dc4deb.jpg",
+        "2026-11-14-carousel3-84dc4deb.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Go for a walk before you check your phone in the morning.\n\nMorning walks wake you up.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Go for a walk before you check your phone in the morning.\n\nThat is it. Morning walks wake you up.",
+        "facebook": "The practice: Go for a walk before you check your phone in the morning.\n\nMorning walks wake you up.",
+        "tiktok": "Go for a walk before you check your phone in the morning. Morning walks wake you up. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Go for a walk before you check your phone in the morning.\n\nMorning walks wake you up.",
+        "_default": "Go for a walk before you check your phone in the morning.\n\nMorning walks wake you up."
+      }
+    }
+  ]
+}
