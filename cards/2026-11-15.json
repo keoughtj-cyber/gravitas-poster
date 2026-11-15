@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-15",
+  "day_index": 318,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-123",
+        "practice": "Take the first step on a project that scares you.",
+        "why": "Fear shrinks with action.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-15-4c9dbb67.jpg",
+      "captions": {
+        "linkedin": "Take the first step on a project that scares you.\n\nThat is the whole assignment. Fear shrinks with action.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take the first step on a project that scares you.\n\nFear shrinks with action.",
+        "facebook": "Take the first step on a project that scares you.\n\nFear shrinks with action.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Take the first step on a project that scares you. Fear shrinks with action. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take the first step on a project that scares you.\n\nFear shrinks with action.",
+        "_default": "Take the first step on a project that scares you.\n\nFear shrinks with action."
+      },
+      "ig_video": "2026-11-15-ig-787dfb70.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-123",
+        "practice": "Take the first step on a project that scares you.",
+        "why": "Fear shrinks with action.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "story": true,
+      "image": "2026-11-15-story-787dfb70.jpg",
+      "captions": {
+        "linkedin": "Take the first step on a project that scares you.\n\nThat is the whole assignment. Fear shrinks with action.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take the first step on a project that scares you.\n\nFear shrinks with action.",
+        "facebook": "Take the first step on a project that scares you.\n\nFear shrinks with action.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Take the first step on a project that scares you. Fear shrinks with action. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take the first step on a project that scares you.\n\nFear shrinks with action.",
+        "_default": "Take the first step on a project that scares you.\n\nFear shrinks with action."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Calm and Mindset",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAL-093",
+        "practice": "Write down your three most important values.",
+        "why": "Values guide calm decisions.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "tall": true,
+      "image": "2026-11-15-reel-75f5cb32.jpg",
+      "video": "2026-11-15-reel-75f5cb32.mp4",
+      "captions": {
+        "linkedin": "Write down your three most important values.\n\nThat is the whole assignment. Values guide calm decisions.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Write down your three most important values.\n\nValues guide calm decisions.",
+        "facebook": "Write down your three most important values.\n\nValues guide calm decisions.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Write down your three most important values. Values guide calm decisions. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Write down your three most important values.\n\nValues guide calm decisions.",
+        "_default": "Write down your three most important values.\n\nValues guide calm decisions."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-079",
+        "practice": "Keep a promise even when no one would know you broke it.",
+        "why": "Integrity is private.",
+        "pillar": "Character",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-15-carousel-e0ec9551.jpg",
+      "images": [
+        "2026-11-15-carousel-e0ec9551.jpg",
+        "2026-11-15-carousel2-e0ec9551.jpg",
+        "2026-11-15-carousel3-e0ec9551.jpg"
+      ],
+      "captions": {
+        "linkedin": "Keep a promise even when no one would know you broke it.\n\nThat is the whole assignment. Integrity is private.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Keep a promise even when no one would know you broke it.\n\nIntegrity is private.",
+        "facebook": "Keep a promise even when no one would know you broke it.\n\nIntegrity is private.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Keep a promise even when no one would know you broke it. Integrity is private. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Keep a promise even when no one would know you broke it.\n\nIntegrity is private.",
+        "_default": "Keep a promise even when no one would know you broke it.\n\nIntegrity is private."
+      }
+    }
+  ]
+}
