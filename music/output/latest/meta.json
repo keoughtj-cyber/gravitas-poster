@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-14",
-  "pillar": "Respect",
-  "prompt": "dark cinematic hybrid, 110 BPM, distorted cello ostinato, pounding low drums, distorted synth bass, cold and serious, wide and distorted, instrumental",
+  "date": "2026-11-15",
+  "pillar": "Confidence",
+  "prompt": "epic dark orchestral, 75 BPM, low brass, timpani, taiko drums, ominous and powerful, huge and wide, instrumental",
   "take": 0,
-  "date_seed": 186090868,
-  "chosen_seed": 187090871,
-  "second_seed": 186090868,
+  "date_seed": 5439074,
+  "chosen_seed": 5439074,
+  "second_seed": 8439083,
   "attempts": [
     {
-      "prompt": "dark cinematic hybrid, 110 BPM, distorted cello ostinato, pounding low drums, distorted synth bass, cold and serious, wide and distorted, instrumental",
+      "prompt": "epic dark orchestral, 75 BPM, low brass, timpani, taiko drums, ominous and powerful, huge and wide, instrumental",
       "source": "rotation",
       "candidates": [
         {
-          "peak": 1.0858,
-          "rms_dbfs": -8.84,
+          "peak": 0.4512,
+          "rms_dbfs": -21.07,
           "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 1.06,
-          "score": -1.06,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 3.55,
+          "score": -3.55,
           "rejected": [],
-          "seed": 186090868
+          "seed": 5439074
         },
         {
-          "peak": 1.1875,
-          "rms_dbfs": -5.77,
-          "silent_fraction": 0.0,
-          "clipped_fraction": 0.0,
-          "loudness_spread_db": 0.81,
-          "score": -0.81,
+          "peak": 0.3875,
+          "rms_dbfs": -23.45,
+          "silent_fraction": 0.021,
+          "clipped_fraction": 1e-05,
+          "loudness_spread_db": 6.41,
+          "score": -6.41,
           "rejected": [],
-          "seed": 187090871
+          "seed": 6439077
         },
         {
-          "peak": 1.0627,
-          "rms_dbfs": -8.86,
-          "silent_fraction": 0.0,
+          "peak": 0.375,
+          "rms_dbfs": -25.02,
+          "silent_fraction": 0.114,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 3.54,
-          "score": -3.54,
+          "loudness_spread_db": 9.4,
+          "score": -9.4,
           "rejected": [],
-          "seed": 188090874
+          "seed": 7439080
         },
         {
-          "peak": 0.9399,
-          "rms_dbfs": -12.4,
+          "peak": 0.3568,
+          "rms_dbfs": -22.11,
           "silent_fraction": 0.0,
           "clipped_fraction": 0.0,
-          "loudness_spread_db": 2.32,
-          "score": -2.32,
+          "loudness_spread_db": 5.19,
+          "score": -5.19,
           "rejected": [],
-          "seed": 189090877
+          "seed": 8439083
         }
       ]
     }
@@ -72,13 +72,13 @@
   "result": {
     "seconds_7s": 7.0,
     "seconds_full": 11.0,
-    "lufs": -14.02,
-    "true_peak_db": -5.57,
+    "lufs": -14.15,
+    "true_peak_db": -1.0,
     "bytes": {
-      "gravitas_2026-11-14_7s.mp3": 169316,
-      "gravitas_2026-11-14_7s.wav": 1234878,
-      "gravitas_2026-11-14_full.wav": 1940478,
-      "gravitas_2026-11-14_7s_b.mp3": 169316
+      "gravitas_2026-11-15_7s.mp3": 169316,
+      "gravitas_2026-11-15_7s.wav": 1234878,
+      "gravitas_2026-11-15_full.wav": 1940478,
+      "gravitas_2026-11-15_7s_b.mp3": 169316
     }
   }
 }
