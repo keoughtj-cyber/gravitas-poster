@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-16",
+  "day_index": 319,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-108",
+        "practice": "Notice when you are rushing and slow down on purpose.",
+        "why": "Hurry breeds stress.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-16-a9aeb650.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Notice when you are rushing and slow down on purpose.\nHurry breeds stress.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress. One rep is enough.",
+        "facebook": "The practice: Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress.",
+        "tiktok": "Notice when you are rushing and slow down on purpose. Hurry breeds stress. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress.",
+        "_default": "Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress."
+      },
+      "ig_video": "2026-11-16-ig-77513a39.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-108",
+        "practice": "Notice when you are rushing and slow down on purpose.",
+        "why": "Hurry breeds stress.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-11-16-story-77513a39.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Notice when you are rushing and slow down on purpose.\nHurry breeds stress.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress. One rep is enough.",
+        "facebook": "The practice: Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress.",
+        "tiktok": "Notice when you are rushing and slow down on purpose. Hurry breeds stress. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress.",
+        "_default": "Notice when you are rushing and slow down on purpose.\n\nHurry breeds stress."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-007",
+        "practice": "Try a sport or class you have never done before.",
+        "why": "New moves build new skills.",
+        "pillar": "Confidence",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-11-16-reel-efda37c1.jpg",
+      "video": "2026-11-16-reel-efda37c1.mp4",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Try a sport or class you have never done before.\nNew moves build new skills.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Try a sport or class you have never done before.\n\nNew moves build new skills. One rep is enough.",
+        "facebook": "The practice: Try a sport or class you have never done before.\n\nNew moves build new skills.",
+        "tiktok": "Try a sport or class you have never done before. New moves build new skills. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Try a sport or class you have never done before.\n\nNew moves build new skills.",
+        "_default": "Try a sport or class you have never done before.\n\nNew moves build new skills."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-158",
+        "practice": "Ask for what you want in your relationship directly.",
+        "why": "Hints are easy to miss.",
+        "pillar": "Confidence",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-16-carousel-aed65ad2.jpg",
+      "images": [
+        "2026-11-16-carousel-aed65ad2.jpg",
+        "2026-11-16-carousel2-aed65ad2.jpg",
+        "2026-11-16-carousel3-aed65ad2.jpg"
+      ],
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Ask for what you want in your relationship directly.\nHints are easy to miss.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Ask for what you want in your relationship directly.\n\nHints are easy to miss. One rep is enough.",
+        "facebook": "The practice: Ask for what you want in your relationship directly.\n\nHints are easy to miss.",
+        "tiktok": "Ask for what you want in your relationship directly. Hints are easy to miss. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask for what you want in your relationship directly.\n\nHints are easy to miss.",
+        "_default": "Ask for what you want in your relationship directly.\n\nHints are easy to miss."
+      }
+    }
+  ]
+}
