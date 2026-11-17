@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-17",
+  "day_index": 320,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-196",
+        "practice": "Say goodbye properly instead of fading out.",
+        "why": "Clean endings are kinder.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-17-67c73666.jpg",
+      "captions": {
+        "linkedin": "Say goodbye properly instead of fading out.\n\nClean endings are kinder.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Say goodbye properly instead of fading out.\n\nThat is it. Clean endings are kinder.",
+        "facebook": "Say goodbye properly instead of fading out.\n\nClean endings are kinder.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Say goodbye properly instead of fading out. Clean endings are kinder. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Say goodbye properly instead of fading out.\n\nClean endings are kinder.",
+        "_default": "Say goodbye properly instead of fading out.\n\nClean endings are kinder."
+      },
+      "ig_video": "2026-11-17-ig-86bbdbe1.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-196",
+        "practice": "Say goodbye properly instead of fading out.",
+        "why": "Clean endings are kinder.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-17-story-86bbdbe1.jpg",
+      "captions": {
+        "linkedin": "Say goodbye properly instead of fading out.\n\nClean endings are kinder.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Say goodbye properly instead of fading out.\n\nThat is it. Clean endings are kinder.",
+        "facebook": "Say goodbye properly instead of fading out.\n\nClean endings are kinder.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Say goodbye properly instead of fading out. Clean endings are kinder. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Say goodbye properly instead of fading out.\n\nClean endings are kinder.",
+        "_default": "Say goodbye properly instead of fading out.\n\nClean endings are kinder."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "HAB-113",
+        "practice": "Volunteer for the task nobody else wants.",
+        "why": "Hard tasks build strength.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-11-17-reel-ed0b9b02.jpg",
+      "video": "2026-11-17-reel-ed0b9b02.mp4",
+      "captions": {
+        "linkedin": "Volunteer for the task nobody else wants.\n\nHard tasks build strength.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Volunteer for the task nobody else wants.\n\nThat is it. Hard tasks build strength.",
+        "facebook": "Volunteer for the task nobody else wants.\n\nHard tasks build strength.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Volunteer for the task nobody else wants. Hard tasks build strength. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Volunteer for the task nobody else wants.\n\nHard tasks build strength.",
+        "_default": "Volunteer for the task nobody else wants.\n\nHard tasks build strength."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Career and Leadership",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAR-020",
+        "practice": "Ask for the time you need instead of rushing work.",
+        "why": "Good work needs time.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-17-carousel-e6796cd9.jpg",
+      "images": [
+        "2026-11-17-carousel-e6796cd9.jpg",
+        "2026-11-17-carousel2-e6796cd9.jpg",
+        "2026-11-17-carousel3-e6796cd9.jpg"
+      ],
+      "captions": {
+        "linkedin": "Ask for the time you need instead of rushing work.\n\nGood work needs time.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask for the time you need instead of rushing work.\n\nThat is it. Good work needs time.",
+        "facebook": "Ask for the time you need instead of rushing work.\n\nGood work needs time.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Ask for the time you need instead of rushing work. Good work needs time. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask for the time you need instead of rushing work.\n\nGood work needs time.",
+        "_default": "Ask for the time you need instead of rushing work.\n\nGood work needs time."
+      }
+    }
+  ]
+}
