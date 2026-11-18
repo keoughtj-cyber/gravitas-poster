@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-18",
+  "day_index": 321,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-042",
+        "practice": "Ask for a stretch assignment.",
+        "why": "Growth comes from reach.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-18-7ec9e100.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask for a stretch assignment.\n\nGrowth comes from reach.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask for a stretch assignment.\n\nGrowth comes from reach.",
+        "facebook": "The practice: Ask for a stretch assignment.\n\nGrowth comes from reach.",
+        "tiktok": "Ask for a stretch assignment. Growth comes from reach. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask for a stretch assignment.\n\nGrowth comes from reach.",
+        "_default": "Ask for a stretch assignment.\n\nGrowth comes from reach."
+      },
+      "ig_video": "2026-11-18-ig-72c4cbe6.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-042",
+        "practice": "Ask for a stretch assignment.",
+        "why": "Growth comes from reach.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "story": true,
+      "image": "2026-11-18-story-72c4cbe6.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Ask for a stretch assignment.\n\nGrowth comes from reach.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask for a stretch assignment.\n\nGrowth comes from reach.",
+        "facebook": "The practice: Ask for a stretch assignment.\n\nGrowth comes from reach.",
+        "tiktok": "Ask for a stretch assignment. Growth comes from reach. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask for a stretch assignment.\n\nGrowth comes from reach.",
+        "_default": "Ask for a stretch assignment.\n\nGrowth comes from reach."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-052",
+        "practice": "Stop explaining a decision after you have stated it once.",
+        "why": "One clear reason is enough.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "tall": true,
+      "image": "2026-11-18-reel-59ec5492.jpg",
+      "video": "2026-11-18-reel-59ec5492.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Stop explaining a decision after you have stated it once.\n\nOne clear reason is enough.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Stop explaining a decision after you have stated it once.\n\nOne clear reason is enough.",
+        "facebook": "The practice: Stop explaining a decision after you have stated it once.\n\nOne clear reason is enough.",
+        "tiktok": "Stop explaining a decision after you have stated it once. One clear reason is enough. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Stop explaining a decision after you have stated it once.\n\nOne clear reason is enough.",
+        "_default": "Stop explaining a decision after you have stated it once.\n\nOne clear reason is enough."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-045",
+        "practice": "Sit quietly for five minutes and focus on your breathing.",
+        "why": "Breathing anchors the mind.",
+        "pillar": "Character",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-18-carousel-ae13e3b2.jpg",
+      "images": [
+        "2026-11-18-carousel-ae13e3b2.jpg",
+        "2026-11-18-carousel2-ae13e3b2.jpg",
+        "2026-11-18-carousel3-ae13e3b2.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Sit quietly for five minutes and focus on your breathing.\n\nBreathing anchors the mind.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Sit quietly for five minutes and focus on your breathing.\n\nBreathing anchors the mind.",
+        "facebook": "The practice: Sit quietly for five minutes and focus on your breathing.\n\nBreathing anchors the mind.",
+        "tiktok": "Sit quietly for five minutes and focus on your breathing. Breathing anchors the mind. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Sit quietly for five minutes and focus on your breathing.\n\nBreathing anchors the mind.",
+        "_default": "Sit quietly for five minutes and focus on your breathing.\n\nBreathing anchors the mind."
+      }
+    }
+  ]
+}
