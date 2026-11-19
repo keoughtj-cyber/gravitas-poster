@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-19",
+  "day_index": 322,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-050",
+        "practice": "Train with a partner who keeps you honest.",
+        "why": "Partners raise effort.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-11-19-3f0f4721.jpg",
+      "captions": {
+        "linkedin": "Train with a partner who keeps you honest.\n\nThat is the whole assignment. Partners raise effort.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Train with a partner who keeps you honest.\n\nPartners raise effort. One rep is enough.",
+        "facebook": "Train with a partner who keeps you honest.\n\nPartners raise effort.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Train with a partner who keeps you honest. Partners raise effort. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Train with a partner who keeps you honest.\n\nPartners raise effort.",
+        "_default": "Train with a partner who keeps you honest.\n\nPartners raise effort."
+      },
+      "ig_video": "2026-11-19-ig-ba096d74.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "FIT-050",
+        "practice": "Train with a partner who keeps you honest.",
+        "why": "Partners raise effort.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "story": true,
+      "image": "2026-11-19-story-ba096d74.jpg",
+      "captions": {
+        "linkedin": "Train with a partner who keeps you honest.\n\nThat is the whole assignment. Partners raise effort.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Train with a partner who keeps you honest.\n\nPartners raise effort. One rep is enough.",
+        "facebook": "Train with a partner who keeps you honest.\n\nPartners raise effort.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Train with a partner who keeps you honest. Partners raise effort. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Train with a partner who keeps you honest.\n\nPartners raise effort.",
+        "_default": "Train with a partner who keeps you honest.\n\nPartners raise effort."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Career and Leadership",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAR-067",
+        "practice": "Help a new coworker feel welcome on their first week.",
+        "why": "First weeks shape loyalty.",
+        "pillar": "Character",
+        "area": "Career and Leadership"
+      },
+      "tall": true,
+      "image": "2026-11-19-reel-fec30027.jpg",
+      "video": "2026-11-19-reel-fec30027.mp4",
+      "captions": {
+        "linkedin": "Help a new coworker feel welcome on their first week.\n\nThat is the whole assignment. First weeks shape loyalty.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Help a new coworker feel welcome on their first week.\n\nFirst weeks shape loyalty. One rep is enough.",
+        "facebook": "Help a new coworker feel welcome on their first week.\n\nFirst weeks shape loyalty.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Help a new coworker feel welcome on their first week. First weeks shape loyalty. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Help a new coworker feel welcome on their first week.\n\nFirst weeks shape loyalty.",
+        "_default": "Help a new coworker feel welcome on their first week.\n\nFirst weeks shape loyalty."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-164",
+        "practice": "Silence work alerts after hours.",
+        "why": "Work can wait until morning.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-19-carousel-df424114.jpg",
+      "images": [
+        "2026-11-19-carousel-df424114.jpg",
+        "2026-11-19-carousel2-df424114.jpg",
+        "2026-11-19-carousel3-df424114.jpg"
+      ],
+      "captions": {
+        "linkedin": "Silence work alerts after hours.\n\nThat is the whole assignment. Work can wait until morning.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Silence work alerts after hours.\n\nWork can wait until morning. One rep is enough.",
+        "facebook": "Silence work alerts after hours.\n\nWork can wait until morning.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Silence work alerts after hours. Work can wait until morning. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Silence work alerts after hours.\n\nWork can wait until morning.",
+        "_default": "Silence work alerts after hours.\n\nWork can wait until morning."
+      }
+    }
+  ]
+}
