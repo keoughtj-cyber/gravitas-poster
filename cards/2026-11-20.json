@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-20",
+  "day_index": 323,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-121",
+        "practice": "Leave space for silence in a conversation.",
+        "why": "Silence lets people go deeper.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-20-55fd19bb.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Leave space for silence in a conversation.\nSilence lets people go deeper.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Leave space for silence in a conversation.\n\nThat is it. Silence lets people go deeper.",
+        "facebook": "The practice: Leave space for silence in a conversation.\n\nSilence lets people go deeper.",
+        "tiktok": "Leave space for silence in a conversation. Silence lets people go deeper. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Leave space for silence in a conversation.\n\nSilence lets people go deeper.",
+        "_default": "Leave space for silence in a conversation.\n\nSilence lets people go deeper."
+      },
+      "ig_video": "2026-11-20-ig-7e8ab4d4.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-121",
+        "practice": "Leave space for silence in a conversation.",
+        "why": "Silence lets people go deeper.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-20-story-7e8ab4d4.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Leave space for silence in a conversation.\nSilence lets people go deeper.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Leave space for silence in a conversation.\n\nThat is it. Silence lets people go deeper.",
+        "facebook": "The practice: Leave space for silence in a conversation.\n\nSilence lets people go deeper.",
+        "tiktok": "Leave space for silence in a conversation. Silence lets people go deeper. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Leave space for silence in a conversation.\n\nSilence lets people go deeper.",
+        "_default": "Leave space for silence in a conversation.\n\nSilence lets people go deeper."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Calm and Mindset",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAL-041",
+        "practice": "Tell yourself I can handle this, then take a step.",
+        "why": "Small words lead to action.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "tall": true,
+      "image": "2026-11-20-reel-ac2fb5a9.jpg",
+      "video": "2026-11-20-reel-ac2fb5a9.mp4",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Tell yourself I can handle this, then take a step.\nSmall words lead to action.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Tell yourself I can handle this, then take a step.\n\nThat is it. Small words lead to action.",
+        "facebook": "The practice: Tell yourself I can handle this, then take a step.\n\nSmall words lead to action.",
+        "tiktok": "Tell yourself I can handle this, then take a step. Small words lead to action. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Tell yourself I can handle this, then take a step.\n\nSmall words lead to action.",
+        "_default": "Tell yourself I can handle this, then take a step.\n\nSmall words lead to action."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Habits and Discipline",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "HAB-107",
+        "practice": "Do one hard thing slowly instead of skipping it.",
+        "why": "Slow is still forward.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-20-carousel-5bac44cc.jpg",
+      "images": [
+        "2026-11-20-carousel-5bac44cc.jpg",
+        "2026-11-20-carousel2-5bac44cc.jpg",
+        "2026-11-20-carousel3-5bac44cc.jpg"
+      ],
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Do one hard thing slowly instead of skipping it.\nSlow is still forward.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Do one hard thing slowly instead of skipping it.\n\nThat is it. Slow is still forward.",
+        "facebook": "The practice: Do one hard thing slowly instead of skipping it.\n\nSlow is still forward.",
+        "tiktok": "Do one hard thing slowly instead of skipping it. Slow is still forward. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Do one hard thing slowly instead of skipping it.\n\nSlow is still forward.",
+        "_default": "Do one hard thing slowly instead of skipping it.\n\nSlow is still forward."
+      }
+    }
+  ]
+}
