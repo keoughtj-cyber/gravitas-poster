@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-21",
+  "day_index": 324,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-107",
+        "practice": "Choose to see a setback as practice.",
+        "why": "Setbacks are training.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-21-7de1d6cf.jpg",
+      "captions": {
+        "linkedin": "Choose to see a setback as practice.\n\nSetbacks are training.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Choose to see a setback as practice.\n\nSetbacks are training.",
+        "facebook": "Choose to see a setback as practice.\n\nSetbacks are training.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Choose to see a setback as practice. Setbacks are training. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Choose to see a setback as practice.\n\nSetbacks are training.",
+        "_default": "Choose to see a setback as practice.\n\nSetbacks are training."
+      },
+      "ig_video": "2026-11-21-ig-febb9e3e.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-107",
+        "practice": "Choose to see a setback as practice.",
+        "why": "Setbacks are training.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-11-21-story-febb9e3e.jpg",
+      "captions": {
+        "linkedin": "Choose to see a setback as practice.\n\nSetbacks are training.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Choose to see a setback as practice.\n\nSetbacks are training.",
+        "facebook": "Choose to see a setback as practice.\n\nSetbacks are training.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Choose to see a setback as practice. Setbacks are training. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Choose to see a setback as practice.\n\nSetbacks are training.",
+        "_default": "Choose to see a setback as practice.\n\nSetbacks are training."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-093",
+        "practice": "Take a warm shower before bed.",
+        "why": "Warmth helps you wind down.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-11-21-reel-6e7f06a3.jpg",
+      "video": "2026-11-21-reel-6e7f06a3.mp4",
+      "captions": {
+        "linkedin": "Take a warm shower before bed.\n\nWarmth helps you wind down.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a warm shower before bed.\n\nWarmth helps you wind down.",
+        "facebook": "Take a warm shower before bed.\n\nWarmth helps you wind down.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Take a warm shower before bed. Warmth helps you wind down. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a warm shower before bed.\n\nWarmth helps you wind down.",
+        "_default": "Take a warm shower before bed.\n\nWarmth helps you wind down."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-157",
+        "practice": "Let people disagree with you without losing your cool.",
+        "why": "Disagreement is not an attack.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-21-carousel-9c91f5e3.jpg",
+      "images": [
+        "2026-11-21-carousel-9c91f5e3.jpg",
+        "2026-11-21-carousel2-9c91f5e3.jpg",
+        "2026-11-21-carousel3-9c91f5e3.jpg"
+      ],
+      "captions": {
+        "linkedin": "Let people disagree with you without losing your cool.\n\nDisagreement is not an attack.\n\nIn GRAVITAS, every practice you finish adds weight to your Stone. It starts as a pebble and, over months of small, steady work, turns rough, shaped, veined, crystal, and finally layered. Nothing about it is loud. It is simply proof that you showed up.\n\nOne practice a day.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Let people disagree with you without losing your cool.\n\nDisagreement is not an attack.",
+        "facebook": "Let people disagree with you without losing your cool.\n\nDisagreement is not an attack.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Let people disagree with you without losing your cool. Disagreement is not an attack. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Let people disagree with you without losing your cool.\n\nDisagreement is not an attack.",
+        "_default": "Let people disagree with you without losing your cool.\n\nDisagreement is not an attack."
+      }
+    }
+  ]
+}
