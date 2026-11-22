@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-22",
+  "day_index": 325,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-189",
+        "practice": "Share credit with a friend for something you did together.",
+        "why": "Shared wins stay shared.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-22-b027908f.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Share credit with a friend for something you did together.\n\nShared wins stay shared.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Share credit with a friend for something you did together.\n\nShared wins stay shared. One rep is enough.",
+        "facebook": "The practice: Share credit with a friend for something you did together.\n\nShared wins stay shared.",
+        "tiktok": "Share credit with a friend for something you did together. Shared wins stay shared. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Share credit with a friend for something you did together.\n\nShared wins stay shared.",
+        "_default": "Share credit with a friend for something you did together.\n\nShared wins stay shared."
+      },
+      "ig_video": "2026-11-22-ig-0a1c6762.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-189",
+        "practice": "Share credit with a friend for something you did together.",
+        "why": "Shared wins stay shared.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-22-story-0a1c6762.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Share credit with a friend for something you did together.\n\nShared wins stay shared.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Share credit with a friend for something you did together.\n\nShared wins stay shared. One rep is enough.",
+        "facebook": "The practice: Share credit with a friend for something you did together.\n\nShared wins stay shared.",
+        "tiktok": "Share credit with a friend for something you did together. Shared wins stay shared. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Share credit with a friend for something you did together.\n\nShared wins stay shared.",
+        "_default": "Share credit with a friend for something you did together.\n\nShared wins stay shared."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "HAB-199",
+        "practice": "Rest after a hard week without guilt.",
+        "why": "Rest is part of the work.",
+        "pillar": "Respect",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-11-22-reel-32d16e1e.jpg",
+      "video": "2026-11-22-reel-32d16e1e.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Rest after a hard week without guilt.\n\nRest is part of the work.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Rest after a hard week without guilt.\n\nRest is part of the work. One rep is enough.",
+        "facebook": "The practice: Rest after a hard week without guilt.\n\nRest is part of the work.",
+        "tiktok": "Rest after a hard week without guilt. Rest is part of the work. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Rest after a hard week without guilt.\n\nRest is part of the work.",
+        "_default": "Rest after a hard week without guilt.\n\nRest is part of the work."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Career and Leadership",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAR-115",
+        "practice": "Be on time to every meeting this week.",
+        "why": "Punctuality builds reputation.",
+        "pillar": "Character",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-22-carousel-c35c2849.jpg",
+      "images": [
+        "2026-11-22-carousel-c35c2849.jpg",
+        "2026-11-22-carousel2-c35c2849.jpg",
+        "2026-11-22-carousel3-c35c2849.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Be on time to every meeting this week.\n\nPunctuality builds reputation.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "The practice: Be on time to every meeting this week.\n\nPunctuality builds reputation. One rep is enough.",
+        "facebook": "The practice: Be on time to every meeting this week.\n\nPunctuality builds reputation.",
+        "tiktok": "Be on time to every meeting this week. Punctuality builds reputation. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Be on time to every meeting this week.\n\nPunctuality builds reputation.",
+        "_default": "Be on time to every meeting this week.\n\nPunctuality builds reputation."
+      }
+    }
+  ]
+}
