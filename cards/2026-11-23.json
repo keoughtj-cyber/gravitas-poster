@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-23",
+  "day_index": 326,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-064",
+        "practice": "Put down your phone when someone walks into the room.",
+        "why": "Looking up says they matter.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-23-e451f866.jpg",
+      "captions": {
+        "linkedin": "Put down your phone when someone walks into the room.\n\nThat is the whole assignment. Looking up says they matter.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Put down your phone when someone walks into the room.\n\nThat is it. Looking up says they matter.",
+        "facebook": "Put down your phone when someone walks into the room.\n\nLooking up says they matter.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Put down your phone when someone walks into the room. Looking up says they matter. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Put down your phone when someone walks into the room.\n\nLooking up says they matter.",
+        "_default": "Put down your phone when someone walks into the room.\n\nLooking up says they matter."
+      },
+      "ig_video": "2026-11-23-ig-6809c966.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "REL-064",
+        "practice": "Put down your phone when someone walks into the room.",
+        "why": "Looking up says they matter.",
+        "pillar": "Respect",
+        "area": "Relationships and Friendships"
+      },
+      "story": true,
+      "image": "2026-11-23-story-6809c966.jpg",
+      "captions": {
+        "linkedin": "Put down your phone when someone walks into the room.\n\nThat is the whole assignment. Looking up says they matter.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Put down your phone when someone walks into the room.\n\nThat is it. Looking up says they matter.",
+        "facebook": "Put down your phone when someone walks into the room.\n\nLooking up says they matter.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Put down your phone when someone walks into the room. Looking up says they matter. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Put down your phone when someone walks into the room.\n\nLooking up says they matter.",
+        "_default": "Put down your phone when someone walks into the room.\n\nLooking up says they matter."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "REL-200",
+        "practice": "Spend an hour helping someone without being asked.",
+        "why": "Generosity strengthens bonds.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "tall": true,
+      "image": "2026-11-23-reel-ee81528b.jpg",
+      "video": "2026-11-23-reel-ee81528b.mp4",
+      "captions": {
+        "linkedin": "Spend an hour helping someone without being asked.\n\nThat is the whole assignment. Generosity strengthens bonds.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Spend an hour helping someone without being asked.\n\nThat is it. Generosity strengthens bonds.",
+        "facebook": "Spend an hour helping someone without being asked.\n\nGenerosity strengthens bonds.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Spend an hour helping someone without being asked. Generosity strengthens bonds. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Spend an hour helping someone without being asked.\n\nGenerosity strengthens bonds.",
+        "_default": "Spend an hour helping someone without being asked.\n\nGenerosity strengthens bonds."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Calm and Mindset",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAL-047",
+        "practice": "Speak up when something bothers you instead of stewing.",
+        "why": "Spoken worries lose weight.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-23-carousel-89375333.jpg",
+      "images": [
+        "2026-11-23-carousel-89375333.jpg",
+        "2026-11-23-carousel2-89375333.jpg",
+        "2026-11-23-carousel3-89375333.jpg"
+      ],
+      "captions": {
+        "linkedin": "Speak up when something bothers you instead of stewing.\n\nThat is the whole assignment. Spoken worries lose weight.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Speak up when something bothers you instead of stewing.\n\nThat is it. Spoken worries lose weight.",
+        "facebook": "Speak up when something bothers you instead of stewing.\n\nSpoken worries lose weight.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Speak up when something bothers you instead of stewing. Spoken worries lose weight. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Speak up when something bothers you instead of stewing.\n\nSpoken worries lose weight.",
+        "_default": "Speak up when something bothers you instead of stewing.\n\nSpoken worries lose weight."
+      }
+    }
+  ]
+}
