@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-24",
+  "day_index": 327,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-059",
+        "practice": "Ask for what you need instead of hoping someone guesses.",
+        "why": "Clear asks reduce stress.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "image": "2026-11-24-cea9f522.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Ask for what you need instead of hoping someone guesses.\nClear asks reduce stress.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress.",
+        "facebook": "The practice: Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress.",
+        "tiktok": "Ask for what you need instead of hoping someone guesses. Clear asks reduce stress. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress.",
+        "_default": "Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress."
+      },
+      "ig_video": "2026-11-24-ig-ea3bb2fa.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAL-059",
+        "practice": "Ask for what you need instead of hoping someone guesses.",
+        "why": "Clear asks reduce stress.",
+        "pillar": "Confidence",
+        "area": "Calm and Mindset"
+      },
+      "story": true,
+      "image": "2026-11-24-story-ea3bb2fa.jpg",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Ask for what you need instead of hoping someone guesses.\nClear asks reduce stress.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress.",
+        "facebook": "The practice: Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress.",
+        "tiktok": "Ask for what you need instead of hoping someone guesses. Clear asks reduce stress. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress.",
+        "_default": "Ask for what you need instead of hoping someone guesses.\n\nClear asks reduce stress."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Career and Leadership",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "CAR-141",
+        "practice": "Write a short post sharing what you have learned at work.",
+        "why": "Sharing builds reputation.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "tall": true,
+      "image": "2026-11-24-reel-05402aad.jpg",
+      "video": "2026-11-24-reel-05402aad.mp4",
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Write a short post sharing what you have learned at work.\nSharing builds reputation.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Write a short post sharing what you have learned at work.\n\nSharing builds reputation.",
+        "facebook": "The practice: Write a short post sharing what you have learned at work.\n\nSharing builds reputation.",
+        "tiktok": "Write a short post sharing what you have learned at work. Sharing builds reputation. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Write a short post sharing what you have learned at work.\n\nSharing builds reputation.",
+        "_default": "Write a short post sharing what you have learned at work.\n\nSharing builds reputation."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Fitness and Health",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "FIT-162",
+        "practice": "Wind down with a book instead of a screen.",
+        "why": "Books ease you into sleep.",
+        "pillar": "Respect",
+        "area": "Fitness and Health"
+      },
+      "image": "2026-11-24-carousel-8a71ea02.jpg",
+      "images": [
+        "2026-11-24-carousel-8a71ea02.jpg",
+        "2026-11-24-carousel2-8a71ea02.jpg",
+        "2026-11-24-carousel3-8a71ea02.jpg"
+      ],
+      "captions": {
+        "linkedin": "Most growth is invisible while it is happening. The Stone in GRAVITAS makes it visible.\n\nThe practice: Wind down with a book instead of a screen.\nBooks ease you into sleep.\n\nSmall, repeatable, and done alone. That is how the Stone gets heavy.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Wind down with a book instead of a screen.\n\nBooks ease you into sleep.",
+        "facebook": "The practice: Wind down with a book instead of a screen.\n\nBooks ease you into sleep.",
+        "tiktok": "Wind down with a book instead of a screen. Books ease you into sleep. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Wind down with a book instead of a screen.\n\nBooks ease you into sleep.",
+        "_default": "Wind down with a book instead of a screen.\n\nBooks ease you into sleep."
+      }
+    }
+  ]
+}
