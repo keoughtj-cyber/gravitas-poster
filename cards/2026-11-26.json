@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-26",
+  "day_index": 329,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-119",
+        "practice": "Take a short walk after lunch.",
+        "why": "Walking lifts afternoon energy.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-26-def79bda.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Take a short walk after lunch.\n\nWalking lifts afternoon energy.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a short walk after lunch.\n\nThat is it. Walking lifts afternoon energy.",
+        "facebook": "The practice: Take a short walk after lunch.\n\nWalking lifts afternoon energy.",
+        "tiktok": "Take a short walk after lunch. Walking lifts afternoon energy. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a short walk after lunch.\n\nWalking lifts afternoon energy.",
+        "_default": "Take a short walk after lunch.\n\nWalking lifts afternoon energy."
+      },
+      "ig_video": "2026-11-26-ig-3cb7ba89.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "CAR-119",
+        "practice": "Take a short walk after lunch.",
+        "why": "Walking lifts afternoon energy.",
+        "pillar": "Respect",
+        "area": "Career and Leadership"
+      },
+      "story": true,
+      "image": "2026-11-26-story-3cb7ba89.jpg",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Take a short walk after lunch.\n\nWalking lifts afternoon energy.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD RESPECT.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Take a short walk after lunch.\n\nThat is it. Walking lifts afternoon energy.",
+        "facebook": "The practice: Take a short walk after lunch.\n\nWalking lifts afternoon energy.",
+        "tiktok": "Take a short walk after lunch. Walking lifts afternoon energy. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Take a short walk after lunch.\n\nWalking lifts afternoon energy.",
+        "_default": "Take a short walk after lunch.\n\nWalking lifts afternoon energy."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Fitness and Health",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "FIT-005",
+        "practice": "Get to 8,000 steps.",
+        "why": "Steps are a simple daily win.",
+        "pillar": "Character",
+        "area": "Fitness and Health"
+      },
+      "tall": true,
+      "image": "2026-11-26-reel-40074410.jpg",
+      "video": "2026-11-26-reel-40074410.mp4",
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Get to 8,000 steps.\n\nSteps are a simple daily win.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Get to 8,000 steps.\n\nThat is it. Steps are a simple daily win.",
+        "facebook": "The practice: Get to 8,000 steps.\n\nSteps are a simple daily win.",
+        "tiktok": "Get to 8,000 steps. Steps are a simple daily win. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Get to 8,000 steps.\n\nSteps are a simple daily win.",
+        "_default": "Get to 8,000 steps.\n\nSteps are a simple daily win."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Relationships and Friendships",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "REL-141",
+        "practice": "Plan a regular call with a friend who lives far away.",
+        "why": "Distance fades with routine.",
+        "pillar": "Character",
+        "area": "Relationships and Friendships"
+      },
+      "image": "2026-11-26-carousel-04c822b6.jpg",
+      "images": [
+        "2026-11-26-carousel-04c822b6.jpg",
+        "2026-11-26-carousel2-04c822b6.jpg",
+        "2026-11-26-carousel3-04c822b6.jpg"
+      ],
+      "captions": {
+        "linkedin": "Your Stone does not grow from big days. It grows from ordinary ones.\n\nThe practice for this one: Plan a regular call with a friend who lives far away.\n\nDistance fades with routine.\n\nGRAVITAS gives men one clear practice each day and a 3D Stone that records every rep.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Plan a regular call with a friend who lives far away.\n\nThat is it. Distance fades with routine.",
+        "facebook": "The practice: Plan a regular call with a friend who lives far away.\n\nDistance fades with routine.",
+        "tiktok": "Plan a regular call with a friend who lives far away. Distance fades with routine. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Plan a regular call with a friend who lives far away.\n\nDistance fades with routine.",
+        "_default": "Plan a regular call with a friend who lives far away.\n\nDistance fades with routine."
+      }
+    }
+  ]
+}
