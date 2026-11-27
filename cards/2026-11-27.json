@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-27",
+  "day_index": 330,
+  "slots": [
+    {
+      "key": "base",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-165",
+        "practice": "Put your workout clothes on even if you might not train.",
+        "why": "Dressed is halfway there.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "image": "2026-11-27-cfaa5b2f.jpg",
+      "captions": {
+        "linkedin": "Put your workout clothes on even if you might not train.\n\nThat is the whole assignment. Dressed is halfway there.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there.",
+        "facebook": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Put your workout clothes on even if you might not train. Dressed is halfway there. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there.",
+        "_default": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there."
+      },
+      "ig_video": "2026-11-27-ig-f86d4049.mp4"
+    },
+    {
+      "key": "story",
+      "area": "",
+      "offset_hours": 0,
+      "practice": {
+        "id": "HAB-165",
+        "practice": "Put your workout clothes on even if you might not train.",
+        "why": "Dressed is halfway there.",
+        "pillar": "Confidence",
+        "area": "Habits and Discipline"
+      },
+      "story": true,
+      "image": "2026-11-27-story-f86d4049.jpg",
+      "captions": {
+        "linkedin": "Put your workout clothes on even if you might not train.\n\nThat is the whole assignment. Dressed is halfway there.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there.",
+        "facebook": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Put your workout clothes on even if you might not train. Dressed is halfway there. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there.",
+        "_default": "Put your workout clothes on even if you might not train.\n\nDressed is halfway there."
+      }
+    },
+    {
+      "key": "reel",
+      "area": "Habits and Discipline",
+      "offset_hours": 12.0,
+      "practice": {
+        "id": "HAB-045",
+        "practice": "Count how many times you pick up your phone in an hour.",
+        "why": "Awareness comes before change.",
+        "pillar": "Character",
+        "area": "Habits and Discipline"
+      },
+      "tall": true,
+      "image": "2026-11-27-reel-fa380004.jpg",
+      "video": "2026-11-27-reel-fa380004.mp4",
+      "captions": {
+        "linkedin": "Count how many times you pick up your phone in an hour.\n\nThat is the whole assignment. Awareness comes before change.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CHARACTER.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Count how many times you pick up your phone in an hour.\n\nAwareness comes before change.",
+        "facebook": "Count how many times you pick up your phone in an hour.\n\nAwareness comes before change.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Count how many times you pick up your phone in an hour. Awareness comes before change. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Count how many times you pick up your phone in an hour.\n\nAwareness comes before change.",
+        "_default": "Count how many times you pick up your phone in an hour.\n\nAwareness comes before change."
+      }
+    },
+    {
+      "key": "carousel",
+      "area": "Career and Leadership",
+      "offset_hours": 5.0,
+      "practice": {
+        "id": "CAR-030",
+        "practice": "Ask a question you think might sound basic.",
+        "why": "Basic questions prevent big mistakes.",
+        "pillar": "Confidence",
+        "area": "Career and Leadership"
+      },
+      "image": "2026-11-27-carousel-f301d3b0.jpg",
+      "images": [
+        "2026-11-27-carousel-f301d3b0.jpg",
+        "2026-11-27-carousel2-f301d3b0.jpg",
+        "2026-11-27-carousel3-f301d3b0.jpg"
+      ],
+      "captions": {
+        "linkedin": "Ask a question you think might sound basic.\n\nThat is the whole assignment. Basic questions prevent big mistakes.\n\nEvery check-in in GRAVITAS shapes the Stone a little more. Miss a day and it waits. Come back and it keeps building.",
+        "instagram": "BUILD CONFIDENCE.\n\nChoose your focus with GRAVITAS. Coming Soon.\n\nFollow @gravitas_ccr for daily growth tips for men who want to be better.",
+        "threads": "Ask a question you think might sound basic.\n\nBasic questions prevent big mistakes.",
+        "facebook": "Ask a question you think might sound basic.\n\nBasic questions prevent big mistakes.\n\nEvery practice you finish in GRAVITAS adds to your Stone.",
+        "tiktok": "Ask a question you think might sound basic. Basic questions prevent big mistakes. #gravitas #dailypractice #selfimprovement",
+        "bluesky": "Ask a question you think might sound basic.\n\nBasic questions prevent big mistakes.",
+        "_default": "Ask a question you think might sound basic.\n\nBasic questions prevent big mistakes."
+      }
+    }
+  ]
+}
